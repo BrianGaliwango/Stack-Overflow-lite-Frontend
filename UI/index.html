@@ -11,8 +11,31 @@
     <nav class="navbar">
       <div class="nav-content">
         <h1><img src="/img/stack-overflow.svg" class="logo"> Stack Overflow lite</h1>
+        <ul class="menu-list">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+        <form action="search" method="post" id="searchForm" class="searchForm">
+          <input type="text" name="search" placeholder="Search..." autocomplete="off">
+        </form>
+        <form id="formBtn">
+          <input type="button" value="Login">
+          <input type="button" value="Sign Up">
+        </form>
       </div>
     </nav>
+    <div class="user-container">
+      <div class="login-container">
+        <h1><img src="/img/stack-overflow.svg" class="login-logo"></h1>
+        <form action="#" method="post" id="loginForm" class="login-form">
+          <label for="name">Name</label>
+          <input type="text" name="name" placeholder="name" id="name" autocomplete="off">
+          <label for="email">Email</label>
+          <input type="text" name="email" placeholder="email"id="email" autocomplete="off">
+        </form>
+      </div>
+    </div>
   </div>
   <script src="/app.js"></script>
 </body>

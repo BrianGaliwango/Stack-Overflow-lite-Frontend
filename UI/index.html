@@ -11,37 +11,50 @@
     <nav class="navbar">
       <div class="nav-content">
         <h1><img src="/img/stack-overflow.svg" class="logo"> Stack Overflow lite</h1>
+
         <ul class="menu-list">
           <li><a href="#">About</a></li>
           <li><a href="#">Product</a></li>
           <li><a href="#">Help</a></li>
         </ul>
+
         <form action="search" method="post" id="searchForm" class="searchForm">
           <input type="text" name="search" placeholder="Search..." autocomplete="off">
         </form>
+
         <div id="form-btn" class="form-btn">
           <input type="button" value="Login" class="btn login-btn" id="login-btn">
           <input type="button" value="Sign Up" class="btn sign-up-btn" id="sign-up-btn">
         </div>
+
       </div>
     </nav>
     <div class="login-container">
+
       <img src="/img/stack-overflow.svg" class="login-logo">
-      <h1>Login</h1>
+
+      <h1>Please Login</h1>
+
       <form action="#" method="post" id="login-form" class="login-form">
-        <label for="name">Name</label>
-        <input type="text" name="name" placeholder="Enter name" id="name" autocomplete="off">
-        <label for="email">Email</label>
-        <input type="text" name="email" placeholder="Enter email"id="email" autocomplete="off">
-        <input type="submit" value="Sign-in" id="login" class="loginForm-btn">
+
+        <div class="form-control">         
+         <input type="text" name="name" placeholder="Enter name" id="name" autocomplete="off">
+       </div>
+
+       <div class="form-control">        
+         <input type="text" name="password" placeholder="Enter password"id="password" autocomplete="off">
+      </div> 
+
+       <button class="loginForm-btn" id="login">Login</button>
+
+        <div class="register">
+          <p class="register-text">
+            Don't Have an Account yet?
+            <br>
+            <a href="createAccount.html">Register Now</a>
+          </p>
+        </div>
       </form>
-      <div class="register">
-        <p>
-          Don't Have an Account yet?
-          <br>
-          <a href="createAccount.html">Register Now</a>
-        </p>
-      </div>
     </div>
   </div>
   <script src="/app.js"></script>

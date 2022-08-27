@@ -40,10 +40,12 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px;
+  padding: 10px;
   transition: all 0.3s ease-in-out;
 }
-
+.nav-content .title {
+  display: inline;
+}
 .nav-content h1 {
   color: rgb(216, 112, 14);
   letter-spacing: 2px;
@@ -60,15 +62,17 @@ nav .logo {
   justify-content: space-between;
   list-style-type: none;
   font-size: 18px;
-  margin: 0px;
+  margin: 0;
 }
 
 .nav-content ul li {
   margin: 5px;
+  margin-top: 11px;
 }
 
 .nav-content ul li a {
   color: #fff;
+  font-size: 20px;
 }
 
 .nav-content ul li a:active {
@@ -94,7 +98,7 @@ nav .logo {
 }
 
 .form-btn {
-  margin: 0;
+  margin-right: 10px;
 }
 
 .form-btn .btn {
@@ -102,6 +106,10 @@ nav .logo {
   border-radius: 35px;
   padding: 8px 18px;
   color: #fff;
+}
+
+.form-btn .btn:active {
+  transform: scale(0.98);
 }
 
 .form-btn .login-btn {
@@ -145,7 +153,6 @@ nav .logo {
 
 .form-control input {
   width: 100%;
-  /* background-color: transparent; */
   border: none;
   border-radius: 5px;
   border-bottom: 2px solid rgb(216, 112, 14);;
@@ -179,4 +186,40 @@ nav .logo {
 
 .login-container .loginForm-btn:active {
   transform: scale(0.98);
+}
+
+@media(max-width: 1050px) {
+
+  .navbar ul li:nth-of-type(3){
+    display: none;
+  }
+
+  .navbar ul {
+    margin-left: -50px;
+  }
+
+  @media(max-width: 930px){
+    .navbar ul li:nth-of-type(2){
+      display: none;
+    }
+  }
+
+  @media(max-width: 870px){
+    .nav-content .title h1 {
+      display: none;
+    }
+  }
+
+  @media(max-width: 640px){
+    .navbar ul li:nth-of-type(1){
+      display: none;
+    }
+  }
+
+  @media(max-width: 600px){
+    .searchForm input {
+      width: 240px;
+      margin-left: -40px;
+    }
+  }
 }

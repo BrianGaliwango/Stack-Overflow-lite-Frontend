@@ -4,15 +4,59 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/style.css">
-  <title>Create Account</title>
+  <title>Register Form</title>
 </head>
 <body>
   <div class="main-container">
     <nav class="navbar">
-      <div class="nav-content"></div>
+      <div class="nav-content">
+
+        <div class="title-container">
+          <img src="/img/stack-overflow.svg" class="logo">
+        </div>
+
+        <div>
+        <h1 class="createAcc-title"> 
+          Stack Overflow lite
+        </h1>
+        </div>
+
+        <div id="form-btn" class="form-btn">
+          <input type="submit" value="Sign In" class="sign-in-btn" id="sign-up-btn">
+        </div>
+
+      </div>
     </nav>
-    <div class="user-container">
-      <h1>Create Account</h1>
+    <div class="login-container">
+
+      <img src="/img/stack-overflow.svg" class="login-logo">
+
+      <h1>Create an Account</h1>
+
+      <form action="#" method="post" id="login-form" class="login-form">
+
+        <div class="form-control">         
+         <input type="text" name="name" placeholder="Name" id="name" autocomplete="off">
+       </div>
+
+       <div class="form-control">         
+        <input type="email" name="email" placeholder="Email" id="name" autocomplete="off">
+      </div> 
+
+       <div class="form-control">        
+         <input type="text" name="password" placeholder="Password"id="password" autocomplete="off">
+      </div> 
+
+       <button class="loginForm-btn" id="login">Create Account</button>
+
+        <div class="register">
+          <p class="register-text">
+            Already have an Account?
+            <br>
+            <a href="log.html">Sign In here</a>
+          </p>
+        </div>
+      </form>
     </div>
   </div>
   <script src="/app.js"></script>

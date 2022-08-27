@@ -43,18 +43,28 @@ a {
   padding: 10px;
   transition: all 0.3s ease-in-out;
 }
-.nav-content .title {
-  display: inline;
+.nav-content .title-container {
+  display: flex;
 }
-.nav-content h1 {
+.nav-content 
+.user-title ,
+.login-title ,
+.createAcc-title
+{
   color: rgb(216, 112, 14);
   letter-spacing: 2px;
   margin: 0;
 }
 
+.nav-content .login-title ,
+.createAcc-title {
+  letter-spacing: 5px;
+  font-size: 28px;
+}
+
 nav .logo {
-  width: 40px;
-  height:30px ;
+  width: 60px;
+  height: 30px ;
 }
 
 .nav-content ul{
@@ -67,7 +77,6 @@ nav .logo {
 
 .nav-content ul li {
   margin: 5px;
-  margin-top: 11px;
 }
 
 .nav-content ul li a {
@@ -101,22 +110,29 @@ nav .logo {
   margin-right: 10px;
 }
 
-.form-btn .btn {
+.form-btn 
+.sign-up-btn ,
+.sign-out-btn ,
+.sign-in-btn {
   border: none;
   border-radius: 35px;
   padding: 8px 18px;
   color: #fff;
 }
 
-.form-btn .btn:active {
+.form-btn:active 
+.sign-up-btn ,
+.sign-out-btn ,
+.sign-in-btn {
   transform: scale(0.98);
 }
 
-.form-btn .login-btn {
+.form-btn .sign-up-btn ,
+.sign-in-btn{
   background-color: steelblue;
 }
 
-.form-btn .sign-up-btn {
+.form-btn .sign-out-btn {
   background-color: blueviolet;
 }
 
@@ -205,7 +221,7 @@ nav .logo {
   }
 
   @media(max-width: 870px){
-    .nav-content .title h1 {
+    .nav-content .user-title {
       display: none;
     }
   }
@@ -216,10 +232,4 @@ nav .logo {
     }
   }
 
-  @media(max-width: 600px){
-    .searchForm input {
-      width: 240px;
-      margin-left: -40px;
-    }
-  }
 }

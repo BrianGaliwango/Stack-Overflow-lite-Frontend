@@ -65,7 +65,7 @@ a {
   letter-spacing: 2px;
   margin: 0;
 }
-
+ 
 .nav-content h1 em {
   color: var(--secondary-text-color);
 }
@@ -171,6 +171,7 @@ nav .logo {
   text-align: center;
   overflow: hidden;
   padding: 30px 45px;
+  margin-top: 30px ;
 }
 
 .login-logo {

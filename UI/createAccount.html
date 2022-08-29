@@ -27,36 +27,39 @@
 
       </div>
     </nav>
-    <div class="login-container">
 
-      <img src="/img/stack-overflow.svg" class="login-logo">
+    <div class="main-content">
+      <div class="login-container">
 
-      <h1>Create an Account</h1>
+        <img src="/img/stack-overflow.svg" class="login-logo">
 
-      <form action="#" method="post" id="login-form" class="login-form">
+        <h1>Create an Account</h1>
+
+        <form action="#" method="post" id="login-form" class="login-form">
+
+          <div class="form-control">         
+          <input type="text" name="name" placeholder="Name" id="name" autocomplete="off">
+        </div>
 
         <div class="form-control">         
-         <input type="text" name="name" placeholder="Name" id="name" autocomplete="off">
-       </div>
+          <input type="email" name="email" placeholder="Email" id="name" autocomplete="off">
+        </div> 
 
-       <div class="form-control">         
-        <input type="email" name="email" placeholder="Email" id="name" autocomplete="off">
-      </div> 
+        <div class="form-control">        
+          <input type="text" name="password" placeholder="Password"id="password" autocomplete="off">
+        </div> 
 
-       <div class="form-control">        
-         <input type="text" name="password" placeholder="Password"id="password" autocomplete="off">
-      </div> 
+        <button class="loginForm-btn" id="login">Create Account</button>
 
-       <button class="loginForm-btn" id="login">Create Account</button>
-
-        <div class="register">
-          <p class="register-text">
-            Already have an Account?
-            <br>
-            <a href="log.html">Sign In here</a>
-          </p>
-        </div>
-      </form>
+          <div class="register">
+            <p class="register-text">
+              Already have an Account?
+              <br>
+              <a href="log.html">Sign In here</a>
+            </p>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
   <script src="/app.js"></script>

@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/style.css">
-  <title>Stack Overflow lite</title>
+  <title>User Page</title>
 </head>
 <body>
   <div class="main-container">
@@ -17,15 +17,15 @@
           </h1>
         </div>
 
+        <form action="search" method="post" id="searchForm" class="searchForm">
+          <input type="text" name="search" placeholder="Search..." autocomplete="off">
+        </form>
+
         <ul class="menu-list">
           <li><a href="#">Profile</a></li>
           <li><a href="#">Questions</a></li>
           <li><a href="#">Help</a></li>
         </ul>
-
-        <form action="search" method="post" id="searchForm" class="searchForm">
-          <input type="text" name="search" placeholder="Search..." autocomplete="off">
-        </form>
 
         <div id="form-btn" class="form-btn">
           <input type="submit" value="Sign Out" class="sign-out-btn" id="sign-out-btn">

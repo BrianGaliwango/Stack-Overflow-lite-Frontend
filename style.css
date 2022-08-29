@@ -1,3 +1,11 @@
+:root {
+  --main-color: rgb(216, 112, 14);
+  --background-main-color: rgb(33, 33, 33);
+  --btn-main-color: steelblue;
+  --secondary-text-color: whitesmoke;
+  --primary-text-color: #fff;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -17,43 +25,47 @@ a {
   align-items: center;
   justify-content: center;
   height: 100vh;
-}
-
-.nav-content {
-  max-width: 1200px; 
-  margin: 0 auto;
+  margin: 0;
 }
 
 .navbar {
   background-color: rgb(33, 33, 33);
   box-shadow: 0 3px 3px rgba(0,0,0,0.5), 0 3px 3px rgba(0,0,0,0.5);
-  color: #fff;
+  color: var(--primary-text-color);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   transition: all 0.3s ease-in-out;
   margin: 0 auto;  
+  z-index: 1;
 }
 
 .nav-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 10px;
+  margin: 0 auto;
   transition: all 0.3s ease-in-out;
 }
+
+
 .nav-content .title-container {
   display: flex;
 }
+
 .nav-content 
 .user-title ,
 .login-title ,
-.createAcc-title
-{
+.createAcc-title{
   color: rgb(216, 112, 14);
   letter-spacing: 2px;
   margin: 0;
+}
+
+.nav-content h1 em {
+  color: var(--secondary-text-color);
 }
 
 .nav-content .login-title ,
@@ -62,7 +74,7 @@ a {
   font-size: 28px;
 }
 
-nav .logo {
+nav .logo{
   width: 60px;
   height: 30px ;
 }

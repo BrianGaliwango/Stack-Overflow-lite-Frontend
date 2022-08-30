@@ -422,11 +422,14 @@ nav .logo {
 
 .posted-qtn {
   background-color: transparent;
+  height: 80vh;
   letter-spacing: 1px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
 }
 
 .posted-qtn-content {
@@ -496,17 +499,29 @@ nav .logo {
 }
 
 .answer-form .answer-post:focus {
-  outline-color: var(--main-color) ;
+  outline-color: var(--main-color);
+}
+
+.answers-content {
+  background-color: var(--form-bg-color);
+  border-radius: 5px;
+  overflow-y: scroll;
 }
 
 .answers-content .answer-list {
-  list-style-type: decimal-leading-zero;
+  list-style-type: circle;
   margin-right: 30px;
+  margin: 0;
 }
 
 .answer-list .answer {
+  display: flex;
+  align-items: center;
   font-size: 20px;
   letter-spacing: 1px;
+  color: #000;
   margin: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.answer .accept-answer-btn {}

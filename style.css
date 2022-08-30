@@ -5,6 +5,7 @@
   --secondary-text-color: whitesmoke;
   --primary-text-color: #fff;
   --main-body-color: #c3c3c3;
+  --hover-main-color: rgb(90 , 90, 90);
 }
 
 * {
@@ -283,10 +284,70 @@ nav .logo {
 }
 
 .right-container {
-  background-color: #fff;
+  background-color: var(--background-main-color);
   width: 75vw;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-text-color);
 }
+
+.left-container .left-header {
+  position: absolute;
+  top: 70;
+  left: 20;
+  display: flex;
+  align-items: center;
+}
+
+.open-profile {
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  background-image: url('/img/Diana King.jpg');
+  background-size: cover;
+}
+
+.profile-link {
+  color: var(--main-color);
+  font-size: 20px;
+  text-decoration: underline var(--secondary-text-color);
+  margin: 8px;
+  letter-spacing: 2px;
+}
+
+ .sidebar-menu .content-btns {
+  list-style-type: none;
+  margin-left: -40px;
+}
+
+.content-btns 
+.post-qtn , 
+.recent-qtns ,
+.qtns-answers {
+  background-color: transparent;
+  border: none;
+  color: var(--secondary-text-color);
+  font-size: 25px;
+  margin: 0;
+  font-family: inherit;
+  cursor: pointer;
+  width: 25vw;
+  height: 80px;
+  transition: all 0.1s ease-in-out;
+}
+
+.content-btns .post-qtn:hover ,
+.recent-qtns:hover ,
+.qtns-answers:hover {
+  background-color: var(--secondary-text-color);
+  color: var(--main-color);
+  font-size: 27px;
+}
+

@@ -77,7 +77,7 @@ a {
 .nav-content .login-title ,
 .createAcc-title {
   letter-spacing: 5px;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 nav .logo {
@@ -122,10 +122,6 @@ nav .logo {
 
 .searchForm input:focus {
   outline-color:var(--main-color);
-}
-
-.form-btn {
-  margin-right: 10px;
 }
 
 .form-btn input
@@ -252,6 +248,12 @@ nav .logo {
     .nav-content .user-title {
       display: none;
     }
+    
+    .nav-content .login-title ,
+    .createAcc-title
+    {
+      margin-left: -15px;
+    }
   }
 
   @media(max-width: 640px){
@@ -351,7 +353,7 @@ nav .logo {
 .qtns-answers:hover {
   background-color: var(--secondary-text-color);
   color: var(--main-color);
-  font-size: 27px;
+  font-size: 23px;
 }
 
 .right-container .post-content {
@@ -548,3 +550,28 @@ nav .logo {
   transform: scale(0.98);
 }
 
+@media(max-width: 870px) {
+  .profile-link {
+    font-size: 16px;
+  }
+
+  .open-profile {
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+  }
+
+  .post-qtn ,
+  .recent-qtns ,
+  .qtns-answers {
+    font-size: 23px;
+  }
+
+  .post-qtn:hover ,
+  .recent-qtns:hover ,
+  .qtns-answers:hover 
+  {
+    font-size: 21px;
+  }
+
+}

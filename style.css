@@ -353,8 +353,11 @@ nav .logo {
 }
 
 .right-container .post-content {
-  max-width: 600px;
+  max-width: 700px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 10px;
 }
 
@@ -415,3 +418,42 @@ nav .logo {
 .post-content .post-text em {
   color: var(--main-color);
 }
+
+.posted-qtn {
+  background-color: orange;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.posted-qtn-content {
+  background-color: azure;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
+}
+
+.posted-qtn-text {
+  font-size: 22px;
+  color:#000;
+}
+
+.posted-
+
+.posted-delete-btn {
+  border: none;
+  color: red;
+}
+
+.posted-answers-btn {
+  border: none;
+  color: green;
+}
+
+

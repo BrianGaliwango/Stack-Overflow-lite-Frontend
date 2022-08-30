@@ -6,6 +6,7 @@
   --primary-text-color: #fff;
   --main-body-color: #c3c3c3;
   --hover-main-color: rgb(90 , 90, 90);
+  --form-bg-color: azure;
 }
 
 * {
@@ -218,7 +219,7 @@ nav .logo {
   padding: 10px;
   font-family: inherit;
   font-size:18px;
-  color: white;
+  color: var(--primary-text-color);
   background-color:steelblue;
 }
 
@@ -378,10 +379,10 @@ nav .logo {
 
 .post-form .post-qtn {
   background-color: var(--secondary-text-color);
+  display: block;
   width: 100%;
   border: none;
   border-radius:2px;
-  display: block;
   font-family: inherit;
   font-size: 20px;
   padding: 10px;
@@ -429,7 +430,7 @@ nav .logo {
 }
 
 .posted-qtn-content {
-  background-color: azure;
+  background-color: var(--form-bg-color);
   width: 100%;
   border-radius: 5px;
   display: flex;
@@ -444,16 +445,48 @@ nav .logo {
   color:#000;
 }
 
-.posted-
+.posted-qtn-btns {
+  margin: 10px;
+}
+
+.posted-delete-btn ,
+.posted-answers-btn{
+  border: none;
+  border-radius: 15px;
+  font-size: 13px;
+  margin: 5px;
+  cursor: pointer;
+}
 
 .posted-delete-btn {
-  border: none;
   color: red;
 }
 
 .posted-answers-btn {
-  border: none;
   color: green;
 }
 
+.posted-delete-btn:active {
+  transform: scale(0.98);
+}
 
+.posted-answers-btn:active {
+  transform: scale(1.98);
+}
+
+.answer-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.answer-form .answer-post {
+  background-color: var(--form-bg-color);
+  width: 100%;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  font-family: serif;
+  text-align: center;
+  letter-spacing: 1px;
+}

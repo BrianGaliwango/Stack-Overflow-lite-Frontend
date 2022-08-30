@@ -421,7 +421,7 @@ nav .logo {
 }
 
 .posted-qtn {
-  background-color: orange;
+  background-color: transparent;
   letter-spacing: 1px;
   display: flex;
   flex-direction: column;
@@ -443,6 +443,7 @@ nav .logo {
 .posted-qtn-text {
   font-size: 22px;
   color:#000;
+  margin: 5px;
 }
 
 .posted-qtn-btns {
@@ -450,9 +451,10 @@ nav .logo {
 }
 
 .posted-delete-btn ,
-.posted-answers-btn{
+.posted-answers-btn {
   border: none;
   border-radius: 15px;
+  box-shadow:0 2px 10px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.5) ;
   font-size: 13px;
   margin: 5px;
   cursor: pointer;
@@ -464,6 +466,7 @@ nav .logo {
 
 .posted-answers-btn {
   color: green;
+  margin-left: 25px;
 }
 
 .posted-delete-btn:active {
@@ -471,7 +474,7 @@ nav .logo {
 }
 
 .posted-answers-btn:active {
-  transform: scale(1.98);
+  transform: scale(0.98);
 }
 
 .answer-form {
@@ -484,9 +487,26 @@ nav .logo {
   background-color: var(--form-bg-color);
   width: 100%;
   border: none;
+  border-radius: 5px;
   padding: 10px;
   font-size: 24px;
   font-family: serif;
   text-align: center;
   letter-spacing: 1px;
+}
+
+.answer-form .answer-post:focus {
+  outline-color: var(--main-color) ;
+}
+
+.answers-content .answer-list {
+  list-style-type: decimal-leading-zero;
+  margin-right: 30px;
+}
+
+.answer-list .answer {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

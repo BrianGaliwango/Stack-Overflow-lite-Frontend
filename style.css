@@ -312,6 +312,7 @@ nav .logo {
   border-radius: 50%;
   background-image: url('/img/Diana King.jpg');
   background-size: cover;
+  cursor: pointer;
 }
 
 .profile-link {
@@ -351,3 +352,66 @@ nav .logo {
   font-size: 27px;
 }
 
+.right-container .post-content {
+  max-width: 600px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.right-container .post-title {
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.right-container .post-title strong {
+  color: var(--main-color);
+}
+
+.right-container .post-form {
+  display: flex;
+  align-items: center;
+}
+
+.post-form .post-qtn {
+  background-color: var(--secondary-text-color);
+  width: 100%;
+  border: none;
+  border-radius:2px;
+  display: block;
+  font-family: inherit;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px;
+  text-align: center;
+}
+
+.post-form .post-qtn:focus {
+  outline-color: var(--main-color);
+}
+
+.post-form .post-btn {
+  background-color: var(--btn-main-color);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 8px;
+  font-size: 20px;
+  font-family: inherit;
+  color: var(--primary-text-color);
+  cursor: pointer;
+}
+
+.post-form .post-btn:active {
+  transform: scale(0.98);
+}
+
+.post-content .post-text {
+  font-size: 1.8em;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+
+.post-content .post-text em {
+  color: var(--main-color);
+}

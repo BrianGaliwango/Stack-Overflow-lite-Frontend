@@ -607,7 +607,8 @@ nav .logo {
 
 .recent-qtns-title , 
 .recent-answers-title ,
-.all-qtns-title {
+.all-qtns-title ,
+.all-answers-title {
   border-bottom: 1px solid var(--main-color);
   font-size: 30px;
   text-align: center;
@@ -667,6 +668,26 @@ nav .logo {
 .add-answer-btn {
   width: 100px;
   background-color: var(--main-color);
+}
+
+.add-answers-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.add-answers-input {
+  background-color: var(--secondary-text-color);
+  width: 97%;
+  border: none;
+  border-radius: 8px;
+  font-size: 19px;
+  padding: 8px ;
+  text-align: center;
+}
+
+.add-answers-input:focus {
+  outline-color: var(--main-color);
 }
 
 .recent-answers-btn:active ,

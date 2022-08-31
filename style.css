@@ -518,8 +518,8 @@ nav .logo {
   flex-direction: column;
   align-items: center;
   list-style-type: none;
-  padding: 10px;
-  margin: 0;
+  padding: 8px;
+  margin: 3px;
 }
 
 .answer-list .answer {
@@ -532,8 +532,12 @@ nav .logo {
   font-size: 20px;
   letter-spacing: 0.5px;
   color: var(--dark-text-color);
+  margin: 0 0 5px;
+}
+
+.answer-text {
+  align-items: center;
   margin: 5px;
-  padding: 0 5px ;
 }
 
 .answer .pick-answer-btn {

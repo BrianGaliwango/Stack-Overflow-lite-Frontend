@@ -8,6 +8,10 @@
   --hover-main-color: rgb(90 , 90, 90);
   --form-bg-color: azure;
   --dark-text-color: #000;
+  --box-shadow-color:0 2px 10px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.5);
+  --secondary-box-shadow-color: 0 3px 3px rgba(0,0,0,0.5), 0 3px 3px rgba(0,0,0,0.5);
+  --happy-text-color:green;
+  --danger-color:red;
 }
 
 * {
@@ -35,8 +39,7 @@ a {
 
 .navbar {
   background-color: var(--background-main-color);
-  /* height: 55px; */
-  box-shadow: 0 3px 3px rgba(0,0,0,0.5), 0 3px 3px rgba(0,0,0,0.5);
+  box-shadow: var(--secondary-box-shadow-color);
   color: var(--primary-text-color);
   position: fixed;
   top: 0;
@@ -138,7 +141,7 @@ nav .logo {
 
 .form-btn .sign-up-btn ,
 .sign-in-btn{
-  background-color: steelblue;
+  background-color: var(--btn-main-color);
 }
 
 .form-btn .sign-out-btn {
@@ -167,7 +170,7 @@ nav .logo {
   background-color: var(--primary-text-color);
   border: none;
   border-radius: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--box-shadow-color);
   text-align: center;
   overflow: hidden;
   padding: 30px 45px;
@@ -188,7 +191,7 @@ nav .logo {
 } 
 
 .login-container a {
-  color: steelblue;
+  color: var(--btn-main-color);
 }
 
 .form-control input {
@@ -217,7 +220,7 @@ nav .logo {
   font-family: inherit;
   font-size:18px;
   color: var(--primary-text-color);
-  background-color:steelblue;
+  background-color:var(--btn-main-color);
 }
 
 .login-container .loginForm-btn:focus {
@@ -497,18 +500,18 @@ nav .logo {
 .posted-answers-btn {
   border: none;
   border-radius: 15px;
-  box-shadow:0 2px 10px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.5) ;
+  box-shadow:var(--box-shadow-color);
   font-size: 13px;
   margin: 5px;
   cursor: pointer;
 }
 
 .posted-delete-btn {
-  color: red;
+  color: var(--danger-color);
 }
 
 .posted-answers-btn {
-  color: green;
+  color: var(--happy-text-color);
   margin-left: 25px;
 }
 
@@ -551,11 +554,11 @@ nav .logo {
 .answer .pick-answer-btn {
   border: none;
   border-radius: 15px;
-  box-shadow:0 2px 10px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.5) ;
+  box-shadow: var(--box-shadow-color);
   font-size: 14px;
   margin: 0 5px ;
   cursor: pointer;
-  color: green;
+  color: var(--happy-text-color);
 }
 
 .pick-answer-btn:active {
@@ -588,16 +591,6 @@ nav .logo {
 
 }
 
-/* .recent-container-bg {
-  width: 100vw;
-  height: 95vh;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: -20px ;
-} */
-
 .recent-qtns-container {
   background-color: rgb(45, 45, 45);
   border-radius: 15px;
@@ -607,6 +600,7 @@ nav .logo {
   display: flex;
   flex-direction: column;
   color: var(--dark-text-color);
+  margin-right: 40px;
 }
 
 .recent-qtns-title {
@@ -625,11 +619,33 @@ nav .logo {
 
 .recent-qtn-tab {
   background-color: var(--form-bg-color);
-  border-bottom: 1px solid var(--main-color);
   display: flex;
-  align-items: center;
+  flex-direction: column;
   margin: 5px; 
   border-radius: 15px;
   letter-spacing: 1px;
-  font-size: 20px;
+  font-size: 19px;
+}
+
+.recent-qtn-text {
+  margin: 10px;
+}
+
+.recent-answers-btn {
+  background-color: var(--happy-text-color);
+  width: 70px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: var(--secondary-box-shadow-color);
+  color: var(--primary-text-color);
+  font-family: inherit;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin: -5px 5px 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.recent-answers-btn:active {
+  transform: scale(0.98);
 }

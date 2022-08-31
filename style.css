@@ -591,7 +591,9 @@ nav .logo {
 
 }
 
-.recent-qtns-container {
+.recent-qtns-container ,
+.recent-answers-container ,
+.all-qtns-container {
   background-color: rgb(45, 45, 45);
   border-radius: 15px;
   max-width: 700px;
@@ -603,7 +605,9 @@ nav .logo {
   margin-right: 40px;
 }
 
-.recent-qtns-title {
+.recent-qtns-title , 
+.recent-answers-title ,
+.all-qtns-title {
   border-bottom: 1px solid var(--main-color);
   font-size: 30px;
   text-align: center;
@@ -611,13 +615,17 @@ nav .logo {
   letter-spacing: 1.2px;
 }
 
-.recent-qtns {
+.recent-qtns , 
+.recent-answers ,
+.all-qtns {
   list-style-type: none;
   padding: 5px;
   margin-top: -15;
 }
 
-.recent-qtn-tab {
+.recent-qtn-tab , 
+.recent-answers-tab ,
+.all-qtn-tab {
   background-color: var(--form-bg-color);
   display: flex;
   flex-direction: column;
@@ -627,11 +635,21 @@ nav .logo {
   font-size: 19px;
 }
 
-.recent-qtn-text {
+.recent-qtn-text ,
+.recent-answers-text ,
+.all-qtn-text {
   margin: 10px;
 }
 
-.recent-answers-btn {
+.all-addAns-btns {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5px;
+}
+
+.recent-answers-btn , 
+.all-answers-btn ,
+.add-answer-btn {
   background-color: var(--happy-text-color);
   width: 70px;
   border: none;
@@ -646,6 +664,14 @@ nav .logo {
   transition: transform 0.2s ease;
 }
 
-.recent-answers-btn:active {
+.add-answer-btn {
+  width: 100px;
+  background-color: var(--main-color);
+}
+
+.recent-answers-btn:active ,
+.all-answers-btn:active ,
+.add-answer-btn:active {
   transform: scale(0.98);
 }
+

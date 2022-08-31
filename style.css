@@ -452,6 +452,45 @@ nav .logo {
   margin: 5px;
 }
 
+.answer-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.answer-form .answer-post {
+  background-color: var(--form-bg-color);
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 24px;
+  font-family: serif;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.answer-form .answer-post:focus {
+  outline-color: var(--main-color);
+}
+
+.answer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+
+.answers-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--form-bg-color);
+  border-radius: 10px;
+  overflow: auto;
+  margin: 0;
+}
+
 .posted-qtn-btns {
   margin: 10px;
 }
@@ -483,36 +522,6 @@ nav .logo {
   transform: scale(0.98);
 }
 
-.answer-form {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.answer-form .answer-post {
-  background-color: var(--form-bg-color);
-  width: 100%;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 24px;
-  font-family: serif;
-  text-align: center;
-  letter-spacing: 1px;
-}
-
-.answer-form .answer-post:focus {
-  outline-color: var(--main-color);
-}
-
-.answers-content {
-  display: flex;
-  justify-content: center;
-  background-color: var(--form-bg-color);
-  border-radius: 10px;
-  overflow-y: scroll;
-}
-
 .answers-content .answer-list {
   display: flex;
   flex-direction: column;
@@ -520,6 +529,7 @@ nav .logo {
   list-style-type: none;
   padding: 8px;
   margin: 3px;
+  margin-top: 150px;
 }
 
 .answer-list .answer {

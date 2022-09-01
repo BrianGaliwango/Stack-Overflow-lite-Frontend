@@ -333,7 +333,8 @@ nav .logo {
   letter-spacing: 2px;
 }
 
-.topics-title {
+.topics-title ,
+.profile-categories-title{
   text-align: center;
   font-size: 18px;
   margin-top: 55px;
@@ -342,16 +343,17 @@ nav .logo {
   letter-spacing: 2px;
 }
 
-.profile-sidebar-menu .profile-content-btns ,
- .sidebar-menu .content-btns {
+
+.profile-sidebar-menu .profile-content-btns , 
+.sidebar-menu .content-btns {
   list-style-type: none;
   margin-left: -40px;
 }
 
 .profile-content-btns
 .profile-qtns-btn ,
-.profile-answers-btn ,
-.profile-recentQtns-btn ,
+.allQtns-answers-btn ,
+.recentProfile-qtns-btn ,
 .content-btns 
 .post-qtn-btn , 
 .recent-qtns-btn ,
@@ -369,11 +371,12 @@ nav .logo {
   transition: all 0.1s ease-in-out;
 }
 
-.profile-content-btns
+.profile-content-btns 
+.allQtns-answers-btn:hover ,
 .profile-qtns-btn:hover ,
-.profile-answers-btn:hover ,
-.profile-recentQtns-btn:hover,
-.content-btns .post-qtn-btn:hover ,
+.recentProfile-qtns-btn:hover , 
+.content-btns
+.post-qtn-btn:hover ,
 .recent-qtns-btn:hover ,
 .qtns-answers-btn:hover {
   background-color: var(--secondary-text-color);
@@ -385,9 +388,20 @@ nav .logo {
   max-width: 700px;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   margin: 10px;
+}
+
+.right-container
+.recent-questions-content ,
+.allQtns-content-container {
+  display: flex;
+  margin-left: 20px;
+}
+
+.allQtns-content-container {
+  margin-right: -20px;
 }
 
 .right-container .post-title {
@@ -600,12 +614,18 @@ nav .logo {
     margin: 2px;
   }
 
+  .profile-qtns-btn ,
+  .recentProfile-qtns-btn ,
+  .allQtns-answers-btn ,
   .post-qtn-btn ,
   .recent-qtns-btn ,
   .qtns-answers-btn {
     font-size: 23px;
   }
 
+  .profile-qtns-btn:hover ,
+  .recentProfile-qtns-btn:hover ,
+  .allQtns-answers-btn:hover ,
   .post-qtn-btn:hover ,
   .recent-qtns-btn:hover ,
   .qtns-answers-btn:hover 
@@ -617,7 +637,8 @@ nav .logo {
 
 .recent-qtns-container ,
 .recent-answers-container ,
-.all-qtns-container {
+.all-qtns-container ,
+.allMy-qtns-container {
   background-color: rgb(45, 45, 45);
   border-radius: 15px;
   max-width: 700px;
@@ -632,7 +653,8 @@ nav .logo {
 .recent-qtns-title , 
 .recent-answers-title ,
 .all-qtns-title ,
-.all-answers-title {
+.all-answers-title ,
+.allMy-answers-title {
   border-bottom: 1px solid var(--main-color);
   font-size: 30px;
   text-align: center;
@@ -642,7 +664,8 @@ nav .logo {
 
 .recent-qtns , 
 .recent-answers ,
-.all-qtns {
+.all-qtns ,
+.allMy-qtns {
   list-style-type: none;
   padding: 5px;
   margin-top: -15;
@@ -650,7 +673,8 @@ nav .logo {
 
 .recent-qtn-tab , 
 .recent-answers-tab ,
-.all-qtn-tab {
+.all-qtn-tab ,
+.allMy-qtn-tab {
   background-color: var(--form-bg-color);
   display: flex;
   flex-direction: column;
@@ -662,16 +686,20 @@ nav .logo {
 
 .recent-qtn-text ,
 .recent-answers-text ,
-.all-qtn-text {
+.all-qtn-text ,
+.allMy-qtn-text {
   margin: 10px;
 }
 
+.allMy-qtns-btns ,
 .all-addAns-btns {
   display: flex;
   justify-content: space-between;
   margin: 0 5px;
 }
 
+.myQtn-delete-btn ,
+.myQtn-answers-btn ,
 .recent-answers-btn , 
 .all-answers-btn ,
 .add-answer-btn {
@@ -687,6 +715,10 @@ nav .logo {
   margin: -5px 5px 5px;
   cursor: pointer;
   transition: transform 0.2s ease;
+}
+
+.myQtn-delete-btn {
+  background-color: var(--danger-color);
 }
 
 .add-answer-btn {
@@ -714,6 +746,8 @@ nav .logo {
   outline-color: var(--main-color);
 }
 
+.myQtn-answers-btn:active ,
+.myQtn-delete-btn:active ,
 .recent-answers-btn:active ,
 .all-answers-btn:active ,
 .add-answer-btn:active {

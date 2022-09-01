@@ -302,6 +302,7 @@ nav .logo {
   align-items: center;
   justify-content: center;
   color: var(--secondary-text-color);
+  overflow: hidden;
 }
 
 .left-container .left-header ,
@@ -388,15 +389,15 @@ nav .logo {
   max-width: 700px;
   overflow: hidden;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
-  margin: 10px;
+  margin-left: -20px;
 }
 
 .right-container
 .recent-questions-content ,
 .allQtns-content-container {
   display: flex;
+  align-items: center;
   margin-left: 20px;
 }
 
@@ -633,12 +634,16 @@ nav .logo {
     font-size: 21px;
   }
 
+  .allQtns-content-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
+.allMy-qtns-container ,
 .recent-qtns-container ,
 .recent-answers-container ,
-.all-qtns-container ,
-.allMy-qtns-container {
+.all-qtns-container {
   background-color: rgb(45, 45, 45);
   border-radius: 15px;
   max-width: 700px;
@@ -650,11 +655,11 @@ nav .logo {
   margin-right: 40px;
 }
 
+.allMy-qtns-title ,
 .recent-qtns-title , 
 .recent-answers-title ,
 .all-qtns-title ,
-.all-answers-title ,
-.allMy-answers-title {
+.all-answers-title {
   border-bottom: 1px solid var(--main-color);
   font-size: 30px;
   text-align: center;
@@ -662,19 +667,19 @@ nav .logo {
   letter-spacing: 1.2px;
 }
 
+.allMy-profile-qtns ,
 .recent-qtns , 
 .recent-answers ,
-.all-qtns ,
-.allMy-qtns {
+.all-qtns {
   list-style-type: none;
   padding: 5px;
   margin-top: -15;
 }
 
+.allMyPro-qtn-tab ,
 .recent-qtn-tab , 
 .recent-answers-tab ,
-.all-qtn-tab ,
-.allMy-qtn-tab {
+.all-qtn-tab {
   background-color: var(--form-bg-color);
   display: flex;
   flex-direction: column;
@@ -687,19 +692,19 @@ nav .logo {
 .recent-qtn-text ,
 .recent-answers-text ,
 .all-qtn-text ,
-.allMy-qtn-text {
+.allMyPro-qtn-text {
   margin: 10px;
 }
 
-.allMy-qtns-btns ,
+.allMyPro-answer-btns ,
 .all-addAns-btns {
   display: flex;
   justify-content: space-between;
   margin: 0 5px;
 }
 
-.myQtn-delete-btn ,
-.myQtn-answers-btn ,
+.myPro-delete-answer-btn ,
+.myPro-add-answer-btn ,
 .recent-answers-btn , 
 .all-answers-btn ,
 .add-answer-btn {
@@ -717,7 +722,7 @@ nav .logo {
   transition: transform 0.2s ease;
 }
 
-.myQtn-delete-btn {
+.myPro-delete-answer-btn {
   background-color: var(--danger-color);
 }
 

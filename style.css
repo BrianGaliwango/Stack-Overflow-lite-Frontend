@@ -16,6 +16,45 @@
   --university-text-color:navy;
 }
 
+@media(max-width: 1050px) {
+
+  .navbar ul li:nth-of-type(3){
+    display: none;
+  }
+
+  .navbar ul {
+    margin-left: -50px;
+  }
+
+  @media(max-width: 930px){
+    .navbar ul li:nth-of-type(2){
+      display: none;
+    }
+  }
+
+  @media(max-width: 870px){
+    .nav-content .user-title {
+      display: none;
+    }
+    
+    .nav-content .login-title ,
+    .createAcc-title
+    {
+      margin-left: -15px;
+    }
+  }
+
+  @media(max-width: 640px){
+    .navbar ul li:nth-of-type(1){
+      display: none;
+    }
+
+    .allMyPro-qtns-title {
+      display: none;
+    }
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -233,41 +272,6 @@ nav .logo {
   transform: scale(0.98);
 }
 
-@media(max-width: 1050px) {
-
-  .navbar ul li:nth-of-type(3){
-    display: none;
-  }
-
-  .navbar ul {
-    margin-left: -50px;
-  }
-
-  @media(max-width: 930px){
-    .navbar ul li:nth-of-type(2){
-      display: none;
-    }
-  }
-
-  @media(max-width: 870px){
-    .nav-content .user-title {
-      display: none;
-    }
-    
-    .nav-content .login-title ,
-    .createAcc-title
-    {
-      margin-left: -15px;
-    }
-  }
-
-  @media(max-width: 640px){
-    .navbar ul li:nth-of-type(1){
-      display: none;
-    }
-  }
-}
-
 .user-container {
   background-color: var(--background-main-color);
   width: 100vw;
@@ -325,53 +329,46 @@ nav .logo {
   cursor: pointer;
 }
 
-.left-profile-header {
+.left-profile-header { 
   position: absolute;
   top: 19;
   width: 100%;
-  height: 200px;
+  height: 230px;
   display: flex;
   flex-direction: column;
 }
 
 .profile-image {
+  background-color: var(--main-color);
   height: 100%;
-  width: 150%;
+  width: 100%;
   background-image: url('/img/Diana King.jpg');
+  background-repeat: no-repeat;
+  background-position:center;
 }
 
 .profile-total-content {
-  background-color: #fff;
+  background-color: var(--form-bg-color);
   border-bottom: 2px solid var(--main-color);
   box-shadow: var(--box-shadow-color);
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items:center ;
-  justify-content: space-between;
   margin-top: -5px;
 }
 
-.total-number-text {
-  font-size: 28px;
-  border-right: 3px solid var(--main-color);
-  border-left: 3px solid var(--main-color);
-  border-radius: 50%;
-  padding:5px ;
-  margin-left: 15px;
-  font-weight: bold;
-  color: var(--university-text-color);
-}
-
-.profile-total-text {
-  margin-right:10px;
-  font-size: 17px;
-  color: var(--university-text-color);
-  text-decoration: underline 2px var(--main-color);
-  text-underline-offset: 2px;
-}
-
-.profile-link ,
 .profile-name {
+  color: var(--university-text-color);
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration:2px underline var(--main-color);
+  text-underline-offset: 2px;
+  margin: 8px;
+  letter-spacing: 2px;
+}
+
+.profile-link {
   color: var(--university-text-color);
   font-size: 20px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -381,11 +378,30 @@ nav .logo {
   letter-spacing: 2px;
 }
 
+.total-number-text {
+  font-size: 26px;
+  border-right: 3px solid var(--happy-text-color);
+  border-left: 3px solid var(--happy-text-color);
+  border-radius: 50%;
+  padding: 2px;
+  margin-top: 1px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.profile-total-text {
+  margin-top: -4px;
+  font-size: 17px;
+  color: var(--university-text-color);
+  text-decoration: underline 2px var(--main-color);
+  text-underline-offset: 2px;
+}
+
 .topics-title ,
 .profile-categories-title{
   text-align: center;
   font-size: 23px;
-  margin-top: 80px;
+  margin-top: 100px;
   margin-bottom: -5px;
   text-decoration: underline var(--main-color);
   letter-spacing: 3px;
@@ -655,8 +671,7 @@ nav .logo {
     font-size: 16px;
   }
 
-  .open-profile ,
-  .profile-image {
+  .open-profile {
     width: 50px;
     height: 50px;
     margin: 2px;
@@ -716,7 +731,7 @@ nav .logo {
   letter-spacing: 1.2px;
 }
 
-.recentTotal-qtn-display {
+.myPro-recentTotal-qtn-display {
   background-color: rgb(23, 23, 23);
   box-shadow: var(--box-shadow-color);
   display: flex;
@@ -730,14 +745,14 @@ nav .logo {
   z-index: 1;
 }
 
-.total-qtns-container {
+.myPro-total-qtns-container {
   display: flex;
   align-items: center;
   color: var(--primary-text-color);
   margin: 0;
 }
 
-.total-qtns-container .total-qtns-number {
+.myPro-total-qtns-container .myPro-total-qtns-number {
   border-right: 3px solid var(--main-color);
   border-left: 3px solid var(--main-color);
   border-radius: 50%;
@@ -747,13 +762,13 @@ nav .logo {
   padding: 5px;
 }
 
-.total-qtn-text {
+.myPro-total-qtn-text {
   letter-spacing: 1px;
   font-size: 18px;
   font-family: inherit;
   text-decoration: underline 2px var(--main-color);
   text-underline-offset: 3px;
-  margin: 10px;
+  margin: 8px;
 }
 
 .allMy-profile-qtns ,

@@ -718,6 +718,7 @@ nav .logo {
 
 .recentTotal-qtn-display {
   background-color: rgb(23, 23, 23);
+  box-shadow: var(--box-shadow-color);
   display: flex;
   position: sticky;
   top: 0;
@@ -726,6 +727,7 @@ nav .logo {
   align-items: center;
   margin: 0 0 16px;
   padding: 10px;
+  z-index: 1;
 }
 
 .total-qtns-container {
@@ -741,6 +743,7 @@ nav .logo {
   border-radius: 50%;
   font-size: 25px;
   font-family: inherit;
+  color: var(--happy-text-color);
   padding: 5px;
 }
 
@@ -769,10 +772,12 @@ nav .logo {
   background-color: var(--form-bg-color);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin: 5px; 
   border-radius: 15px;
   letter-spacing: 1px;
   font-size: 19px;
+  position: relative;
 }
 
 .recent-qtn-text ,
@@ -780,6 +785,20 @@ nav .logo {
 .all-qtn-text ,
 .allMyPro-qtn-text {
   margin: 10px;
+}
+
+.total-answers-number {
+  position: absolute;
+  bottom: -2;
+  left: 10;
+  border-right: 3px solid var(--happy-text-color);
+  border-left: 3px solid var(--happy-text-color);
+  border-radius: 50%;
+  box-shadow: var(--secondary-box-shadow-color);
+  color: var(--main-color);
+  text-align: center;
+  padding: 2px;
+  margin-bottom: 5px;
 }
 
 .allMyPro-answer-btns ,
@@ -806,6 +825,10 @@ nav .logo {
   margin: -5px 5px 5px;
   cursor: pointer;
   transition: transform 0.2s ease;
+}
+
+.myPro-add-answer-btn {
+  margin-left: 40px;
 }
 
 .myPro-delete-answer-btn {

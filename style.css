@@ -384,11 +384,11 @@ nav .logo {
 .topics-title ,
 .profile-categories-title{
   text-align: center;
-  font-size: 18px;
+  font-size: 23px;
   margin-top: 80px;
   margin-bottom: -5px;
   text-decoration: underline var(--main-color);
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 
@@ -708,7 +708,7 @@ nav .logo {
 .recent-answers-title ,
 .all-qtns-title ,
 .all-answers-title {
-  text-decoration: underline 3px solid var(--main-color);
+  text-decoration: underline 2px solid var(--main-color);
   text-underline-offset: 2px;
   font-size: 30px;
   text-align: center;
@@ -731,8 +731,9 @@ nav .logo {
 }
 
 .total-qtns-container .total-qtns {
-  border-right: 8px solid var(--main-color);
-  border-radius: 35px;
+  border-right: 3px solid var(--main-color);
+  border-left: 3px solid var(--main-color);
+  border-radius: 50%;
   font-size: 25px;
   font-family: inherit;
   padding: 5px;
@@ -742,7 +743,7 @@ nav .logo {
   letter-spacing: 1px;
   font-size: 18px;
   font-family: inherit;
-  text-decoration: underline 4px var(--main-color);
+  text-decoration: underline 2px var(--main-color);
   text-underline-offset: 3px;
   margin: 10px;
 }

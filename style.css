@@ -16,6 +16,15 @@
   --university-text-color:navy;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-body-color);
+  margin: 0;
+}
+
 @media(max-width: 1050px) {
 
   .navbar ul li:nth-of-type(3){
@@ -31,37 +40,68 @@
       display: none;
     }
   }
+}
 
-  @media(max-width: 870px){
-    .nav-content .user-title {
-      display: none;
-    }
-    
-    .nav-content .login-title ,
-    .createAcc-title
-    {
-      margin-left: -15px;
-    }
+@media(max-width: 870px) {
+  .nav-content .user-title {
+    display: none;
+  }
+  
+  .nav-content .login-title ,
+  .createAcc-title
+  {
+    margin-left: -15px;
   }
 
-  @media(max-width: 640px){
-    .navbar ul li:nth-of-type(1){
-      display: none;
-    }
+  .profile-link ,
+  .profile-name {
+    font-size: 16px;
+  }
 
-    .allMyPro-qtns-title {
-      display: none;
-    }
+  .open-profile {
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+  }
+
+  .profile-qtns-btn ,
+  .recentProfile-qtns-btn ,
+  .allQtns-answers-btn ,
+  .post-qtn-btn ,
+  .recent-qtns-btn ,
+  .qtns-answers-btn {
+    font-size: 23px;
+  }
+
+  .profile-qtns-btn:hover ,
+  .recentProfile-qtns-btn:hover ,
+  .allQtns-answers-btn:hover ,
+  .post-qtn-btn:hover ,
+  .recent-qtns-btn:hover ,
+  .qtns-answers-btn:hover 
+  {
+    font-size: 21px;
+  }
+
+  .allQtns-content-container {
+    display: flex;
+    flex-direction: column;
   }
 }
 
-* {
-  box-sizing: border-box;
+@media(max-width: 640px){
+  .navbar ul li:nth-of-type(1){
+    display: none;
+  }
+
+  .allMyPro-qtns-title {
+    display: none;
+  }
+
+  .profile-sidebar-menu h1 {
+    font-size: 15px;
 }
 
-body {
-  background-color: var(--main-body-color);
-  margin: 0;
 }
 
 a {
@@ -378,8 +418,8 @@ nav .logo {
   letter-spacing: 2px;
 }
 
-.total-number-text {
-  font-size: 26px;
+.profile-total-number-qtns {
+  font-size: 20px;
   border-right: 3px solid var(--happy-text-color);
   border-left: 3px solid var(--happy-text-color);
   border-radius: 50%;
@@ -395,15 +435,17 @@ nav .logo {
   color: var(--university-text-color);
   text-decoration: underline 2px var(--main-color);
   text-underline-offset: 2px;
+  letter-spacing: 2px;
 }
 
 .topics-title ,
 .profile-categories-title{
   text-align: center;
-  font-size: 23px;
+  font-size: 18px;
   margin-top: 100px;
   margin-bottom: -5px;
-  text-decoration: underline var(--main-color);
+  text-decoration:2px underline var(--main-color);
+  text-underline-offset: 2px;
   letter-spacing: 3px;
 }
 
@@ -665,44 +707,6 @@ nav .logo {
   transform: scale(0.98);
 }
 
-@media(max-width: 870px) {
-  .profile-link ,
-  .profile-name {
-    font-size: 16px;
-  }
-
-  .open-profile {
-    width: 50px;
-    height: 50px;
-    margin: 2px;
-  }
-
-  .profile-qtns-btn ,
-  .recentProfile-qtns-btn ,
-  .allQtns-answers-btn ,
-  .post-qtn-btn ,
-  .recent-qtns-btn ,
-  .qtns-answers-btn {
-    font-size: 23px;
-  }
-
-  .profile-qtns-btn:hover ,
-  .recentProfile-qtns-btn:hover ,
-  .allQtns-answers-btn:hover ,
-  .post-qtn-btn:hover ,
-  .recent-qtns-btn:hover ,
-  .qtns-answers-btn:hover 
-  {
-    font-size: 21px;
-  }
-
-
-  .allQtns-content-container {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 .allMy-qtns-container ,
 .recent-qtns-container ,
 .recent-answers-container ,
@@ -753,12 +757,12 @@ nav .logo {
 }
 
 .myPro-total-qtns-container .myPro-total-qtns-number {
-  border-right: 3px solid var(--main-color);
-  border-left: 3px solid var(--main-color);
+  border-right: 3px solid var(--happy-text-color);
+  border-left: 3px solid var(--happy-text-color);
   border-radius: 50%;
   font-size: 25px;
   font-family: inherit;
-  color: var(--happy-text-color);
+  color: var(--main-color);
   padding: 5px;
 }
 
@@ -848,6 +852,11 @@ nav .logo {
 
 .myPro-delete-answer-btn {
   background-color: var(--danger-color);
+}
+
+.myPro-delete-answer-btn:active ,
+.myPro-add-answer-btn:active{
+  transform: scale(0.98);
 }
 
 .add-answer-btn {

@@ -361,24 +361,29 @@ nav .logo {
 }
 
 .left-container .left-header {
+  background-color: var(--main-color);
   position: absolute;
-  top: 70;
-  left: 20;
+  top: 0;
+  height: 180px;
+  width: 100%;
   display: flex;
   align-items: center;
 }
 
 .open-profile {
-  width: 70px;
-  height: 70px;
+  width: 120px;
+  height: 120px;
   border: none;
   border-radius: 50%;
   background-image: url('/img/Diana King.jpg');
   background-size: cover;
+  display: flex;
   cursor: pointer;
+  margin-left: 20px;
+  position: fixed;
 }
 
-.left-profile-header { 
+.left-profile-header {  
   position: absolute;
   top: 0;
   width: 100%;
@@ -410,7 +415,7 @@ nav .logo {
 .profile-name {
   color: var(--university-text-color);
   font-size: 15px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-decoration:2px underline var(--main-color);
   text-underline-offset: 2px;
   margin: 8px;
@@ -418,12 +423,12 @@ nav .logo {
 }
 
 .profile-link {
-  color: var(--university-text-color);
+  color: var(--primary-text-color);
   font-size: 20px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-decoration: underline var(--main-color);
+  font-family:  'Times New Roman', Times, serif;
+  text-decoration: underline var(--happy-text-color);
   text-underline-offset: 2px;
-  margin: 8px;
+  margin-left: 150px;
   letter-spacing: 2px;
 }
 
@@ -726,7 +731,7 @@ nav .logo {
   background-color: rgb(45, 45, 45);
   border-radius: 2px;
   max-width: 700px;
-  height: 87vh;
+  height: 80vh;
   overflow: auto;
   display: flex;
   flex-direction: column;

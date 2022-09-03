@@ -793,7 +793,8 @@ nav .logo {
   margin: 8px;
 }
 
-.allMy-profile-qtns ,
+.myPro-allQuestions-list ,
+.myPro-question-answers ,
 .recent-qtns , 
 .recent-answers ,
 .all-qtns {
@@ -802,7 +803,8 @@ nav .logo {
   margin-top: -15;
 }
 
-.allMyPro-qtn-tab ,
+.allMyPro-qtn-content ,
+.myPro-answers-content ,
 .recent-qtn-tab , 
 .recent-answers-tab ,
 .all-qtn-tab {
@@ -817,14 +819,15 @@ nav .logo {
   position: relative;
 }
 
+.allMyPro-qtn-text ,
+.myPro-answer-text ,
 .recent-qtn-text ,
 .recent-answers-text ,
-.all-qtn-text ,
-.allMyPro-qtn-text {
+.all-qtn-text {
   margin: 10px;
 }
 
-.total-answers-number {
+.myPro-inQtn-total-answers-number {
   position: absolute;
   bottom: -2;
   left: 10;
@@ -845,6 +848,15 @@ nav .logo {
   margin: 0 5px;
 }
 
+.myPro-deleteBtn-content {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+  margin-right: 15px;
+  margin-top: -5px;
+}
+
+.myPro-delete-qtn-btn ,
 .myPro-delete-answer-btn ,
 .myPro-add-answer-btn ,
 .recent-answers-btn , 
@@ -868,12 +880,20 @@ nav .logo {
   margin-left: 40px;
 }
 
-.myPro-delete-answer-btn {
+.myPro-delete-qtn-btn {
   background-color: var(--danger-color);
+  align-items: flex-end;
 }
 
-.myPro-delete-answer-btn:active ,
-.myPro-add-answer-btn:active{
+.myPro-delete-answer-btn {
+  background-color: var(--danger-color);
+  margin: 2px;
+}
+
+
+.myPro-delete-qtn-btn:active ,
+.myPro-add-answer-btn:active ,
+.myPro-delete-answer-btn:active {
   transform: scale(0.98);
 }
 

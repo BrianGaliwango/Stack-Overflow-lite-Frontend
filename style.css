@@ -110,8 +110,17 @@ body {
     font-size: 24px;
     letter-spacing: 2px;
   }
-
   
+}
+
+@media (min-width: 640px){
+  .MyPro-RecentQtns-title {
+    display: none;
+  }
+
+  .myPro-total-recentQtns-container {
+    display: flex;
+  }
 }
 
 a {
@@ -719,6 +728,8 @@ nav .logo {
 
 .allMy-qtns-container ,
 .allMy-answers-container ,
+.myPro-recentQtns-container ,
+.myPro-recentAnswers-container ,
 .recent-qtns-container ,
 .recent-answers-container ,
 .all-qtns-container {
@@ -733,8 +744,14 @@ nav .logo {
   margin-right: 40px;
 }
 
+.myPro-recentQtns-container {
+  margin-left: 30px;
+}
+
 .myPro-total-qtns-display ,
-.myPro-Total-answers-display {
+.myPro-Total-answers-display ,
+.myPro-recent-qtns-display ,
+.myPro-total-recentAnswers-display {
   background-color: rgb(23, 23, 23);
   box-shadow: var(--box-shadow-color);
   display: flex;
@@ -748,9 +765,10 @@ nav .logo {
   z-index: 1;
 }
 
-
 .allMyPro-qtns-title ,
 .myPro-answers-title ,
+.myPro-recentQtns-title ,
+.myPro-recentAnswers-title ,
 .recent-qtns-title , 
 .recent-answers-title ,
 .all-qtns-title ,
@@ -764,7 +782,9 @@ nav .logo {
 }
 
 .myPro-total-qtns-container ,
-.myPro-total-answers-container {
+.myPro-total-answers-container ,
+.myPro-total-recentQtns-container ,
+.myPro-total-recentAnswers-container {
   display: flex;
   align-items: center;
   color: var(--primary-text-color);
@@ -772,19 +792,26 @@ nav .logo {
 }
 
 .myPro-total-qtns-container .myPro-total-qtns-number ,
-.myPro-total-answers-container .myPro-total-answers-number
+.myPro-total-answers-container .myPro-total-answers-number ,
+.myPro-total-recentQtns-container .myPro-total-recentQtns-number ,
+.myPro-total-recentAnswers-container .myPro-total-recentAnswers-number
  {
   border-right: 3px solid var(--happy-text-color);
   border-left: 3px solid var(--happy-text-color);
   border-radius: 50%;
-  font-size: 25px;
+  font-size: 20px;
   font-family: inherit;
   color: var(--main-color);
-  padding: 5px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .myPro-total-qtn-text , 
-.myPro-total-answers-text {
+.myPro-total-answers-text ,
+.myPro-total-recentQtns-text ,
+.myPro-total-recentAnswers-text {
   letter-spacing: 1px;
   font-size: 18px;
   font-family: inherit;
@@ -795,6 +822,8 @@ nav .logo {
 
 .myPro-allQuestions-list ,
 .myPro-question-answers ,
+.myPro-recentQuestions-list ,
+.myPro-recentQuestion-answers ,
 .recent-qtns , 
 .recent-answers ,
 .all-qtns {
@@ -805,6 +834,8 @@ nav .logo {
 
 .allMyPro-qtn-content ,
 .myPro-answers-content ,
+.myPro-recentQtn-content ,
+.myPro-recentAnswer-content ,
 .recent-qtn-tab , 
 .recent-answers-tab ,
 .all-qtn-tab {
@@ -821,34 +852,40 @@ nav .logo {
 
 .allMyPro-qtn-text ,
 .myPro-answer-text ,
+.myPro-recentQtn-text ,
+.myPro-recentAnswer-text ,
 .recent-qtn-text ,
 .recent-answers-text ,
 .all-qtn-text {
   margin: 10px;
 }
 
-.myPro-inQtn-total-answers-number {
+.myPro-inQtn-total-answers-number ,
+.myPro-inQtn-recentTotal-answers-number {
   position: absolute;
   bottom: -2;
-  left: 10;
+  left: 90;
   border-right: 3px solid var(--happy-text-color);
   border-left: 3px solid var(--happy-text-color);
   border-radius: 50%;
   box-shadow: var(--secondary-box-shadow-color);
   color: var(--main-color);
   text-align: center;
-  padding: 2px;
-  margin-bottom: 5px;
+  font-size: 15px;
+  padding: 1px;
+  margin-bottom: 6px;
 }
 
 .allMyPro-answer-btns ,
-.all-addAns-btns {
+.all-addAns-btns ,
+.myPro-recentQtn-btns {
   display: flex;
   justify-content: space-between;
   margin: 0 5px;
 }
 
-.myPro-deleteBtn-content {
+.myPro-deleteBtn-content ,
+.myPro-recentDeleteBtn-content {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 5px;
@@ -859,6 +896,9 @@ nav .logo {
 .myPro-delete-qtn-btn ,
 .myPro-delete-answer-btn ,
 .myPro-add-answer-btn ,
+.myPro-recentAnswers-btn ,
+.myPro-recentDeleteQtn-btn ,
+.myPro-recentDelete-answer-btn ,
 .recent-answers-btn , 
 .all-answers-btn ,
 .add-answer-btn {
@@ -876,11 +916,9 @@ nav .logo {
   transition: transform 0.2s ease;
 }
 
-.myPro-add-answer-btn {
-  margin-left: 40px;
-}
-
-.myPro-delete-qtn-btn {
+.myPro-delete-qtn-btn ,
+.myPro-recentDeleteQtn-btn ,
+.myPro-recentDelete-answer-btn {
   background-color: var(--danger-color);
   align-items: flex-end;
 }
@@ -890,9 +928,11 @@ nav .logo {
   margin: 2px;
 }
 
-
 .myPro-delete-qtn-btn:active ,
 .myPro-add-answer-btn:active ,
+.myPro-recentAnswers-btn:active ,
+.myPro-recentDeleteQtn-btn:active ,
+.myPro-recentDelete-answer-btn:active ,
 .myPro-delete-answer-btn:active {
   transform: scale(0.98);
 }

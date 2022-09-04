@@ -764,7 +764,8 @@ nav .logo {
 .myPro-Total-answers-display ,
 .myPro-recent-qtns-display ,
 .myPro-total-recentAnswers-display ,
-.user-recentQtns-display {
+.user-recentQtns-display ,
+.allUser-qtns-display {
   background-color: rgb(23, 23, 23);
   box-shadow: var(--box-shadow-color);
   display: flex;
@@ -791,7 +792,8 @@ nav .logo {
 .recent-answers-title ,
 .all-qtns-title ,
 .all-answers-title ,
-.user-recentQtns-title {
+.user-recentQtns-title ,
+.allUser-qtns-title {
   text-decoration: underline 2px solid var(--main-color);
   text-underline-offset: 2px;
   font-size: 20px;
@@ -806,26 +808,27 @@ nav .logo {
   font-size: 25px;
 }
 
-.recent-answers-title {
-  background-color: rgba(0, 0, 0, 0.4);
+.recent-answers-title ,
+.allUser-qtns-title {
   font-size: 24px;
 }
 
 .myPro-total-qtns-container ,
 .myPro-total-answers-container ,
 .myPro-total-recentQtns-container ,
-.myPro-total-recentAnswers-container {
+.myPro-total-recentAnswers-container ,
+.allUser-total-qtns-container {
   display: flex;
   align-items: center;
   color: var(--primary-text-color);
   margin: 0;
 }
 
-.myPro-total-qtns-container .myPro-total-qtns-number ,
-.myPro-total-answers-container .myPro-total-answers-number ,
-.myPro-total-recentQtns-container .myPro-total-recentQtns-number ,
-.myPro-total-recentAnswers-container .myPro-total-recentAnswers-number
- {
+.myPro-total-qtns-number ,
+.myPro-total-answers-number ,
+.myPro-total-recentQtns-number ,
+.myPro-total-recentAnswers-number ,
+.allUser-total-qtns-number {
   border-right: 3px solid var(--happy-text-color);
   border-left: 3px solid var(--happy-text-color);
   border-radius: 50%;
@@ -836,6 +839,10 @@ nav .logo {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.allUser-total-qtns-number {
+  margin-right: 10px;
 }
 
 .myPro-total-qtn-text , 
@@ -861,7 +868,7 @@ nav .logo {
 .myPro-recentQuestion-answers ,
 .recent-qtns , 
 .recent-answers-list ,
-.all-qtns {
+.allUser-qtns-list {
   list-style-type: none;
   padding: 5px;
   margin-top: -1;
@@ -873,7 +880,7 @@ nav .logo {
 .myPro-recentAnswer-content ,
 .recent-qtn-tab , 
 .recent-answers-tab ,
-.all-qtn-tab {
+.allUser-qtn-content {
   background-color: var(--form-bg-color);
   display: flex;
   flex-direction: column;
@@ -891,7 +898,7 @@ nav .logo {
 .myPro-recentAnswer-text ,
 .recent-qtn-text ,
 .recent-answers-text ,
-.all-qtn-text {
+.allUser-qtn-text {
   margin: 10px;
 }
 
@@ -908,6 +915,19 @@ nav .logo {
   font-size: 15px;
   padding: 1px;
   margin-right:10px ;
+}
+
+.allUser-inQtn-total-answers-number {
+  position: absolute;
+  right: 90;
+  bottom: 5;
+  border-left: 3px solid var(--happy-text-color);
+  border-right: 3px solid var(--happy-text-color);
+  border-radius: 50%;
+  box-shadow: var(--secondary-box-shadow-color);
+  padding: 1px;
+  text-align: center;
+  font-size: 15px;
 }
 
 .myPro-inQtn-total-answers-number ,
@@ -949,8 +969,8 @@ nav .logo {
 }
 
 .allMyPro-answer-btns ,
-.all-addAns-btns ,
-.myPro-recentQtn-btns {
+.myPro-recentQtn-btns ,
+.allUser-addAns-btns {
   display: flex;
   justify-content: space-between;
   margin: 0 5px;
@@ -966,8 +986,8 @@ nav .logo {
 .myPro-delete-answer-btn ,
 .myPro-add-answer-btn ,
 .myPro-recentAnswers-btn , 
-.all-answers-btn ,
-.add-answer-btn {
+.allUser-answers-btn ,
+.user-addAnswer-btn {
   background-color: var(--happy-text-color);
   width: 70px;
   border: none;
@@ -980,6 +1000,11 @@ nav .logo {
   margin: -5px 5px 5px;
   cursor: pointer;
   transition: transform 0.2s ease;
+}
+
+.user-addAnswer-btn {
+  width: 100px;
+  background-color: var(--main-color);
 }
 
 .myPro-delete-qtn-btn ,
@@ -1013,11 +1038,6 @@ nav .logo {
   transform: scale(0.98);
 }
 
-.add-answer-btn {
-  width: 100px;
-  background-color: var(--main-color);
-}
-
 .add-answers-form {
   width: 100%;
   display: flex;
@@ -1041,8 +1061,8 @@ nav .logo {
 .myQtn-answers-btn:active ,
 .myQtn-delete-btn:active ,
 .recent-answers-btn:active ,
-.all-answers-btn:active ,
-.add-answer-btn:active {
+.allUser-answers-btn:active ,
+.user-addAnswer-btn:active {
   transform: scale(0.98);
 }
 

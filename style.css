@@ -591,7 +591,7 @@ nav .logo {
   align-items: end;
 }
 
-.answer-container ,
+.user-answers-container ,
 .myPro-allQtns-container ,
 .allMy-answers-container ,
 .myPro-recentQtns-container ,
@@ -647,15 +647,7 @@ nav .logo {
   outline-color: var(--main-color);
 }
 
-.posted-qtn-content {
-  background-color: var(--form-bg-color);
-  width: 100%;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
+.user-postedQtn-content ,
 .posted-recentQtn-content ,
 .allUser-postedQtn-content ,
 .myPro-postedQtn-content ,
@@ -664,17 +656,18 @@ nav .logo {
   border-radius: 5px;
   display: flex;
   align-items: center;
-  width: 96.2%;
+  width: 98%;
   position: sticky; 
   z-index: 1; 
+  margin: 5px 5px;
 }
 
 .myPro-postedQtn-content ,
 .myPro-recentPostedQtn-content {
-  margin-top: 5px;
+  /* margin-top: 5px; */
 }
 
-.posted-qtn-text ,
+.user-postedQtn-text ,
 .posted-recentQtn-text ,
 .allUser-postedQtn-text ,
 .myPro-postedQtn-text ,
@@ -684,7 +677,7 @@ nav .logo {
   margin: 5px;
 }
 
-.posted-qtn-btns ,
+.user-postedQtn-btns ,
 .posted-recentQtn-btns ,
 .allUser-postedQtns-btns ,
 .myPro-postedQtn-btns ,
@@ -703,7 +696,7 @@ nav .logo {
   margin-left: 25px;
 }
 
-.posted-delete-btn ,
+.user-postedQtns-back-btn ,
 .posted-recentQtns-back-btn ,
 .allUser-postedQtns-back-btn ,
 .myPro-postedQtns-back-btn ,
@@ -718,7 +711,7 @@ nav .logo {
  
 }
 
-.posted-delete-btn:active ,
+.user-postedQtns-back-btn:active ,
 .posted-recentQtns-back-btn:active ,
 .allUser-postedQtns-back-btn:active ,
 .myPro-postedQtns-back-btn:active {
@@ -820,6 +813,7 @@ nav .logo {
   height: 45px;
 }
 
+.user-answers-title ,
 .myPro-allQtns-title ,
 .myPro-answers-title ,
 .myPro-recentQtns-title ,
@@ -1062,7 +1056,8 @@ nav .logo {
   background-color: var(--main-color);
 }
 
-.add-answers-form ,
+/* .add-answers-form , */
+.user-addAnswers-form ,
 .allUsers-addAnswers-form {
   width: 100%;
   display: flex;
@@ -1070,15 +1065,16 @@ nav .logo {
 }
 
 .add-answers-input {
-  background-color: var(--secondary-text-color);
+  /* background-color: var(--secondary-text-color);
   width: 97%;
   border: none;
   border-radius: 8px;
   font-size: 19px;
   padding: 8px ;
-  text-align: center;
+  text-align: center; */
 }
 
+.user-addAnswer-input ,
 .allUser-addAnswer-input {
   background-color: var(--secondary-text-color);
   width: 98%;
@@ -1091,7 +1087,8 @@ nav .logo {
   padding: 10px;
 } 
 
-.add-answers-input:focus ,
+/* .add-answers-input:focus , */
+.user-addAnswer-input:focus ,
 .allUser-addAnswer-input:focus {
   outline-color: var(--main-color);
 }

@@ -515,7 +515,8 @@ nav .logo {
 
 .right-container .post-content ,
 .recent-questions-content ,
-.allQtns-content-container {
+.allQtns-content-container ,
+.myPro-allRecentQtns-content-container {
   max-width: 700px;
   overflow: hidden;
   display: flex;
@@ -581,6 +582,14 @@ nav .logo {
   color: var(--main-color);
 }
 
+.myPro-outAnswers-container {
+  max-width: 700px ;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
 .answer-container ,
 .allMy-qtns-container ,
 .allMy-answers-container ,
@@ -597,6 +606,7 @@ nav .logo {
   overflow: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   color: var(--dark-text-color);
   margin-left: 25px;
   margin-top: 20px;
@@ -652,13 +662,13 @@ nav .logo {
   border-radius: 5px;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 96.2%;
   position: sticky; 
   z-index: 1; 
 }
 
 .myPro-postedQtn-content {
-  width: 100%;
+  margin-top: 5px;
 }
 
 .posted-qtn-text ,
@@ -795,11 +805,13 @@ nav .logo {
   justify-content: center;
 }
 
+.myPro-recent-qtns-display { 
+
+}
+
 .myPro-Total-answers-display {
-  background-color: rgba(0, 0, 0, 0.4);
   box-shadow: none;
   height: 45px;
-  margin-top: 5px;
 }
 
 .allMyPro-qtns-title ,
@@ -823,7 +835,6 @@ nav .logo {
 
 .user-recentQtns-title ,
 .allUser-qtns-title {
-
   font-size: 24px;
 }
 
@@ -877,9 +888,9 @@ nav .logo {
   margin: 8px;
 }
 
-.myPro-answers-content ,
 .recent-answers-content ,
-.user-allAnswers-content {
+.user-allAnswers-content ,
+.myPro-outRecentQtn-container {
   border-radius: 5px;
   overflow-y: auto;
 }
@@ -910,7 +921,7 @@ nav .logo {
   flex-direction: column;
   justify-content: space-between;
   margin: 5px; 
-  border-radius: 5px;
+  border-radius: 15px;
   letter-spacing: 1px;
   font-size: 19px;
   position: relative;

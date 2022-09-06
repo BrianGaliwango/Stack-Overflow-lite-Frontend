@@ -615,6 +615,11 @@ nav .logo {
   margin-top: 20px;
 }
 
+.ask-qtn-container {
+  background-color: var(--background-main-color);
+  color: var(--primary-text-color);
+}
+
 .posted-qtn {
   background-color: transparent;
   height: 80vh;

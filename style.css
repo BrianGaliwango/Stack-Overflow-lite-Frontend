@@ -515,7 +515,6 @@ nav .logo {
 
 .post-content ,
 .user-recentQtns-content-container ,
-/* .user-allAnswers-container , */
 .user-allQtns-content-container ,
 .myPro-allQtns-content-container ,
 .myPro-allRecentQtns-content-container {
@@ -584,20 +583,10 @@ nav .logo {
   color: var(--main-color);
 }
 
-.myPro-outRecentAnswers-container ,
-.myPro-outAnswers-container {
-  /* max-width: 700px ;
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  align-items: end; */
-}
-
 .ask-qtn-container ,
 .user-answers-container ,
 .user-recentQtns-container ,
 .myPro-allQtns-container ,
-/* .allMy-answers-container , */
 .myPro-allAnswers-container ,
 .myPro-recentQtns-container ,
 .myPro-recentAnswers-container ,
@@ -769,11 +758,6 @@ nav .logo {
   justify-content: center;
 }
 
-.myPro-total-answers-display {
-  /* box-shadow: none;
-  height: 45px; */
-}
-
 .user-answers-title ,
 .myPro-allQtns-title ,
 .myPro-answers-title ,
@@ -848,7 +832,6 @@ nav .logo {
   text-underline-offset: 3px;
   margin: 8px;
 }
-
 
 .user-answers-content ,
 .user-recentQtns-content ,

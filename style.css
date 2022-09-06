@@ -514,7 +514,7 @@ nav .logo {
 }
 
 .right-container .post-content ,
-.recent-questions-content ,
+.user-recentQtns-content-container ,
 .myPro-allQtns-content-container ,
 .myPro-allRecentQtns-content-container {
   max-width: 700px;
@@ -592,11 +592,11 @@ nav .logo {
 }
 
 .user-answers-container ,
+.user-recentQtns-container ,
 .myPro-allQtns-container ,
 .allMy-answers-container ,
 .myPro-recentQtns-container ,
 .myPro-recentAnswers-container ,
-.recent-qtns-container ,
 .recent-answers-container ,
 .allUser-qtns-container ,
 .allUser-answers-container {
@@ -648,6 +648,7 @@ nav .logo {
 }
 
 .user-postedQtn-content ,
+/* .user-recentQtns-content , */
 .posted-recentQtn-content ,
 .allUser-postedQtn-content ,
 .myPro-postedQtn-content ,
@@ -722,55 +723,18 @@ nav .logo {
   transform: scale(0.98);
 }
 
-.answers-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--form-bg-color);
-  border-radius: 10px;
-  overflow: auto;
-  margin: 0;
-}
-
-.answers-content .answer-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style-type: none;
-  justify-content: center;
-  padding: 8px;
-  margin: 3px;
-}
-
-.answer-list .answer {
-  background-color: var(--secondary-text-color);
-  border-radius: 10px;
-  box-shadow:0 1px 5px rgba(0, 0, 0, 0.2), 0 1px 5px rgba(0, 0, 0, 0.5) ;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  letter-spacing: 0.5px;
-  color: var(--dark-text-color);
-  margin: 0 0 5px;
-}
-
-.answer-text {
-  align-items: center;
-  margin: 5px;
-}
-
-.answer .pick-answer-btn {
+.user-pickAnswer-btn {
   border: none;
+  width: 90px;
   border-radius: 15px;
   box-shadow: var(--box-shadow-color);
   font-size: 14px;
-  margin: 0 5px ;
+  margin: 0 5px 5px 10px ;
   cursor: pointer;
   color: var(--happy-text-color);
 }
 
-.pick-answer-btn:active {
+.user-pickAnswer-btn:active {
   transform: scale(0.98);
 }
 
@@ -786,7 +750,7 @@ nav .logo {
 .user-recentQtns-display ,
 .allUser-qtns-display {
   background-color: rgb(23, 23, 23);
-  box-shadow: var(--box-shadow-color);
+  /* box-shadow: var(--box-shadow-color); */
   display: flex;
   position: sticky;
   top: 0;
@@ -818,12 +782,11 @@ nav .logo {
 .myPro-answers-title ,
 .myPro-recentQtns-title ,
 .myPro-recentAnswers-title ,
-.recent-qtns-title , 
-.recent-answers-title ,
 .all-qtns-title ,
-.allUser-answers-title ,
 .user-recentQtns-title ,
-.allUser-qtns-title {
+.recent-answers-title ,
+.allUser-qtns-title ,
+.allUser-answers-title {
   text-decoration: underline 2px solid var(--main-color);
   text-underline-offset: 2px;
   font-size: 20px;
@@ -838,6 +801,8 @@ nav .logo {
   font-size: 24px;
 }
 
+
+.user-answers-title ,
 .recent-answers-title ,
 .allUser-answers-title {
   background-color: rgba(0, 0, 0, 0.4);
@@ -888,8 +853,11 @@ nav .logo {
   margin: 8px;
 }
 
+
+.user-answers-content ,
+.user-recentQtns-content ,
 .recent-answers-content ,
-.user-allAnswers-content ,
+.allUser-answer-content ,
 .myPro-allAnswers-content ,
 .myPro-allQuestions-content ,
 .myPro-recentQtn-content ,
@@ -898,11 +866,13 @@ nav .logo {
   overflow-y: auto;
 }
 
+
+.user-answers-list ,
 .myPro-allQuestions-list ,
 .myPro-allQtnAnswers-list ,
 .myPro-recentQuestions-list ,
 .myPro-recentAnswers-list ,
-.recent-qtns , 
+.user-recentQtns-list , 
 .recent-answers-list ,
 .allUser-qtns-list ,
 .allUser-answers-list {
@@ -911,35 +881,42 @@ nav .logo {
   margin-top: -1;
 }
 
+.user-answer-content ,
+.user-allAnswer-content ,
 .myPro-allQtn-content ,
 .myPro-answer-content ,
 .myPro-recentQtn-content ,
 .myPro-recentAnswer-content ,
-.recent-qtn-tab , 
+.user-recentQtn-content , 
 .recent-answers-tab ,
-.allUser-qtn-content ,
-.user-allAnswer-content{
+.allUser-qtn-content {
   background-color: var(--form-bg-color);
+  border-radius: 15px;
+  /* border-top: 5px solid darkgreen; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 5px; 
-  border-radius: 15px;
   letter-spacing: 1px;
   font-size: 19px;
   position: relative;
 }
 
+.user-answer-text ,
+.user-allAnswers-text ,
 .myPro-allQtn-text ,
 .myPro-answer-text ,
 .myPro-recentQtn-text ,
 .myPro-recentAnswer-text ,
-.recent-qtn-text ,
+.user-recentQtn-text ,
 .recent-answers-text ,
 .allUser-qtn-text ,
-.allUser-answers-text ,
-.user-allAnswers-text {
+.allUser-answers-text {
   margin: 10px;
+}
+
+.user-answer-content.picked {
+  border-top: 5px solid var(--happy-text-color);
 }
 
 .user-inQtn-recentTotal-answers-number {

@@ -540,7 +540,7 @@ nav .logo {
   align-items: center;
 }
 
-.post-form .post-qtn {
+.post-form .post-qtn-form {
   background-color: var(--secondary-text-color);
   display: block;
   width: 100%;
@@ -554,11 +554,11 @@ nav .logo {
   text-align: center;
 }
 
-.post-form .post-qtn:focus {
+.post-form .post-qtn-form:focus {
   outline-color: var(--main-color);
 }
 
-.post-form .post-btn {
+.post-form .post-qtn-btn {
   background-color: var(--btn-main-color);
   border: none;
   border-radius: 10px;
@@ -595,7 +595,7 @@ nav .logo {
 .user-allAnswers-container {
   background-color: rgb(45, 45, 45);
   border-radius: 2px;
-  max-width: 700px;
+  width: 700px;
   max-height: 75vh;
   overflow: auto;
   display: flex;
@@ -611,8 +611,21 @@ nav .logo {
   color: var(--primary-text-color);
 }
 
+.ask-qtn-container.hide ,
+.user-answers-container.hide ,
+.user-recentQtns-container.hide ,
+.myPro-allQtns-container.hide ,
+.myPro-allAnswers-container.hide ,
+.myPro-recentQtns-container.hide ,
+.myPro-recentAnswers-container.hide ,
+.user-recentAnswers-container.hide ,
+.user-allQtns-container.hide ,
+.user-allAnswers-container.hide {
+  display: none;
+}
+
 .posted-qtn {
-  background-color: transparent;
+  /* background-color: transparent;
   height: 80vh;
   letter-spacing: 1px;
   display: flex;
@@ -620,7 +633,7 @@ nav .logo {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; */
 }
 
 .answer-form {
@@ -1078,3 +1091,11 @@ nav .logo {
   transform: scale(0.98);
 }
 
+.error {
+  background-color: var(--danger-color);
+  border-radius: 5px;
+  color: var(--secondary-text-color);
+  text-align: center;
+  font-size: 18px;
+  
+}

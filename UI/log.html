@@ -29,33 +29,29 @@
     </nav>
     
     <div class="main-content">
-    <div class="login-container">
+      <div class="login-container">
+        <img src="/img/stack-overflow.svg" class="login-logo">
+        <h1>Please Login</h1>
+        <form action="#" method="post" id="login-form" class="login-form">
+          <div class="form-control">         
+          <input type="text" name="name" placeholder="Enter name" id="name" autocomplete="off" required>
+         </div>
 
-      <img src="/img/stack-overflow.svg" class="login-logo">
+          <div class="form-control">        
+            <input type="text" name="password" placeholder="Enter password"id="password" autocomplete="off" required>
+          </div> 
 
-      <h1>Please Login</h1>
+          <button class="loginForm-btn" id="login">Sign In</button>
 
-      <form action="#" method="post" id="login-form" class="login-form">
-
-        <div class="form-control">         
-         <input type="text" name="name" placeholder="Enter name" id="name" autocomplete="off">
-       </div>
-
-       <div class="form-control">        
-         <input type="text" name="password" placeholder="Enter password"id="password" autocomplete="off">
-      </div> 
-
-       <button class="loginForm-btn" id="login">Sign In</button>
-
-        <div class="register">
-          <p class="register-text">
-            Don't Have an Account yet?
-            <br>
-            <a href="createAccount.html">Register Now</a>
-          </p>
-        </div>
-      </form>
-    </div>
+          <div class="register">
+            <p class="register-text">
+              Don't Have an Account yet?
+              <br>
+              <a href="createAccount.html">Register Now</a>
+            </p>
+          </div>
+        </form>
+      </div>
   </div>
   </div>
   <script src="/app.js"></script>

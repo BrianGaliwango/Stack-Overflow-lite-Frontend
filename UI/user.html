@@ -53,12 +53,12 @@
         </div>
       </div>
 
-      <div class="right-container">
+      <div class="right-container" id="right-container">
 
                               <!-- StartPage -->
 
-        <div class="post-content">          
-           <div class="ask-qtn-container">
+        <div class="post-content" id="post-content">          
+           <div class="ask-qtn-container " id="ask-qtn-container">
             <div class="post-title">
               <h1 class="qtn-title">
                 Don't <strong>Get</strong> Stuck
@@ -66,8 +66,9 @@
             </div>
 
             <form class="post-form">
-              <input autocomplete="off" type="text" name="post" placeholder="Post Question" id="post-qtn" class="post-qtn">
-              <input type="submit" value="Post" id="post-btn" class="post-btn">
+              <input autocomplete="off" type="text" name="q" placeholder="Post Question" id="post-qtn-form" class="post-qtn-form" autofocus required>
+
+              <input type="submit" value="Post" id="post-qtn-btn" class="post-qtn-btn">
             </form>
 
               <p class="post-slogan">
@@ -76,13 +77,13 @@
           </div>  
 
             
-          <!-- Posted Qtn answer Space-->
+                     <!-- Posted Qtn answer Space-->
 
-           <!-- <div class="user-answers-container">
+           <div class="user-answers-container hide" id="user-answers-container">
 
-              <div class="user-postedQtn-content">
-                <p class="user-postedQtn-text">
-                  How do i position this question in css and html Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, corporis!
+              <div class="user-postedQtn-content" id="user-postedQtn-content">
+                <p class="user-postedQtn-text" id="user-postedQtn-text">
+                  How do i position this question in css and html Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, corporis! 
                 </p>
   
                 <div class="user-postedQtn-btns">
@@ -92,85 +93,85 @@
                 </div>
               </div>
                 
-              <form method="post" class="user-addAnswers-form">
+              <form class="user-addAnswers-form">
                 <input type="text" name="answer"  class="user-addAnswer-input" id="user-addAnswer-input" placeholder="Please answer here" autocomplete="off">
               </form>
                   
               <h1 class="user-answers-title">Answers</h1>
   
               <div class="user-answers-content">
-                <ul class="user-answers-list">                
-                  <li class="user-answer-content picked">
+                 <ul class="user-answers-list" id="user-answers-list">                
+                  <!-- <li class="user-answer-content picked" id="user-answer-content">
                     <p class="user-answer-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure quia?
                     </p>  
                     <input type="submit" value="not answer" class="user-pickAnswer-btn" id="user-pickAnswer-btn">
                   </li>
   
-                  <li class="user-answer-content">
+                  <li class="user-answer-content" id="user-answer-content">
                     <p class="user-answer-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur in temporibus necessitatibus sunt atque quibusdam? Doloremque libero a iure quia?
                     </p> 
                     <input type="submit" value="pick answer" class="user-pickAnswer-btn" id="user-pickAnswer-btn"> 
                   </li>
   
-                  <li class="user-answer-content">
+                  <li class="user-answer-content" id="user-answer-content">
                     <p class="user-answer-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur in temporibus necessitatibus sunt atque quibusdam? Doloremque libero a iure quia?
                     </p> 
                     <input type="submit" value="pick answer" class="user-pickAnswer-btn" id="user-pickAnswer-btn"> 
                   </li>
-                  <li class="user-answer-content">
+                  <li class="user-answer-content" id="user-answer-content">
                     <p class="user-answer-text">
                       Lorem ipsum dolor sit aquibusdam? Doloremque libero a iure quia?
                     </p> 
                     <input type="submit" value="pick answer" class="user-pickAnswer-btn" id="user-pickAnswer-btn">
                   </li>
   
-                  <li class="user-answer-content">
+                  <li class="user-answer-content" id="user-answer-content">
                     <p class="user-answer-text">
                       Lorem ipsum dolor sit ameariatur in temporibus necessitatibus sunt atque quibusdam? Doloremque libero a iure quia?
                     </p> 
                     <input type="submit" value="pick answer" class="user-pickAnswer-btn" id="user-pickAnswer-btn">
                   </li>
   
-                  <li class="user-answer-content">
+                  <li class="user-answer-content" id="user-answer-content">
                     <p class="user-answer-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimusquibusdam? Doloremque libero a iure quia?
                     </p> 
                     <input type="submit" value="pick answer" class="user-pickAnswer-btn" id="user-pickAnswer-btn"> 
                   </li>
   
-                  <li class="user-answer-content">
+                  <li class="user-answer-content" id="user-answer-content">
                     <p class="user-answer-text">
                       Lorem ipsum dolor sit amet consectetur aduibusdam? Doloremque libero a iure quia?
                     </p> 
                     <input type="submit" value="pick answer" class="user-pickAnswer-btn" id="user-pickAnswer-btn">
                   </li>
   
-                  <li class="user-answer-content">
+                  <li class="user-answer-content" id="user-answer-content">
                     <p class="user-answer-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Liure quia?
                     </p>  
                     <input type="submit" value="pick answer" class="user-pickAnswer-btn" id="user-pickAnswer-btn">                  
                   </li>
   
-                  <li class="user-answer-content">
+                  <li class="user-answer-content" id="user-answer-content">
                     <p class="user-answer-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing e! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur in temporibus 
                     </p> 
                     <input type="submit" value="pick answer" class="user-pickAnswer-btn" id="user-pickAnswer-btn">
                   </li>
   
-                  <li class="user-answer-content">
+                  <li class="user-answer-content" id="user-answer-content">
                     <p class="user-answer-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, 
                     </p>   
                     <input type="submit" value="pick answer" class="user-pickAnswer-btn" id="user-pickAnswer-btn">           
-                  </li>                                
-                </ul>
+                  </li>                                 -->
+                </ul> 
               </div>
-            </div>   -->
+            </div>   
         
         </div>
 

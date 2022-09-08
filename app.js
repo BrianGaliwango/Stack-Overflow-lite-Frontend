@@ -7,8 +7,11 @@ const users = [
 ];
 
 const rightContainer = document.getElementById('right-container');
+const contentBtns = document.getElementById('content-btns');
 const postContent = document.getElementById('post-content');
 const askQtnContainer = document.getElementById('ask-qtn-container');
+const userRecentQtnContainer = document.getElementById('user-recentQtns-content-container');
+const userAllQtnsContainer = document.getElementById('user-allQtns-content-container');
 const postQtnBtn = document.getElementById('post-qtn-btn');
 const postQtnInput = document.getElementById('post-qtn-form');
 const userAnswersContainer = document.getElementById('user-answers-container');
@@ -19,6 +22,22 @@ const userAnswersList = document.getElementById('user-answers-list');
 const userAnswerContent = document.getElementById('user-answer-content');
 const addAnswerBtn = document.getElementById('answer-qtn-btn');
 const userPickAnswerBtn = document.getElementById('user-pickAnswer-btn');
+
+// Change categories eventListener
+contentBtns.addEventListener('click', (e) =>{
+  if(e.target.classList.contains('post-qtn-btn')){
+    rightContainer.innerHTML = '';
+    rightContainer.appendChild(postContent);
+  }else if(e.target.classList.contains('recent-qtns-btn')){
+    rightContainer.innerHTML = '';
+    userRecentQtnContainer.classList.remove('hide');
+    rightContainer.appendChild(userRecentQtnContainer); 
+  }else if(e.target.classList.contains('qtns-answers-btn')){
+    rightContainer.innerHTML = ''; 
+    userAllQtnsContainer.classList.remove('hide');
+    rightContainer.appendChild(userAllQtnsContainer)
+  }
+})
 
        // Post Question Eventlistener
 postQtnBtn.addEventListener('click', (e) => {

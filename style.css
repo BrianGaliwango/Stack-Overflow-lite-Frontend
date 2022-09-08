@@ -527,6 +527,10 @@ nav .logo {
   margin-left: -20px;
 }
 
+.user-recentQtns-content-container {
+  /* height: 75vh; */
+}
+
 .right-container .post-title {
   font-size: 30px;
   letter-spacing: 2px;
@@ -608,22 +612,16 @@ nav .logo {
   margin-top: 20px;
   position: relative;
 }
+.user-recentQtns-container {
+  height: 87vh;
+}
 
 .ask-qtn-container {
   background-color: var(--background-main-color);
   color: var(--primary-text-color);
 }
 
-.ask-qtn-container.hide ,
-.user-answers-container.hide ,
-.user-recentQtns-container.hide ,
-.myPro-allQtns-container.hide ,
-.myPro-allAnswers-container.hide ,
-.myPro-recentQtns-container.hide ,
-.myPro-recentAnswers-container.hide ,
-.user-recentAnswers-container.hide ,
-.user-allQtns-container.hide ,
-.user-allAnswers-container.hide {
+.hide {
   display: none;
 }
 
@@ -751,6 +749,10 @@ nav .logo {
   transform: scale(0.98);
 }
 
+.user-pickAnswer-btn:focus {
+  outline: none;
+}
+
 .myPro-recentQtns-container {
   margin-left: 5px;
 }
@@ -865,7 +867,6 @@ nav .logo {
   border-radius: 5px;
   overflow-y: auto;
   word-break: break-all;
-  max-height: 290px;
 }
 
 .user-answers-content {

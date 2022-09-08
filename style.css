@@ -920,12 +920,8 @@ nav .logo {
   margin: 10px;
 }
 
-.user-answer-content.picked ,
-.user-recentAnswer-content.picked ,
-.user-allAnswer-content.picked ,
-.myPro-answer-content.picked ,
-.myPro-recentAnswer-content.picked {
-  border-top: 5px solid var(--happy-text-color);
+.picked {
+  border-top: 15px solid var(--happy-text-color);
 }
 
 .user-inQtn-recentTotal-answers-number {

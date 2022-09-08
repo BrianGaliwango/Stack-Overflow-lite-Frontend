@@ -518,17 +518,12 @@ nav .logo {
 .user-allQtns-content-container ,
 .myPro-allQtns-content-container ,
 .myPro-allRecentQtns-content-container {
-  max-height: 75vh;
-  max-width: 720px;
+  max-height: 87vh;
+  max-width: 850px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-left: -20px;
-}
-
-.user-recentQtns-content-container {
-  /* height: 75vh; */
 }
 
 .right-container .post-title {
@@ -601,17 +596,16 @@ nav .logo {
 .user-allAnswers-container {
   background-color: rgb(45, 45, 45);
   border-radius: 2px;
-  width: 720px; 
+  width: 850px; 
   max-height: 87vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: var(--dark-text-color);
-  margin-left: 25px;
-  margin-top: 20px;
   position: relative;
 }
+.user-recentAnswers-container ,
 .user-recentQtns-container {
   height: 87vh;
 }
@@ -667,6 +661,7 @@ nav .logo {
   position: fixed;
   background-color: var(--form-bg-color);
   border-radius: 5px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   max-width: 98%;
@@ -865,12 +860,13 @@ nav .logo {
 .myPro-recentQtns-content ,
 .myPro-recentAnswers-content {
   border-radius: 5px;
-  overflow-y: auto;
+  overflow-y: scroll;
   word-break: break-all;
+  height: 87vh;
 }
 
 .user-answers-content {
-  max-height: 350px;
+  /* max-height: 400px; */
 }
 
 .user-recentAnswers-list ,
@@ -884,8 +880,9 @@ nav .logo {
 .myPro-recentAnswers-list {
   list-style-type: none;
   padding: 5px;
-  margin-top: -1;
+  margin-top: -1px;
 }
+
 
 .user-answer-content ,
 .user-allAnswer-content ,
@@ -1052,9 +1049,6 @@ nav .logo {
   color: var(--secondary-text-color);
 }
 
-.answer-qtn-btn:active {
-  transform: scale(0.98);
-}
 
 .answer-qtn-btn:focus {
   outline: none;
@@ -1099,23 +1093,21 @@ nav .logo {
 }
 
 
+.answer-qtn-btn:active ,
+.myQtn-answers-btn:active ,
+.myQtn-delete-btn:active ,
+.recent-answers-btn:active ,
+.allUser-answers-btn:active ,
+.user-addAnswer-btn:active ,
+.user-answers-btn:active ,
+.user-recentAnswers-btn:active ,
 .myPro-pickAnswer-btn:active ,
 .myPro-delete-qtn-btn:active ,
 .myPro-answers-btn:active ,
 .myPro-recentAnswers-btn:active ,
 .myPro-recentDeleteQtn-btn:active ,
 .myPro-recentDelete-answer-btn:active ,
-.myPro-delete-answer-btn:active ,
-.user-answers-btn:active {
-  transform: scale(0.98);
-}
-
-
-.myQtn-answers-btn:active ,
-.myQtn-delete-btn:active ,
-.recent-answers-btn:active ,
-.allUser-answers-btn:active ,
-.user-addAnswer-btn:active {
+.myPro-delete-answer-btn:active  {
   transform: scale(0.98);
 }
 

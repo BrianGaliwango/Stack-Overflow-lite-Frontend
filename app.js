@@ -2,7 +2,12 @@ const users = [
   {
     name: 'John',
     lastName: 'Doe',
-    questions: [''],
+    questions: [
+      {
+        question: 'What do you think you are doing today  ?',
+        answer: 'Am free today'
+      }
+    ],
   }
 ];
 
@@ -15,13 +20,25 @@ const userAllQtnsContainer = document.getElementById('user-allQtns-content-conta
 const postQtnBtn = document.getElementById('post-qtn-btn');
 const postQtnInput = document.getElementById('post-qtn-form');
 const userAnswersContainer = document.getElementById('user-answers-container');
+const userRecQtnCont = document.getElementById('user-recentQtns-container');
+const userRecAnswers = document.getElementById('user-recentAnswers-container');
+const userRecQtnsContent = document.getElementById('user-recentQtns-content')
 const userQtnEl = document.getElementById('user-postedQtn-text');
 const userAnswerInput = document.getElementById('user-addAnswer-input'); 
-const userPostedBackBtn = document.getElementById('user-postedQtns-back-btn')
+const userPostedBackBtn = document.getElementById('user-postedQtns-back-btn');
+const userRecQtnPostedBtn = document.getElementById('user-postedRecentQtns-back-btn');
 const userAnswersList = document.getElementById('user-answers-list');
+const userRecentQtnsList = document.getElementById('user-recentQtns-list');
 const userAnswerContent = document.getElementById('user-answer-content');
 const addAnswerBtn = document.getElementById('answer-qtn-btn');
 const userPickAnswerBtn = document.getElementById('user-pickAnswer-btn');
+const userRecDisplay = document.getElementById('user-recentQtns-display');
+
+const pickAnswerBtn = document.createElement('input');
+pickAnswerBtn.type = 'button';
+pickAnswerBtn.value = 'pick answer';
+pickAnswerBtn.className = 'user-pickAnswer-btn'
+pickAnswerBtn.id = 'user-pickAnswer-btn';
 
 // Change categories eventListener
 contentBtns.addEventListener('click', (e) =>{
@@ -45,11 +62,22 @@ postQtnBtn.addEventListener('click', (e) => {
   askQuestion()
 });
 
-//Back btn eventListener
+//Back btn eventListeners
 userPostedBackBtn.addEventListener('click', (e) => {
   e.preventDefault();
   userAnswersContainer.classList.toggle('hide')
   askQtnContainer.classList.toggle('hide');
+});
+
+// User Back eventListeners
+
+userRecQtnPostedBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  userRecAnswers.classList.add('hide');
+  userRecentQtnContainer.classList.remove('hide'); 
+  userRecQtnsContent.classList.remove('hide');
+  userRecentQtnContainer.appendChild(userRecQtnCont);
 });
 
        // Add Answer Eventlistener
@@ -68,10 +96,22 @@ userAnswersList.addEventListener('click', (e) => {
   }else{
     e.target.value = 'pick answer';
   } 
+    removePicked()
     e.target.parentElement.classList.toggle('picked');
    // e.target.contains.userPickAnswerBtn.value = 'answer';
     console.log('id')
   }
+});
+
+// Check answers eventListener
+userRecentQtnsList.addEventListener('click', (e) => {
+  if(e.target.classList.contains('user-recentAnswers-btn')){
+    e.target.parentElement.parentElement.parentElement.parentElement.classList.add('hide')
+    userRecentQtnContainer.innerHTML = '';
+    userRecAnswers.classList.remove('hide');
+     console.log(e.target)
+  }
+  userRecentQtnContainer.appendChild(userRecAnswers)
 });
 
  // Ask Question func
@@ -110,20 +150,12 @@ function addAnswers(answer) {
     const paragraph = document.createElement('p');
     paragraph.classList.add('user-answer-text');
     paragraph.innerText = answerText;
-    const pickAnswerBtn = document.createElement('input');
-    pickAnswerBtn.type = 'button';
-    pickAnswerBtn.value = 'pick answer';
-    pickAnswerBtn.className = 'user-pickAnswer-btn'
-    pickAnswerBtn.id = 'user-pickAnswer-btn';
     answerEl.appendChild(paragraph);
     answerEl.appendChild(pickAnswerBtn);
     userAnswersList.appendChild(answerEl);
-       
-    // console.log(answerText);
   }
   userAnswerInput.value = '';
 }
-
 
 function showAnswerError(){
   const answerErrDiv = document.createElement('div');
@@ -134,6 +166,8 @@ function showAnswerError(){
   setTimeout(() => {answerErrDiv.remove()}, 2000);
 }
 
-function pickAnswer(e){
-  
+function removePicked(){
+  for(let i = 0; i < userAnswersList.length; i++) {
+    userAnswersList[i].classList.remove('picked');
+  }
 }

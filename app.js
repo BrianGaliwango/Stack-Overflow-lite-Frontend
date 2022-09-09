@@ -1,3 +1,16 @@
+const users = [ 
+  {
+    name: 'John',
+    lastName: 'Doe',
+    questions: [
+      {
+        question: 'What do you think you are doing today  ?',
+        answer: 'Am free today'
+      }
+    ],
+  }
+];
+
 const rightContainer = document.getElementById('right-container');
 const contentBtns = document.getElementById('content-btns');
 const postContent = document.getElementById('post-content');
@@ -20,11 +33,7 @@ const userAnswerContent = document.getElementById('user-answer-content');
 const addAnswerBtn = document.getElementById('answer-qtn-btn');
 const userPickAnswerBtn = document.getElementById('user-pickAnswer-btn');
 const userRecDisplay = document.getElementById('user-recentQtns-display');
-const userAllQtnsCont = document.getElementById('user-allQtns-container');
 const userAllQtnsList = document.getElementById('user-allQtns-list');
-const userAllAnswersList = document.getElementById('user-allAnswers-list');
-const userAnswersBtn = document.getElementById('user-answers-btn');
-
 
 // Change categories eventListener
 contentBtns.addEventListener('click', (e) =>{
@@ -69,6 +78,7 @@ userRecQtnPostedBtn.addEventListener('click', (e) => {
        // Add Answer Eventlistener
 addAnswerBtn.addEventListener('click', (e) => {
   e.preventDefault(); 
+
   addAnswers()
 });
 
@@ -81,9 +91,8 @@ userAnswersList.addEventListener('click', (e) => {
   }else{
     e.target.value = 'pick answer';
   } 
+    // removePicked()
     e.target.parentElement.classList.toggle('picked');
-   // e.target.contains.userPickAnswerBtn.value = 'answer';
-    console.log('id')
   }
 });
 
@@ -98,38 +107,29 @@ userRecentQtnsList.addEventListener('click', (e) => {
   userRecentQtnContainer.appendChild(userRecAnswers)
 });
 
-// user check all qtn answer eventListener
-userAllQtnsList.addEventListener('click', (e) => {
-  if(e.target.classList.contains('user-answers-btn')){
-    e.target.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add('hide')
-    user
-  }
-})
-
  // Ask Question func
 function askQuestion(){
-  const questionText = postQtnInput.value;
+  const question = postQtnInput.value;
+  if(question !== '') {
+  askQtnContainer.classList.toggle('hide');
+  userAnswersContainer.classList.toggle('hide');
+  userQtnEl.innerHTML = question;
 
-  if(questionText !== '') {
-    askQtnContainer.classList.toggle('hide');
-    userAnswersContainer.classList.toggle('hide');
-    userQtnEl.innerHTML = questionText;
-
-    if(questionText) {
-      const question = document.createElement('li'); 
-      question.classList.add('user-allQtn-content');
+    if(question) {
+      const questionEl = document.createElement('li'); 
+      questionEl.classList.add('user-allQtn-content');
 
       const paragraph = document.createElement('p');
       paragraph.classList.add('user-allQtn-text');
-      paragraph.innerText = questionText;
+      paragraph.innerText = question;
 
       const divTotal = document.createElement('div');
-      divTotal.classList.add('user-all-inQtn-total-answers-number')
-      divTotal.innerText = 10;
+      divTotal.className = 'user-all-inQtn-total-answers-number'
+      divTotal.innerHTML = 10;
 
       const divBtns = document.createElement('div');
-      divBtns.className = 'user-allAddAns-btns';
-
+      divBtns.classList.add('user-allAddAns-btns')
+      
       const addAnsBtn = document.createElement('input');
       addAnsBtn.type = 'submit';
       addAnsBtn.value = 'add answers';
@@ -142,21 +142,18 @@ function askQuestion(){
       answersBtn.className = 'user-answers-btn'
       answersBtn.id = 'user-answers-btn';
 
-      // divBtns.appendChild(addAnsBtn);
-      divBtns.appendChild(answersBtn)
-      question.appendChild(divBtns);
-      question.appendChild(divTotal)
-      question.appendChild(paragraph)
-      question.appendChild(answersBtn);
+      divBtns.appendChild(answersBtn);
+      questionEl.appendChild(divBtns);
+      questionEl.appendChild(divTotal)
+      questionEl.appendChild(paragraph)
+      questionEl.appendChild(answersBtn);
 
-      userAllQtnsList.appendChild(question);
-
-    }
-
+      userAllQtnsList.appendChild(questionEl);
+      }
   }else{
-    showError()
+    showError();
   }
-  
+  postQtnInput.value = '';
 }
 
                       // Error func
@@ -175,32 +172,21 @@ function addAnswers(answer) {
   let answerText = userAnswerInput.value;
 
   if(answerText === '') {
+    showAnswerError();
+  }else{
     const answerEl = document.createElement('li');
     answerEl.classList.add('user-answer-content');
     const paragraph = document.createElement('p');
     paragraph.classList.add('user-answer-text');
     paragraph.innerText = answerText;
+    answerEl.appendChild(paragraph);
     const pickAnswerBtn = document.createElement('input');
     pickAnswerBtn.type = 'button';
     pickAnswerBtn.value = 'pick answer';
     pickAnswerBtn.className = 'user-pickAnswer-btn'
     pickAnswerBtn.id = 'user-pickAnswer-btn';
-    answerEl.appendChild(paragraph);
     answerEl.appendChild(pickAnswerBtn);
     userAnswersList.appendChild(answerEl);
-
-    if(answerText){
-      const answerEl = document.createElement('li');
-      answerEl.classList.add('user-allAnswer-content');
-      const paragraph = document.createElement('p');
-      paragraph.className = 'user-allAnswer-text';
-      paragraph.innerText = answerText;
-      answerEl.appendChild(paragraph);
-      answerEl.appendChild(pickAnswerBtn);
-      userAllAnswersList.appendChild(answerEl);
-    }
-  }else{
-    showError();
   }
   userAnswerInput.value = '';
 }
@@ -213,18 +199,4 @@ function showAnswerError(){
   userAnswersContainer.insertBefore(answerErrDiv, userAnswersTitle)
   setTimeout(() => {answerErrDiv.remove()}, 2000);
 }
-
-
-// function updateLS(){
-//   questionsEl = document.querySelectorAll('user-allQtn-text')
-
-//   const userAllQtnsList = [];
-//   questionsEl.forEach(question => {
-//     userAllQtnsList.push({
-//       text: questionsEl.innerText
-//     })
-//   })
-//   localStorage.setItem(JSON.stringify(userAllQtnsList));
-// }
-
 

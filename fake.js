@@ -79,58 +79,58 @@
 
 
 
-// function askQuestion(){
-//   let question = postQtnInput.value;
+function askQuestion(){
+  let question = postQtnInput.value;
 
-//   if(questionText !== '') {
-//     askQtnContainer.classList.toggle('hide');
-//     userAnswersContainer.classList.toggle('hide');
-//     userQtnEl.innerHTML = question;
+  if(questionText !== '') {
+    askQtnContainer.classList.toggle('hide');
+    userAnswersContainer.classList.toggle('hide');
+    userQtnEl.innerHTML = question;
 
-//     if(questionText !== '') {
-//       const question = document.createElement('li'); 
-//       question.classList.add('user-allQtn-content');
+    if(questionText !== '') {
+      const question = document.createElement('li'); 
+      question.classList.add('user-allQtn-content');
 
-//       const paragraph = document.createElement('p');
-//       paragraph.classList.add('user-allQtn-text');
-//       paragraph.innerText = questionText;
+      const paragraph = document.createElement('p');
+      paragraph.classList.add('user-allQtn-text');
+      paragraph.innerText = questionText;
 
-//       const divTotal = document.createElement('div');
-//       divTotal.classList.add('user-all-inQtn-total-answers-number')
+      const divTotal = document.createElement('div');
+      divTotal.classList.add('user-all-inQtn-total-answers-number')
 
-//       const divBtns = document.createElement('div');
-//       divBtns.classList.add('user-allAddAns-btns')
+      const divBtns = document.createElement('div');
+      divBtns.classList.add('user-allAddAns-btns')
       
-//       const addAnsBtn = document.createElement('input');
-//       addAnsBtn.type = 'submit';
-//       addAnsBtn.value = 'add answers';
-//       addAnsBtn.className = 'user-addAnswer-btn'
-//       addAnsBtn.id = 'user-addAnswer-btn';
+      const addAnsBtn = document.createElement('input');
+      addAnsBtn.type = 'submit';
+      addAnsBtn.value = 'add answers';
+      addAnsBtn.className = 'user-addAnswer-btn'
+      addAnsBtn.id = 'user-addAnswer-btn';
 
-//       const answersBtn = document.createElement('input');
-//       answersBtn.type = 'submit';
-//       answersBtn.value = 'answers';
-//       answersBtn.className = 'user-answers-btn'
-//       answersBtn.id = 'user-answers-btn';
+      const answersBtn = document.createElement('input');
+      answersBtn.type = 'submit';
+      answersBtn.value = 'answers';
+      answersBtn.className = 'user-answers-btn'
+      answersBtn.id = 'user-answers-btn';
 
-//       divBtns.appendChild(addAnsBtn, answersBtn);
-//       question.appendChild(divBtns);
-//       question.appendChild(divTotal)
-//       question.appendChild(paragraph)
-//       question.appendChild(answersBtn);
+      divBtns.appendChild(addAnsBtn, answersBtn);
+      question.appendChild(divBtns);
+      question.appendChild(divTotal)
+      question.appendChild(paragraph)
+      question.appendChild(answersBtn);
 
-//       userAllQtnsList.appendChild(qtn);
+      userAllQtnsList.appendChild(qtn);
 
 
-//     }
+    }
 
-//   }else{
-//     showError();
-//   }
+  }else{
+    showError();
+  }
   
   
 
-// }
+}
 
 
 

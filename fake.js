@@ -146,6 +146,25 @@ if(answerText){
 }
 
 if(userAllAnswersList){
-  
+
 }
   
+
+
+function updateAllAnswers() {
+  const answers = document.querySelectorAll('user-answer-content')
+
+  answers.forEach((answer) => {
+    const answerEl = document.createElement('li');
+    if(answer.classList.contains('picked')){
+      answer.classList.add('user-answer-content picked');
+    }else{
+      answer.classList.add('user-answer-content')
+    }
+    
+    userAllAnswersList.innerHTML = '';
+    userAllAnswersList.appendChild(answerEl);
+
+  });
+ 
+}

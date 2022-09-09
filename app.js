@@ -14,7 +14,7 @@ const userQtnEl = document.getElementById('user-postedQtn-text');
 const userAnswerInput = document.getElementById('user-addAnswer-input'); 
 const userPostedBackBtn = document.getElementById('user-postedQtns-back-btn');
 const userRecQtnPostedBtn = document.getElementById('user-postedRecentQtns-back-btn');
-let userAnswersList = document.getElementById('user-answers-list');
+const userAnswersList = document.getElementById('user-answers-list');
 const userRecentQtnsList = document.getElementById('user-recentQtns-list');
 const userAnswerContent = document.getElementById('user-answer-content');
 const addAnswerBtn = document.getElementById('answer-qtn-btn');
@@ -24,7 +24,6 @@ const userAllQtnsCont = document.getElementById('user-allQtns-container');
 const userAllQtnsList = document.getElementById('user-allQtns-list');
 const userAllAnswersList = document.getElementById('user-allAnswers-list');
 const userAnswersBtn = document.getElementById('user-answers-btn');
-const userAllAnswersCont = document.getElementById('user-allAnswers-container');
 
 
 // Change categories eventListener
@@ -91,8 +90,10 @@ userAnswersList.addEventListener('click', (e) => {
 // Check answers eventListener
 userRecentQtnsList.addEventListener('click', (e) => {
   if(e.target.classList.contains('user-recentAnswers-btn')){
-    e.target.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add('hide')
+    e.target.parentElement.parentElement.parentElement.parentElement.classList.add('hide')
+    userRecentQtnContainer.innerHTML = '';
     userRecAnswers.classList.remove('hide');
+     console.log(e.target)
   }
   userRecentQtnContainer.appendChild(userRecAnswers)
 });
@@ -101,7 +102,7 @@ userRecentQtnsList.addEventListener('click', (e) => {
 userAllQtnsList.addEventListener('click', (e) => {
   if(e.target.classList.contains('user-answers-btn')){
     e.target.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add('hide')
-    userAllAnswersCont.classList.remove('hide');
+    user
   }
 })
 
@@ -172,10 +173,8 @@ function showError(){
 
 function addAnswers(answer) {
   let answerText = userAnswerInput.value;
-  
-  
-  
-  if(answerText !== '') {
+
+  if(answerText === '') {
     const answerEl = document.createElement('li');
     answerEl.classList.add('user-answer-content');
     const paragraph = document.createElement('p');
@@ -190,25 +189,18 @@ function addAnswers(answer) {
     answerEl.appendChild(pickAnswerBtn);
     userAnswersList.appendChild(answerEl);
 
-   
     if(answerText){
       const answerEl = document.createElement('li');
       answerEl.classList.add('user-allAnswer-content');
       const paragraph = document.createElement('p');
-      paragraph.classList.add('user-allAnswer-text');
+      paragraph.className = 'user-allAnswer-text';
       paragraph.innerText = answerText;
-      const pickAnswerBtn = document.createElement('input');
-      pickAnswerBtn.type = 'button';
-      pickAnswerBtn.value = 'pick answer';
-      pickAnswerBtn.className = 'user-pickAnswer-btn'
-      pickAnswerBtn.id = 'user-pickAnswer-btn';
       answerEl.appendChild(paragraph);
       answerEl.appendChild(pickAnswerBtn);
       userAllAnswersList.appendChild(answerEl);
-      
     }
   }else{
-      showAnswerError();
+    showError();
   }
   userAnswerInput.value = '';
 }

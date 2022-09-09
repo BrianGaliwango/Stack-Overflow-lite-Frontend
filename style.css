@@ -883,7 +883,6 @@ nav .logo {
   margin-top: -1px;
 }
 
-
 .user-answer-content ,
 .user-allAnswer-content ,
 .user-allQtn-content ,
@@ -936,7 +935,7 @@ nav .logo {
 
 .user-all-inQtn-total-answers-number {
   position: absolute;
-  right: 90;
+  left: 10;
   bottom: 5;
   border-left: 3px solid var(--happy-text-color);
   border-right: 3px solid var(--happy-text-color);
@@ -989,6 +988,7 @@ nav .logo {
 .user-allAddAns-btns {
   display: flex;
   justify-content: space-between;
+  
 }
 
 .myPro-answers-btn ,
@@ -1009,9 +1009,15 @@ nav .logo {
   transition: transform 0.2s ease;
 }
 
+.user-answers-btn {
+  margin-left: 50px; 
+}
+
+
 .user-addAnswer-btn {
   width: 90px;
   background-color: var(--main-color);
+  position: absolute;
 }
 
 .user-addAnswers-form ,
@@ -1110,6 +1116,25 @@ nav .logo {
 .myPro-delete-answer-btn:active  {
   transform: scale(0.98);
 }
+
+.answer-qtn-btn:focus ,
+.myQtn-answers-btn:focus ,
+.myQtn-delete-btn:focus ,
+.recent-answers-btn:focus ,
+.allUser-answers-btn:focus ,
+.user-addAnswer-btn:focus ,
+.user-answers-btn:focus ,
+.user-recentAnswers-btn:focus ,
+.myPro-pickAnswer-btn:focus ,
+.myPro-delete-qtn-btn:focus ,
+.myPro-answers-btn:focus ,
+.myPro-recentAnswers-btn:focus ,
+.myPro-recentDeleteQtn-btn:focus ,
+.myPro-recentDelete-answer-btn:focus ,
+.myPro-delete-answer-btn:focus  {
+  outline: none;
+}
+
 
 .error {
   background-color: var(--danger-color);

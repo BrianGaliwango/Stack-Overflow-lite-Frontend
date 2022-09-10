@@ -64,18 +64,18 @@
 // }
 
 
-// function updateLS(){
-//   qtns = document.querySelectorAll('user-allQtn-content')
+function updateLS(){
+  questionsEl = document.querySelectorAll('user-allQtn-content')
 
-//   const questions = [];
+  const questions = [];
 
-//   qtnsList.forEach(qtn => {
-//     questions.push({
-//       text: qtn.innerText
-//     })
-//   })
-//   localStorage.setItem('questions', JSON.stringify(qtns))
-// }
+  questionsEl.forEach(qtn => {
+    questions.push({
+      text: qtn.innerText
+    })
+  })
+  localStorage.setItem('questions', JSON.stringify(questions))
+}
 
 
 

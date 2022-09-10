@@ -349,6 +349,7 @@ nav .logo {
   align-items: center;
   justify-content: center;
   color: var(--primary-text-color);
+  position: relative;
 }
 
 .right-container {
@@ -466,16 +467,18 @@ nav .logo {
   font-size: 18px;
   font-weight: normal;
   margin-top: 100px;
-  margin-bottom: -5px;
   text-underline-offset: 2px;
   letter-spacing: 3px;
   padding: 5px;
 }
 
-
 .profile-sidebar-menu .profile-content-btns , 
 .sidebar-menu .content-btns {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-left: -40px;
 }
 
@@ -498,6 +501,7 @@ nav .logo {
   height: 80px;
   margin:5px ;
   transition: all 0.1s ease-in-out;
+  margin: 0;
 }
 
 .profile-content-btns 
@@ -511,6 +515,17 @@ nav .logo {
   background-color: var(--secondary-text-color);
   color: var(--main-color);
   font-size: 23px;
+}
+
+.profile-content-btns
+.profile-qtns-btn:focus ,
+.allQtns-answers-btn:focus  ,
+.recentProfile-qtns-btn:focus ,
+.content-btns 
+.post-qtn-btn:focus , 
+.recent-qtns-btn:focus ,
+.qtns-answers-btn:focus {
+  outline: none;
 }
 
 .post-content ,
@@ -655,7 +670,7 @@ nav .logo {
 
 .user-postedQtn-content ,
 .user-postedRecentQtn-content ,
-.user-allPostedQtn-content ,
+.user-allSelectedQtn-content ,
 .myPro-postedQtn-content ,
 .myPro-recentPostedQtn-content {
   position: fixed;
@@ -674,7 +689,7 @@ nav .logo {
 
 .user-postedQtn-text ,
 .user-postedRecentQtn-text ,
-.user-allPostedQtn-text ,
+.user-allSelectedQtn-text ,
 .myPro-postedQtn-text ,
 .myPro-recentPostedQtn-text{
   font-size: 20px;
@@ -684,7 +699,7 @@ nav .logo {
 
 .user-postedQtn-btns ,
 .user-postedRecentQtn-btns ,
-.user-allPostedQtns-btns ,
+.user-allSelectedQtns-btns ,
 .myPro-postedQtn-btns ,
 .myPro-recentPostedQtn-btns {
   position: relative;
@@ -694,7 +709,7 @@ nav .logo {
 
 .user-postedQtns-back-btn ,
 .user-postedRecentQtns-back-btn ,
-.user-allPostedQtns-back-btn ,
+.user-allSelectedQtns-back-btn ,
 .myPro-postedQtns-back-btn ,
 .myPro-recentPostedQtn-back-btn{
   border: none;
@@ -708,7 +723,7 @@ nav .logo {
 
 .user-postedQtns-back-btn:active ,
 .user-postedRecentQtns-back-btn:active ,
-.user-allPostedQtns-back-btn:active ,
+.user-allSelectedQtns-back-btn:active ,
 .myPro-postedQtns-back-btn:active ,
 .myPro-recentPostedQtn-back-btn:active {
   transform: scale(0.98);

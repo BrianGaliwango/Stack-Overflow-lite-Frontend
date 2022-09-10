@@ -33,7 +33,11 @@ const userAnswerContent = document.getElementById('user-answer-content');
 const addAnswerBtn = document.getElementById('answer-qtn-btn');
 const userPickAnswerBtn = document.getElementById('user-pickAnswer-btn');
 const userRecDisplay = document.getElementById('user-recentQtns-display');
+const userAllQtnsCont = document.getElementById('user-allQtns-container');
+const userAllQtnsContent = document.getElementById('user-allQtns-content');
 const userAllQtnsList = document.getElementById('user-allQtns-list');
+const userAllAnswersContainer = document.getElementById('user-allAnswers-container');
+
 
 // Change categories eventListener
 contentBtns.addEventListener('click', (e) =>{
@@ -107,9 +111,28 @@ userRecentQtnsList.addEventListener('click', (e) => {
   userRecentQtnContainer.appendChild(userRecAnswers)
 });
 
+// Check all Answer Qtn Eventlistener
+userAllQtnsList.addEventListener('click', (e) => {
+  if(e.target.classList.contains('user-answers-btn')){
+    e.target.parentElement.parentElement.parentElement.classList.add('hide')
+    userAllAnswersContainer.classList.remove('hide') 
+  }
+})
+
+// User selected question back eventListener 
+userAllAnswersContainer.addEventListener('click', (e) => {
+  if(e.target.classList.contains('user-allSelectedQtn-back-btn')) {
+    
+    userAllAnswersContainer.classList.add('hide');
+    userAllQtnsCont.classList.remove('hide'); 
+    userAllQtnsContent.classList.remove('hide');
+    userAllQtnsList.classList.remove('hide');
+  }
+});
+
  // Ask Question func
 function askQuestion(){
-  const question = postQtnInput.value;
+  let question = postQtnInput.value;
   if(question !== '') {
   askQtnContainer.classList.toggle('hide');
   userAnswersContainer.classList.toggle('hide');
@@ -200,3 +223,14 @@ function showAnswerError(){
   setTimeout(() => {answerErrDiv.remove()}, 2000);
 }
 
+function updateLS(){
+  questionsList = document.querySelectorAll('li');
+
+  const questions = [];
+
+  questionsList.forEach(questionEl => {
+    questions.push({
+      text: questionEl.innerText     
+    })
+  })
+}

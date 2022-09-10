@@ -118,7 +118,10 @@ userAllQtnsList.addEventListener('click', (e) => {
     e.target.parentElement.parentElement.parentElement.parentElement.classList.add('hide');   
     
     userAllAnswersContainer.classList.remove('hide');
-   
+
+  
+    // userAllSelectedQtnCont.innerText = '';
+    // userAllSelectedQtnText.text = userAllQtnText;
   }
 })
 
@@ -198,9 +201,7 @@ function showError(){
 function addAnswers(answer) {
   let answerText = userAnswerInput.value;
 
-  if(answerText === '') {
-    showAnswerError();
-  }else{
+  if(answerText !== '') {
     const answerEl = document.createElement('li');
     answerEl.classList.add('user-answer-content');
     const paragraph = document.createElement('p');
@@ -214,6 +215,25 @@ function addAnswers(answer) {
     pickAnswerBtn.id = 'user-pickAnswer-btn';
     answerEl.appendChild(pickAnswerBtn);
     userAnswersList.appendChild(answerEl);
+
+    if(answerText){
+      const answerEl = document.createElement('li');
+      answerEl.classList.add('user-allAnswer-content');
+      const paragraph = document.createElement('p');
+      paragraph.classList.add('user-allAnswer-text');
+      const pickAnswerBtn = document.createElement('input');
+      pickAnswerBtn.type = 'button';
+      pickAnswerBtn.value = 'pick answer';
+      pickAnswerBtn.className = 'user-pickAnswer-btn'
+      pickAnswerBtn.id = 'user-pickAnswer-btn';
+      paragraph.innerText = answerText;
+      answerEl.appendChild(paragraph);
+      answerEl.appendChild(pickAnswerBtn);
+      userAllAnswerList.appendChild(answerEl);
+    }
+
+  }else{
+    showAnswerError();
   }
   userAnswerInput.value = '';
 }
@@ -222,8 +242,11 @@ function showAnswerError(){
   const answerErrDiv = document.createElement('div');
   answerErrDiv.className = 'error'
   const  userAnswersTitle = document.getElementById('user-answers-title');
+  const userAllAnswersTitle = document.getElementById('user-allAnswers-title');
   answerErrDiv.appendChild(document.createTextNode('Please enter a valid answer'));
+  userAllAnswersContainer.insertBefore(answerErrDiv, userAllAnswersTitle);
   userAnswersContainer.insertBefore(answerErrDiv, userAnswersTitle)
+  
   setTimeout(() => {answerErrDiv.remove()}, 2000);
 }
 
@@ -245,9 +268,20 @@ function userAddAnswer(){
     answerEl.appendChild(pickAnswerBtn);
     userAllAnswerList.appendChild(answerEl);
   }else{
-    showAnswerError()
+    showAddAnswerError()
   }
+  userAddAnsInput.value = '';
+}
 
+
+function showAddAnswerError(){
+  const answerErrDiv = document.createElement('div');
+  answerErrDiv.className = 'error'
+  const userAllAnswersTitle = document.querySelector('user-allAnswers-title');
+  answerErrDiv.appendChild(document.createTextNode('Please enter a valid answer'));
+  userAllAnswersContainer.insertBefore(answerErrDiv, userAllAnswersTitle);
+  
+  setTimeout(() => {answerErrDiv.remove()}, 2000);
 }
 
 

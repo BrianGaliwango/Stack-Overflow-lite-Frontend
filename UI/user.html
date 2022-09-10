@@ -503,7 +503,7 @@
 
         <div class="user-allQtns-container" id="user-allQtns-container">
 
-          <div class="allUser-qtns-display">
+          <div class="allUser-qtns-display" id="allUser-qtns-display">
             <h1 class="allUser-qtns-title">
               All Questions:
             </h1> 
@@ -655,25 +655,28 @@
         <div class="user-allAnswers-container hide" id="user-allAnswers-container">
 
           <div class="user-allSelectedQtn-content">
-            <p class="user-allSelectedQtn-text">
+            <p class="user-allSelectedQtn-text" id="user-allSelectedQtn-text">
               How do i position this question in css and html Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, corporis!
             </p>
 
             <div class="user-allSelectedQtn-btns">
-              <input type="submit" value="back" id="user-allSelectedQtn-back-btn" class="user-allSelectedQtn-back-btn">
+              <input type="submit" value="back" id="user-allSelectedQtns-back-btn" class="user-allSelectedQtns-back-btn">
             </div>
           </div>
             
-          <form method="post" class="user-addAnswers-form">
+          <form class="user-addAnswers-form">
             <input type="text" name="answer"  class="allUser-addAnswer-input" id="allUser-addAnswer-input" placeholder="add an answer" autocomplete="off">
+            
+            <input type="submit" value="answer" id="user-AllAnswer-qtn-btn" class="user-AllAnswer-qtn-btn">
+
           </form>
               
           <h1 class="user-allAnswers-title">Answers</h1>
 
           <div class="user-allAnswers-content">
-            <ul class="user-allAnswers-list">                
+            <ul class="user-allAnswers-list" id="user-allAnswers-list">                
               <!-- <li class="user-allAnswer-content picked">
-                <p class="user-allAnswer-text">
+                <p class="user-allAnswer-text" id="user-allAnswer-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
                 </p>  
                 <input type="submit" value="not answer" class="user-pickAnswer-btn" id="user-pickAnswer-btn">     

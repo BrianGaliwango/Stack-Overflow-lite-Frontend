@@ -1,15 +1,3 @@
-const users = [ 
-  {
-    name: 'John',
-    lastName: 'Doe',
-    questions: [
-      {
-        question: 'What do you think you are doing today  ?',
-        answer: 'Am free today'
-      }
-    ],
-  }
-];
 
 const rightContainer = document.getElementById('right-container');
 const contentBtns = document.getElementById('content-btns');
@@ -36,8 +24,15 @@ const userRecDisplay = document.getElementById('user-recentQtns-display');
 const userAllQtnsCont = document.getElementById('user-allQtns-container');
 const userAllQtnsContent = document.getElementById('user-allQtns-content');
 const userAllQtnsList = document.getElementById('user-allQtns-list');
+const userAllAnswerList = document.getElementById('user-allAnswers-list');
+const userAllQtnText = document.getElementById('user-allQtn-text');
 const userAllAnswersContainer = document.getElementById('user-allAnswers-container');
-
+const userAllSelectedQtnCont = document.getElementById('user-allSelectedQtn-content');
+const userAllSelectedQtnText = document.getElementById('user-allSelectedQtn-text');
+const userAllQtnCont = document.getElementById('user-allQtn-content');
+const userAllQtnsDisplay = document.getElementById('allUser-qtns-display');
+const userAddAnsInput = document.getElementById('allUser-addAnswer-input');
+const userAllAddAnswerBtn = document.getElementById('user-AllAnswer-qtn-btn');
 
 // Change categories eventListener
 contentBtns.addEventListener('click', (e) =>{
@@ -106,22 +101,30 @@ userRecentQtnsList.addEventListener('click', (e) => {
     e.target.parentElement.parentElement.parentElement.parentElement.classList.add('hide')
     userRecentQtnContainer.innerHTML = '';
     userRecAnswers.classList.remove('hide');
-     console.log(e.target)
   }
   userRecentQtnContainer.appendChild(userRecAnswers)
+});
+
+// User add Answer Eventlistener 
+userAllAddAnswerBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  userAddAnswer();
 });
 
 // Check all Answer Qtn Eventlistener
 userAllQtnsList.addEventListener('click', (e) => {
   if(e.target.classList.contains('user-answers-btn')){
-    e.target.parentElement.parentElement.parentElement.classList.add('hide')
-    userAllAnswersContainer.classList.remove('hide') 
+    e.target.parentElement.parentElement.parentElement.parentElement.classList.add('hide');   
+    
+    userAllAnswersContainer.classList.remove('hide');
+   
   }
 })
 
 // User selected question back eventListener 
 userAllAnswersContainer.addEventListener('click', (e) => {
-  if(e.target.classList.contains('user-allSelectedQtn-back-btn')) {
+  if(e.target.classList.contains('user-allSelectedQtns-back-btn')) {
     
     userAllAnswersContainer.classList.add('hide');
     userAllQtnsCont.classList.remove('hide'); 
@@ -172,6 +175,7 @@ function askQuestion(){
       questionEl.appendChild(answersBtn);
 
       userAllQtnsList.appendChild(questionEl);
+
       }
   }else{
     showError();
@@ -223,14 +227,40 @@ function showAnswerError(){
   setTimeout(() => {answerErrDiv.remove()}, 2000);
 }
 
-function updateLS(){
-  questionsList = document.querySelectorAll('li');
+function userAddAnswer(){
+  let userAnswer = userAddAnsInput.value;
 
-  const questions = [];
+  if(userAnswer !== ''){
+    const answerEl = document.createElement('li');
+    answerEl.classList.add('user-allAnswer-content');
+    const paragraph = document.createElement('p');
+    paragraph.classList.add('user-allAnswer-text');
+    paragraph.innerText = userAnswer;
+    answerEl.appendChild(paragraph);
+    const pickAnswerBtn = document.createElement('input');
+    pickAnswerBtn.type = 'button';
+    pickAnswerBtn.value = 'pick answer';
+    pickAnswerBtn.className = 'user-pickAnswer-btn'
+    pickAnswerBtn.id = 'user-pickAnswer-btn';
+    answerEl.appendChild(pickAnswerBtn);
+    userAllAnswerList.appendChild(answerEl);
+  }else{
+    showAnswerError()
+  }
 
-  questionsList.forEach(questionEl => {
-    questions.push({
-      text: questionEl.innerText     
-    })
-  })
 }
+
+
+
+
+// function updateLS(){
+//   questionsCont = document.querySelectorAll('.user-allQtn-content');
+
+//   const questions = [];
+
+//   questionsCont.forEach(questionCont => {
+//     questions.push({
+//       text: questionCont.innerText     
+//     })
+//   })
+// }

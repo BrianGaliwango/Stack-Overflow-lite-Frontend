@@ -1061,7 +1061,8 @@ nav .logo {
   outline-color: var(--main-color);
 }
 
-.answer-qtn-btn {
+.answer-qtn-btn ,
+.user-AllAnswer-qtn-btn {
   background-color: var(--happy-text-color);
   border: none;
   border-radius: 15px;
@@ -1071,7 +1072,8 @@ nav .logo {
 }
 
 
-.answer-qtn-btn:focus {
+.answer-qtn-btn:focus ,
+.user-AllAnswer-qtn-btn:focus {
   outline: none;
 }
 
@@ -1113,8 +1115,8 @@ nav .logo {
   transition: transform 0.2s ease; 
 }
 
-
 .answer-qtn-btn:active ,
+.user-addAnswer-btn:active ,
 .myQtn-answers-btn:active ,
 .myQtn-delete-btn:active ,
 .recent-answers-btn:active ,

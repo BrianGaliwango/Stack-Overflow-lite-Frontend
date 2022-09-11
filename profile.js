@@ -7,6 +7,7 @@ const profileContentBtns = document.getElementById('profile-content-btns');
 const myProAllQtnList = document.getElementById('myPro-allQuestions-list');
 const myProAllQtnAnswers = document.getElementById('myPro-allAnswers-container');
 const myProPostedQtnContent = document.getElementById('myPro-postedQtn-content');
+const myProAnswersList = document.getElementById('myPro-allQtnAnswers-list')
 const myProAllQtnsDisplay = document.getElementById('myPro-allQtns-total-display');
 const myProQtnCont = document.getElementById('myPro-allQtn-content')
 
@@ -55,6 +56,23 @@ myProPostedQtnContent.addEventListener('click', (e) => {
     console.log(123)
   }
   profileQtnContentContainer.appendChild(myProAllQtnsContainer)
+})
+
+// Delete Question Eventlistener
+
+myProAllQtnList.addEventListener('click', (e) => {
+  e.preventDefault();
+  if(e.target.classList.contains('myPro-delete-qtn-btn')){
+    e.target.parentElement.remove();
+  }
+})
+
+
+// Delete answers Eventlistener 
+myProAnswersList.addEventListener('click', (e) => {
+  if(e.target.classList.contains('myPro-delete-answer-btn')){
+    e.target.parentElement.parentElement.remove();
+  }
 })
 
 

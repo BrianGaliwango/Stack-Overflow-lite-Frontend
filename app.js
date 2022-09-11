@@ -18,6 +18,7 @@ const userRecQtnPostedBtn = document.getElementById('user-postedRecentQtns-back-
 const userAnswersList = document.getElementById('user-answers-list');
 const userRecentQtnsList = document.getElementById('user-recentQtns-list');
 const userAnswerContent = document.getElementById('user-answer-content');
+const userRecAnswersList = document.getElementById('user-recentAnswers-list')
 const addAnswerBtn = document.getElementById('answer-qtn-btn');
 const userPickAnswerBtn = document.getElementById('user-pickAnswer-btn');
 const userRecDisplay = document.getElementById('user-recentQtns-display');
@@ -82,7 +83,8 @@ addAnswerBtn.addEventListener('click', (e) => {
 });
 
 // Pick Answer Eventlistener
-userAnswersList.addEventListener('click', (e) => {
+userAnswersList.addEventListener('click', (e) => { 
+
   if(e.target.classList.contains('user-pickAnswer-btn')) {
 
     if(e.target.value === 'pick answer'){
@@ -135,6 +137,36 @@ userAllAnswersContainer.addEventListener('click', (e) => {
     userAllQtnsList.classList.remove('hide');
   }
 });
+
+// User pick Answer Eventlistener
+userRecAnswersList.addEventListener('click', (e) => {
+  if(e.target.classList.contains('user-pickAnswer-btn')) {
+
+    if(e.target.value === 'pick answer'){
+    e.target.value = 'not answer';
+  }else{
+    e.target.value = 'pick answer';
+  } 
+    // removePicked()
+    e.target.parentElement.classList.toggle('picked');
+  }
+});
+
+
+// All user pick Answer Eventlistener
+userAllAnswerList.addEventListener('click', (e) => {
+  if(e.target.classList.contains('user-pickAnswer-btn')) {
+
+    if(e.target.value === 'pick answer'){
+    e.target.value = 'not answer';
+  }else{
+    e.target.value = 'pick answer';
+  } 
+    // removePicked()
+    e.target.parentElement.classList.toggle('picked');
+  }
+});
+
 
  // Ask Question func
 function askQuestion(){
@@ -273,7 +305,6 @@ function userAddAnswer(){
   userAddAnsInput.value = '';
 }
 
-
 function showAddAnswerError(){
   const answerErrDiv = document.createElement('div');
   answerErrDiv.className = 'error'
@@ -283,8 +314,6 @@ function showAddAnswerError(){
   
   setTimeout(() => {answerErrDiv.remove()}, 2000);
 }
-
-
 
 
 // function updateLS(){

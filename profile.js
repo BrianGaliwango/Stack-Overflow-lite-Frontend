@@ -102,7 +102,6 @@ myProRecQtnList.addEventListener('click', (e) => {
 
     myProRecAnswersContainer.classList.remove('hide');
   }
-  console.log(e.target)
 })
 
 // Back to qtns eventListener

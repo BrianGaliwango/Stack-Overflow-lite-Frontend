@@ -34,7 +34,7 @@ profileContentBtns.addEventListener('click', (e) => {
 myProAllQtnList.addEventListener('click', (e) => {
   if(e.target.classList.contains('myPro-answers-btn')){
     console.log(e.target)
-    e.target.parentElement.parentElement.parentElement.parentElement.classList.add('hide')
+    e.target.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add('hide')
 
     myProAllQtnsDisplay.classList.add('hide');
     myProAllQtnAnswers.classList.remove('hide'); 
@@ -63,7 +63,7 @@ myProPostedQtnContent.addEventListener('click', (e) => {
 myProAllQtnList.addEventListener('click', (e) => {
   e.preventDefault();
   if(e.target.classList.contains('myPro-delete-qtn-btn')){
-    e.target.parentElement.remove();
+    e.target.parentElement.parentElement.remove();
   }
 })
 

@@ -53,27 +53,25 @@
 
       <div class="profile-sidebar-menu">
         <h1 class="profile-categories-title">Categories</h1>
-        <ul class="profile-content-btns">
-          <li class="total-category">
-            <button class="profile-qtns-btn">
+        <ul class="profile-content-btns" id="profile-content-btns">
+          <li>
+            <button class="profile-qtns-btn" id="profile-qtns-btn">
               My Questions
             </button>         
           </li>
-          <li><button class="recentProfile-qtns-btn">
+          <li><button class="recentProfile-qtns-btn" id="recentProfile-qtns-btn">
             My Recent Questions
           </button></li>
-          <!-- <li><button class="allQtns-answers-btn">Questions and Answers</button></li> -->
         </ul>
       </div>
     </div>
 
-    <div class="right-container">
+    <div class="right-container" id="right-container">
                   <!-- Profile Questions -->
-       <div class="myPro-allQtns-content-container">
+       <div class="myPro-allQtns-content-container" id="myPro-allQtns-content-container">        
+         <div class="myPro-allQtns-container" id="myPro-allQtns-container">
         
-         <div class="myPro-allQtns-container">
-        
-           <div class="myPro-allQtns-total-display">
+           <div class="myPro-allQtns-total-display" id="myPro-allQtns-total-display">
               <h1 class="myPro-allQtns-title">
                 My Questions:
               </h1> 
@@ -83,32 +81,35 @@
               </div>
           </div> 
 
-             <div class="myPro-allQuestions-content">
-              <ul class="myPro-allQuestions-list">                
-                <li class="myPro-allQtn-content">
+             <div class="myPro-allQuestions-content" id="myPro-allQuestions-content">
+
+              <ul class="myPro-allQuestions-list" id="myPro-allQuestions-list"> 
+
+                <li class="myPro-allQtn-content" id="myPro-allQtn-content">
                   <p class="myPro-allQtn-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure quia?
                   </p>
                   <div class="myPro-inQtn-total-answers-number">
                     10
                   </div>  
-                  <div class="myPro-allAnswer-btns">
+                  
                     <input type="submit" value="answers" class="myPro-answers-btn" id="myPro-answers-btn"> 
-                    <input type="submit" value="x" class="myPro-delete-qtn-btn" id="myPro-delete-qtn-btn">       
-                </div>  
+                
+                  <input type="submit" value="x" class="myPro-delete-qtn-btn" id="myPro-delete-qtn-btn">       
                 </li>
 
-                <li class="myPro-allQtn-content">
+                <li class="myPro-allQtn-content" id="myPro-allQtn-content">
                   <p class="myPro-allQtn-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur in temporibus necessitatibus sunt atque quibusdam? Doloremque libero a iure quia?
                   </p>  
                   <div class="myPro-inQtn-total-answers-number">
                     20
                   </div>
-                  <div class="myPro-allAnswer-btns">
+                  
                     <input type="submit" value="answers" class="myPro-answers-btn" id="myPro-answers-btn"> 
+
                     <input type="submit" value="x" class="myPro-delete-qtn-btn" id="myPro-delete-qtn-btn">   
-                  </div>  
+                    
                 </li>
 
                 <li class="myPro-allQtn-content">
@@ -220,8 +221,8 @@
           </div>  
                         <!--  Profile Answers Content-->
       
-       <div class="myPro-allAnswers-container">
-        <div class="myPro-postedQtn-content">
+       <div class="myPro-allAnswers-container hide" id="myPro-allAnswers-container">
+        <div class="myPro-postedQtn-content" id="myPro-postedQtn-content">
           <p class="myPro-postedQtn-text">
             How do i position this question in css and html Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, corporis!
           </p>
@@ -355,16 +356,16 @@
           </ul>
         </div>  
 
-       </div>    -->
+       </div>    
     
      </div>
 
       
                 <!-- Profile Recent Questions Data -->
         
-     <div class="myPro-allRecentQtns-content-container">   
+     <div class="myPro-allRecentQtns-content-container hide" id="myPro-allRecentQtns-content-container">   
 
-          <!-- <div class="myPro-recentQtns-container">  
+         <div class="myPro-recentQtns-container">  
 
           <div class="myPro-recentQtns-display">
             <h1 class="MyPro-recentQtns-title">
@@ -377,9 +378,9 @@
           </div>
 
           <div class="myPro-recentQtns-content">
-            <ul class="myPro-recentQtns-list">                
+            <ul class="myPro-recentQtns-list" id="myPro-recentQtns-list">                
               <li class="myPro-recentQtn-content">
-                <p class="myPro-recentQtn-text">
+                <p class="myPro-recentQtn-text" id="myPro-recentQtn-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure quia?
                 </p>
                 <div class="myPro-inQtn-recentTotal-answers-number">
@@ -517,11 +518,11 @@
             </ul>
           </div>
 
-        </div>     -->
+        </div>     
 
                            <!-- Recent Answers Data -->
 
-            <!-- <div class="myPro-recentAnswers-container">
+           <div class="myPro-recentAnswers-container hide">
 
             <div class="myPro-recentPostedQtn-content">
               <p class="myPro-recentPostedQtn-text">
@@ -620,13 +621,12 @@
                 </li>                                 
               </ul>
             </div>
-          </div>  -->
+          </div>  
 
       </div>  
                       
-
     </div>            
   </div>
-  <script src="/app.js"></script>
+  <script src="/profile.js"></script>
 </body>
 </html>

@@ -10,11 +10,12 @@ const myProAllQtnList = document.getElementById('myPro-allQuestions-list');
 const myProAllQtnAnswers = document.getElementById('myPro-allAnswers-container');
 const myProAnsCont = document.getElementById('myPro-answer-content')
 const myProPostedQtnContent = document.getElementById('myPro-postedQtn-content');
-const myProAnswersList = document.getElementById('myPro-allQtnAnswers-list')
+const myProAnswersList = document.getElementById('myPro-allQtnAnswers-list');
 const myProAllQtnsDisplay = document.getElementById('myPro-allQtns-total-display');
-const myProQtnCont = document.getElementById('myPro-allQtn-content')
+const myProQtnCont = document.getElementById('myPro-allQtn-content');
 const myProRecSelectedQtn = document.getElementById('myPro-recentPostedQtn-content');
-const myProRecQtnList = document.getElementById('myPro-recentQtns-list')
+const myProRecQtnList = document.getElementById('myPro-recentQtns-list');
+const myProRecAnswersList = document.getElementById('myPro-recentAnswers-list');
 
 
 
@@ -111,6 +112,39 @@ myProRecSelectedQtn.addEventListener('click', (e) => {
   myProRecQtnsContainer.classList.remove('hide');
   myProAllQtnsContainer.classList.remove('hide');
 })
+
+// Delete recent Qtns eventListener
+myProRecQtnList.addEventListener('click', (e) => {
+  if(e.target.classList.contains('myPro-recentDeleteQtn-btn')){
+    e.target.parentElement.parentElement.remove();
+    console.log(e.target);
+  }
+});
+
+   // Pick answer eventListener
+  myProRecAnswersList.addEventListener('click', (e) => {
+  e.preventDefault();
+  if(e.target.classList.contains('myPro-pickAnswer-btn')){
+
+    if(e.target.value === 'pick answer'){
+      e.target.value = 'not answer';
+    }else{
+      e.target.value = 'pick answer';
+    } 
+
+    e.target.parentElement.parentElement.classList.toggle('picked');
+  }
+});
+
+// Delete recent answer eventListener
+
+myProRecAnswersList.addEventListener('click', (e) => {
+  if(e.target.classList.contains('myPro-recentDelete-answer-btn')){
+    e.target.parentElement.parentElement.remove();
+    console.log(e.target);
+  }
+});
+
 
 
 

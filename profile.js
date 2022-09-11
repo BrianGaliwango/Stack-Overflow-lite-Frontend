@@ -1,15 +1,20 @@
 const rightContainer = document.getElementById('right-container');
 const profileQtnContentContainer = document.getElementById('myPro-allQtns-content-container');
-const profileAllRecentQtnsContentContainer = document.getElementById('myPro-allRecentQtns-content-container')
+const profileAllRecentQtnsContentContainer = document.getElementById('myPro-allRecentQtns-content-container');
+const myProRecQtnsContainer = document.getElementById('myPro-recentQtns-container');
+const myProRecAnswersContainer = document.getElementById('myPro-recentAnswers-container');
 const myProAllQtnsContainer = document.getElementById('myPro-allQtns-container');
 const myProAllQtnContent = document.getElementById('myPro-allQuestions-content');
 const profileContentBtns = document.getElementById('profile-content-btns');
 const myProAllQtnList = document.getElementById('myPro-allQuestions-list');
 const myProAllQtnAnswers = document.getElementById('myPro-allAnswers-container');
+const myProAnsCont = document.getElementById('myPro-answer-content')
 const myProPostedQtnContent = document.getElementById('myPro-postedQtn-content');
 const myProAnswersList = document.getElementById('myPro-allQtnAnswers-list')
 const myProAllQtnsDisplay = document.getElementById('myPro-allQtns-total-display');
 const myProQtnCont = document.getElementById('myPro-allQtn-content')
+const myProRecSelectedQtn = document.getElementById('myPro-recentPostedQtn-content');
+const myProRecQtnList = document.getElementById('myPro-recentQtns-list')
 
 
 
@@ -26,14 +31,12 @@ profileContentBtns.addEventListener('click', (e) => {
     rightContainer.appendChild(profileAllRecentQtnsContentContainer);
   }
 
-  console.log(e.target)
 });
 
 
 // Check answers eventListener
 myProAllQtnList.addEventListener('click', (e) => {
   if(e.target.classList.contains('myPro-answers-btn')){
-    console.log(e.target)
     e.target.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add('hide')
 
     myProAllQtnsDisplay.classList.add('hide');
@@ -53,10 +56,26 @@ myProPostedQtnContent.addEventListener('click', (e) => {
     myProAllQtnsContainer.classList.remove('hide');
     myProAllQtnContent.classList.remove('hide');
     myProAllQtnList.classList.remove('hide');
-    console.log(123)
   }
   profileQtnContentContainer.appendChild(myProAllQtnsContainer)
 })
+
+// Pick answer eventListener
+myProAnswersList.addEventListener('click', (e) => {
+  e.preventDefault();
+  if(e.target.classList.contains('myPro-pickAnswer-btn')){
+
+    if(e.target.value === 'pick answer'){
+      e.target.value = 'not answer';
+    }else{
+      e.target.value = 'pick answer';
+    } 
+    e.target.parentElement.parentElement.classList.toggle('picked');
+  }
+  console.log(e.target.parentElement)
+})
+
+
 
 // Delete Question Eventlistener
 
@@ -73,6 +92,24 @@ myProAnswersList.addEventListener('click', (e) => {
   if(e.target.classList.contains('myPro-delete-answer-btn')){
     e.target.parentElement.parentElement.remove();
   }
+})
+
+// MyPro recent check answers eventListener 
+myProRecQtnList.addEventListener('click', (e) => {
+  if(e.target.classList.contains('myPro-recentAnswers-btn')){
+    e.target.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add('hide');
+
+    myProRecAnswersContainer.classList.remove('hide');
+  }
+  console.log(e.target)
+})
+
+// Back to qtns eventListener
+myProRecSelectedQtn.addEventListener('click', (e) => {
+
+  myProRecAnswersContainer.classList.add('hide');
+  myProRecQtnsContainer.classList.remove('hide');
+  myProAllQtnsContainer.classList.remove('hide');
 })
 
 

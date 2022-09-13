@@ -1,4 +1,3 @@
-
 const rightContainer = document.getElementById('right-container');
 const contentBtns = document.getElementById('content-btns');
 const postContent = document.getElementById('post-content');

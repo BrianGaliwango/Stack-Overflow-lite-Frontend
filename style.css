@@ -634,40 +634,6 @@ nav .logo {
   display: none;
 }
 
-.posted-qtn {
-  /* background-color: transparent;
-  height: 80vh;
-  letter-spacing: 1px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transition: all 0.2s ease-in-out; */
-}
-
-/* .answer-form {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.answer-form .answer-post {
-  background-color: var(--form-bg-color);
-  width: 100%;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 24px;
-  font-family: serif;
-  text-align: center;
-  letter-spacing: 1px;
-} */
-
-/* .answer-form .answer-post:focus {
-  outline-color: var(--main-color);
-} */
-
 .user-postedQtn-content ,
 .user-postedRecentQtn-content ,
 .user-allSelectedQtn-content ,
@@ -880,10 +846,6 @@ nav .logo {
   height: 87vh;
 }
 
-.user-answers-content {
-  /* max-height: 400px; */
-}
-
 .user-recentAnswers-list ,
 .user-answers-list ,
 .user-recentQtns-list ,
@@ -1002,8 +964,7 @@ nav .logo {
 .myPro-allAnswer-btns ,
 .user-allAddAns-btns {
   display: flex;
-  justify-content: space-between;
-  
+  justify-content: space-between;  
 }
 
 .myPro-answers-btn ,
@@ -1027,7 +988,6 @@ nav .logo {
 .user-answers-btn {
   margin-left: 50px; 
 }
-
 
 .user-addAnswer-btn {
   width: 90px;
@@ -1055,7 +1015,6 @@ nav .logo {
   padding: 10px;
 } 
 
-
 .user-addAnswer-input:focus ,
 .allUser-addAnswer-input:focus {
   outline-color: var(--main-color);
@@ -1070,7 +1029,6 @@ nav .logo {
   margin: 6px;
   color: var(--secondary-text-color);
 }
-
 
 .answer-qtn-btn:focus ,
 .user-AllAnswer-qtn-btn:focus {
@@ -1152,12 +1110,10 @@ nav .logo {
   outline: none;
 }
 
-
 .error {
   background-color: var(--danger-color);
   border-radius: 5px;
   color: var(--secondary-text-color);
   text-align: center;
-  font-size: 18px;
-  
+  font-size: 18px; 
 }

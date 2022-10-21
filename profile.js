@@ -31,7 +31,6 @@ profileContentBtns.addEventListener('click', (e) => {
     profileAllRecentQtnsContentContainer.classList.remove('hide');
     rightContainer.appendChild(profileAllRecentQtnsContentContainer);
   }
-
 });
 
 
@@ -76,17 +75,13 @@ myProAnswersList.addEventListener('click', (e) => {
   console.log(e.target.parentElement)
 })
 
-
-
 // Delete Question Eventlistener
-
 myProAllQtnList.addEventListener('click', (e) => {
   e.preventDefault();
   if(e.target.classList.contains('myPro-delete-qtn-btn')){
     e.target.parentElement.parentElement.remove();
   }
 })
-
 
 // Delete answers Eventlistener 
 myProAnswersList.addEventListener('click', (e) => {

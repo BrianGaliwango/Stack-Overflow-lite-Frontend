@@ -11,48 +11,51 @@
     <nav class="navbar">
       <div class="nav-content">
 
-        <div class="title-container">
+        <div class="logoTitle-container">
           <img src="/img/stack-overflow.svg" class="logo">
         </div>
-
-        <div>
-        <h1 class="login-title"> 
-          &nbspStack <em>Overflow</em> lite
-        </h1>
-        </div>
+        
+        <div class="app-title-container">
+          <h3 class="login-title"> 
+          Stack Overflow lite
+          </h3>  
+      </div>
 
         <div id="form-btn" class="form-btn">
-          <input type="submit" value="Sign Up" class="sign-up-btn" id="sign-up-btn">
+          <a class="sign-up-btn" id="sign-up-btn "href="register.html">Register</a>
         </div>
 
       </div>
     </nav>
-    
+
     <div class="main-content">
       <div class="login-container">
         <img src="/img/stack-overflow.svg" class="login-logo">
         <h1>Please Login</h1>
         <form action="#" method="post" id="login-form" class="login-form">
+
           <div class="form-control">         
           <input type="text" name="name" placeholder="Enter name" id="name" autocomplete="off" required>
          </div>
 
           <div class="form-control">        
-            <input type="text" name="password" placeholder="Enter password"id="password" autocomplete="off" required>
+            <input type="text" name="password" placeholder="Enter password"id="password"  class="name-input" autocomplete="off" required>
           </div> 
 
-          <button class="loginForm-btn" id="login">Sign In</button>
+          <div id="form-btn" class="form-btn">
+            <a class="login-btn" id="login" href="user.html">Sign in</a>
+          </div>
 
           <div class="register">
             <p class="register-text">
               Don't Have an Account yet?
               <br>
-              <a href="createAccount.html">Register Now</a>
+              <a href="register.html">Register Now</a>
             </p>
           </div>
         </form>
       </div>
-  </div>
+    </div>
   </div>
   <script src="/app.js"></script>
 </body>

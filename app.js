@@ -209,7 +209,6 @@ function askQuestion(){
       questionEl.appendChild(answersBtn);
 
       userAllQtnsList.appendChild(questionEl);
-
       }
   }else{
     showError();

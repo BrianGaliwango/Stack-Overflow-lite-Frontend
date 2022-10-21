@@ -25,7 +25,7 @@ body {
   margin: 0;
 }
 
-@media(max-width: 1050px) {
+/* @media(max-width: 1050px) {
 
   .navbar ul li:nth-of-type(3){
     display: none;
@@ -115,9 +115,8 @@ body {
   .myPro-total-qtns-container small {
     font-size: 24px;
     letter-spacing: 2px;
-  }
-  
-}
+  }  
+} */
 
 a {
   text-decoration: none;
@@ -130,6 +129,7 @@ a {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100vw;
   margin: 0;
 }
 
@@ -155,9 +155,8 @@ a {
   transition: all 0.2s ease-in-out;
 }
 
-
-.nav-content .title-container {
-  display: flex;
+.nav-content .logoTitle-container {
+  display: inline-flex;
 }
 
 .nav-content 
@@ -169,11 +168,7 @@ a {
   margin: 0;
 }
  
-.nav-content h1 em {
-  color: var(--secondary-text-color);
-}
-
-.nav-content .login-title ,
+.login-title ,
 .createAcc-title {
   letter-spacing: 5px;
   font-size: 30px;
@@ -223,8 +218,8 @@ nav .logo {
   outline-color:var(--main-color);
 }
 
-.form-btn input
- {
+.form-btn input ,
+.form-btn a {
   border: none;
   border-radius: 35px;
   padding: 8px 18px;
@@ -236,7 +231,7 @@ nav .logo {
 }
 
 .form-btn .sign-up-btn ,
-.sign-in-btn{
+.sign-in-btn {
   background-color: var(--btn-main-color);
 }
 
@@ -258,7 +253,9 @@ nav .logo {
   object-fit: contain;
 }
 
-.login-container {
+.login-container ,
+.register-container {
+  width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -277,16 +274,18 @@ nav .logo {
   width: 40px;
 }
 
-.login-container h1 {
+.login-container h1 
+.register-container h1{
   text-align: center;
 }
 
 .form-control {
   margin: 15px 0 30px;
-  width: 300px;
+  width: 400px;
 } 
 
-.login-container a {
+.login-container a ,
+.register-container a {
   color: var(--btn-main-color);
 }
 
@@ -306,7 +305,8 @@ nav .logo {
   outline: none;
 }
 
-.login-container .loginForm-btn {
+.login-container .login-btn ,
+.register-container .register-btn {
   border: 0;
   border-radius: 5px;
   cursor: pointer;
@@ -319,11 +319,13 @@ nav .logo {
   background-color:var(--btn-main-color);
 }
 
-.login-container .loginForm-btn:focus {
+.login-container .login-btn:focus ,
+.register-container .register-btn:focus {
   outline: none;
 }
 
-.login-container .loginForm-btn:active {
+.login-container .login-btn:active ,
+.register-container .register-btn:active {
   transform: scale(0.98);
 }
 
@@ -620,6 +622,7 @@ nav .logo {
   color: var(--dark-text-color);
   position: relative;
 }
+
 .user-recentAnswers-container ,
 .user-recentQtns-container {
   height: 87vh;
@@ -1116,4 +1119,181 @@ nav .logo {
   color: var(--secondary-text-color);
   text-align: center;
   font-size: 18px; 
+}
+
+/* Media 540 */
+@media screen and (max-width: 540px) {
+  .logoTitle-container {
+    margin-left: -5px; 
+ }
+
+ .login-title {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-right: 25px;
+}
+
+ .login-container ,
+ .register-container {
+    width: 90vw;
+  }
+
+} 
+
+/* Media 414 */
+@media screen and (max-width: 414px) {
+  .logoTitle-container {
+    margin-left: -5px; 
+ }
+
+  nav .logo {
+    width: 25px;
+  }
+
+  .app-title-container{
+    margin-left: 10px;
+  }
+
+  .login-title {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+
+  .form-btn .sign-up-btn {
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .login-container ,
+  .register-container {
+    width: 90vw;
+  }
+
+  .login-logo {
+    width: 35px;
+  }
+  
+  .login-container h1 {
+    font-size: 35px;
+  }
+
+  .register-container h1 {
+    margin-bottom: 0;
+  }
+
+  .form-btn .sign-up-btn {
+    padding: 6px;
+    font-size: 15px;
+  }
+
+  .form-btn .sign-in-btn {
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .form-control {
+    width: 280px;  
+    margin: 5px 0 45px;
+  } 
+
+  .form-control input {
+    font-size: 25px;
+  } 
+
+}
+
+/* Media 395 */
+@media screen and (max-width: 395px) {
+  .form-btn .sign-up-btn {
+    padding: 3px;
+    font-size: 13px;
+  }
+ 
+  .form-btn .sign-in-btn {
+    font-size: 13px;
+    padding: 5px;
+  }
+ 
+}
+
+/* Media 375 */
+@media screen and (max-width: 375px) {
+  .login-title {
+    font-size: 25px;
+    letter-spacing: 0.5px;
+  }
+
+  .register-container {
+    height: 500px;
+  }
+
+  .register-container h1 {
+    font-size: 30px;
+  }
+
+  .register-container .form-control {
+    margin: 15px;
+  }
+
+  .register-container .register-btn {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .register-container h1 {
+    font-size: 29px;
+  }
+}
+
+/* Media 300px */
+@media screen and (max-width: 300px){
+  .logoTitle-container {
+     margin-left: -5px; 
+  }
+
+  nav .logo {
+    width: 25px;
+    height: 20px;
+  }
+
+  .app-title-container {
+    margin-left: 10px;
+  }
+
+  .form-btn .sign-up-btn {
+    font-size: 12px;
+    padding: 3px;
+  }
+
+  .form-btn .sign-in-btn {
+    font-size: 12px;
+  }
+
+  .login-title {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+  }
+
+  .login-logo {
+    width: 25px;
+  }
+  
+  .login-container h1 {
+    font-size: 25px;
+  }
+
+  .register-container h1 {
+    font-size: 20px;
+  }
+  
+  .form-control {
+    width: 200px;
+    /* width: 300% ; */
+  } 
+
+  .register-container .form-control {
+    margin: 10px;
+  }
+
 }

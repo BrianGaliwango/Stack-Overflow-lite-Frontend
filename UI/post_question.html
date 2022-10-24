@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>User Page</title>
+</head>
+<body>
+  <div class="main-container">
+
+    <nav class="navbar">
+      <div class="nav-content">
+        <div class="logo-container">
+         <img src="/img/stack-overflow.svg" class="logo">
+        </div>
+
+        <div class="menuBtn-container">
+          <button class="menu-button" id="menu-button">
+           <img src="/img/menu-symbol.svg" alt="" class="menu-symbol">
+          </button>            
+        </div>
+
+        <div class="title-container">
+          <h1 class="user-title"> 
+          Stack Overflow lite
+          </h1>
+        </div>
+
+        <form action="search" method="post" id="searchForm" class="searchForm">
+          <input type="text" name="search" placeholder="Search..." autocomplete="off">
+        </form>
+
+        <div id="form-btn" class="form-btn">
+          <a href="login.html" class="logout-btn" id="logout-btn">logout</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="user-container">  
+      
+      <div class="left-container hide" id="left-container">
+        <div class="left-header">
+          <div class="open-profile"></div>
+        </div>
+
+        <div class="sidebar-menu">
+          <div class="profile-link-container">
+            <a href="profile.html" class="profile-link">Profile</a>
+          </div>
+
+          <h2 class="topics-title">Categories</h2>
+
+          <ul class="content-btns" id="content-btns">
+            <li>
+              <button class="post-qtn-btn">
+                <a href="post_question.html"></a> 
+              </button>
+            </li>
+            
+            <li>
+              <button class="qtns-answers-btn">
+               <a href="user.html">Questions</a> 
+              </button>
+            </li>
+
+            <li>
+              <button class="recent-qtns-btn">
+                <a href="user.html">Recent Questions</a>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <footer>Stack overflow lite</footer>
+
+      </div>
+
+      <div class="right-container" id="right-container">
+
+        <div class="post-content" id="post-content"> 
+                         
+           <div class="ask-qtn-container" id="ask-qtn-container">
+            <div class="post-title">
+              <h1 class="app-title">
+                Don't <strong>Get</strong> Stuck
+              </h1>
+            </div>
+            
+            <div class="post-form">
+              <label>Title</label>
+              <input autocomplete="off" type="text" name="title" placeholder="Add title" id="post-qtn-form" class="post-qtn-form" autofocus required>
+              
+              <label>Question body</label>
+              <textarea class="post-qtn-form" id="post-qtn-form" name="question" id="" cols="30" rows="8" placeholder="Ask question"></textarea>
+
+              <input type="submit" value="Ask question" id="submit-qtn-btn" class="submit-qtn-btn">
+            </div>
+
+              <p class="post-slogan">
+                <em>Millions</em> of people <em>find</em> the best <em>answers</em> to <em>technical problems</em> <br> and <em>help</em> others <em>answer</em> theirs.
+              </p>
+          </div>              
+        </div>
+
+      </div> 
+    </div>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

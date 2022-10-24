@@ -1,4 +1,6 @@
 const rightContainer = document.getElementById('right-container');
+const leftContainer = document.getElementById('left-container');
+const menuBtn = document.getElementById('menu-button');
 const profileQtnContentContainer = document.getElementById('myPro-allQtns-content-container');
 const profileAllRecentQtnsContentContainer = document.getElementById('myPro-allRecentQtns-content-container');
 const myProRecQtnsContainer = document.getElementById('myPro-recentQtns-container');
@@ -17,7 +19,15 @@ const myProRecSelectedQtn = document.getElementById('myPro-recentPostedQtn-conte
 const myProRecQtnList = document.getElementById('myPro-recentQtns-list');
 const myProRecAnswersList = document.getElementById('myPro-recentAnswers-list');
 
+// Show sidebar eventListener
+menuBtn.addEventListener('click', (e) => {
+  leftContainer.classList.toggle('hide')
+});
 
+// Hide sidebar eventListener
+leftContainer.addEventListener('mouseleave', (e) => {
+  leftContainer.classList.add('hide')
+});
 
 // Change categories eventListener
 profileContentBtns.addEventListener('click', (e) => {

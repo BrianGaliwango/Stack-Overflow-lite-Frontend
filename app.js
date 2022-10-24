@@ -1,10 +1,12 @@
 const rightContainer = document.getElementById('right-container');
+const leftContainer = document.getElementById('left-container');
+const menuBtn = document.getElementById('menu-button');
 const contentBtns = document.getElementById('content-btns');
 const postContent = document.getElementById('post-content');
 const askQtnContainer = document.getElementById('ask-qtn-container');
 const userRecentQtnContainer = document.getElementById('user-recentQtns-content-container');
 const userAllQtnsContainer = document.getElementById('user-allQtns-content-container');
-const postQtnBtn = document.getElementById('post-qtn-btn');
+const postQtnBtn = document.getElementById('submit-qtn-btn');
 const postQtnInput = document.getElementById('post-qtn-form');
 const userAnswersContainer = document.getElementById('user-answers-container');
 const userRecQtnCont = document.getElementById('user-recentQtns-container');
@@ -33,6 +35,16 @@ const userAllQtnCont = document.getElementById('user-allQtn-content');
 const userAllQtnsDisplay = document.getElementById('allUser-qtns-display');
 const userAddAnsInput = document.getElementById('allUser-addAnswer-input');
 const userAllAddAnswerBtn = document.getElementById('user-AllAnswer-qtn-btn');
+
+// Show sidebar eventListener
+menuBtn.addEventListener('click', (e) => {
+  leftContainer.classList.toggle('hide')
+});
+
+// Hide sidebar eventListener
+leftContainer.addEventListener('mouseleave', (e) => {
+  leftContainer.classList.add('hide')
+});
 
 // Change categories eventListener
 contentBtns.addEventListener('click', (e) =>{
@@ -114,17 +126,17 @@ userAllAddAnswerBtn.addEventListener('click', (e) => {
 });
 
 // Check all Answer Qtn Eventlistener
-userAllQtnsList.addEventListener('click', (e) => {
-  if(e.target.classList.contains('user-answers-btn')){
-    e.target.parentElement.parentElement.parentElement.parentElement.classList.add('hide');   
+// userAllQtnsList.addEventListener('click', (e) => {
+//   if(e.target.classList.contains('user-answers-btn')){
+//     e.target.parentElement.parentElement.parentElement.parentElement.classList.add('hide');   
     
-    userAllAnswersContainer.classList.remove('hide');
+//     userAllAnswersContainer.classList.remove('hide');
 
   
-    // userAllSelectedQtnCont.innerText = '';
-    // userAllSelectedQtnText.text = userAllQtnText;
-  }
-})
+//     // userAllSelectedQtnCont.innerText = '';
+//     // userAllSelectedQtnText.text = userAllQtnText;
+//   }
+// })
 
 // User selected question back eventListener 
 userAllAnswersContainer.addEventListener('click', (e) => {

@@ -1,0 +1,254 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>User Page</title>
+</head>
+<body>
+  <div class="main-container">
+
+    <nav class="navbar">
+      <div class="nav-content">
+        <div class="logo-container">
+         <img src="/img/stack-overflow.svg" class="logo">
+        </div>
+
+        <div class="menuBtn-container">
+          <button class="menu-button" id="menu-button">
+           <img src="/img/menu-symbol.svg" alt="" class="menu-symbol">
+          </button>            
+        </div>
+
+        <div class="title-container">
+          <h1 class="user-title"> 
+          Stack Overflow lite
+          </h1>
+        </div>
+
+        <form action="search" method="post" id="searchForm" class="searchForm">
+          <input type="text" name="search" placeholder="Search..." autocomplete="off">
+        </form>
+
+        <div id="form-btn" class="form-btn">
+          <a href="login.html" class="logout-btn" id="logout-btn">logout</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="user-container">  
+      
+      <div class="left-container hide" id="left-container">
+        <div class="left-header">
+          <div class="open-profile"></div>
+        </div>
+
+        <div class="sidebar-menu">
+          <!-- <div class="profile-link-container">
+            <a href="profile.html" class="profile-link">Profile</a>
+          </div> -->
+
+          <!-- <h2 class="topics-title">Categories</h2> -->
+
+          <ul class="content-btns" id="content-btns">
+            <li>
+              <button class="post-qtn-btn">
+                <a href="user.html" class="profile-link">Home</a>
+              </button>
+            </li>
+            <li>
+              <button class="recent-qtns-btn"><a href="profile.html" class="profile-link">Profile</a></button>
+            </li>
+            <!-- <li>
+              <button class="qtns-answers-btn">Questions and Answers</button>
+            </li>  -->
+          </ul>
+        </div>
+
+        <footer>Stack overflow lite</footer>
+
+      </div>
+
+      <div class="right-container" id="right-container">
+
+        <div class="user-allAnswers-container" id="user-allAnswers-container">
+
+          <div class="question-container">
+            
+            <h1 class="selected-questions-title" >Question</h1>
+
+            <div class="user-allSelectedQtn-content">            
+              <p class="selected-user-allAnswer-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur in temporibus necessitatibus sunt atque quibusdam? Doloremque libero a iure quia?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum quasi similique nostrum eos, eaque eligendi dolorum nobis id? Optio, adipisci.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse provident harum fugit repellendus doloremque sequi officiis nihil ab explicabo velit, enim aliquid eius vero mollitia aliquam voluptatum tempore illum aut asperiores dolores quos omnis. Eos in eius voluptatibus, nam numquam magnam repellat molestiae ipsum sapiente architecto maiores corrupti. Modi nostrum qui molestias, perspiciatis officia corrupti est doloremque iure nobis quae maxime suscipit debitis, reiciendis similique, tempora culpa accusantium eos sint necessitatibus ea incidunt sit. Reiciendis, quam! Hic, rerum iste delectus maiores excepturi sunt modi illo aperiam saepe? Repellat ipsa praesentium accusamus quasi, nesciunt inventore incidunt rem aliquam necessitatibus debitis est.
+              </p> 
+            </div>
+
+            <div class="answers-list">
+              <h1 class="user-allAnswers-title">Answers</h1>
+              <ul class="user-allAnswers-list" id="user-allAnswers-list">                
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>                            
+              </ul>
+            </div>
+
+            <div class="answer-form">     
+              <h1 class="user-allAnswers-title">Add Answers</h1>      
+              <form class="user-addAnswers-form" id="user-addAnswers-form">
+   
+                <textarea class="allUser-addAnswer-input"  id="allUser-addAnswer-input" name="answer" id="" cols="30" rows="10" placeholder="Answer question"></textarea>
+                
+                <input type="submit" value="answer" id="user-AllAnswer-qtn-btn" class="user-AllAnswer-qtn-btn">
+              </form>
+            </div> 
+            
+            
+          </div>
+
+          <!-- <div class="user-allSelectedQtn-content" id="user-allSelectedQtn-content">
+            <p class="user-allSelectedQtn-text" id="user-allSelectedQtn-text">
+              How do i position this question in css and html Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, corporis!
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae iure odit voluptatibus earum harum quidem fuga officiis? Mollitia velit amet assumenda libero possimus numquam corrupti in, consequuntur, impedit praesentium, quod autem nihil ullam. Ullam reprehenderit ab rem, dignissimos cum architecto quae eaque omnis incidunt labore quaerat debitis maiores rerum quisquam! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia voluptate optio a eaque aliquid et magni reprehenderit, odit iusto eos tempora quisquam consectetur non blanditiis possimus, quibusdam magnam eligendi repellendus fugiat. Provident nemo deserunt amet animi omnis. Praesentium, veritatis vero quam enim ipsa unde perferendis hic perspiciatis ipsam consequatur officia.
+            </p>
+
+            <div class="user-allSelectedQtn-btns">
+              <input type="submit" value="back" id="user-allSelectedQtns-back-btn" class="user-allSelectedQtns-back-btn">
+            </div>
+
+            <div class="answers-list">
+              <h1 class="user-allAnswers-title">Answers</h1>
+              <ul class="user-allAnswers-list" id="user-allAnswers-list">                
+                <li class="user-allAnswer-content picked">
+                  <p class="selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>  
+                  <input type="submit" value="not answer" class="user-pickAnswer-btn" id="user-pickAnswer-btn">     
+                </li>
+                
+                <li class="user-allAnswer-content picked">
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>  
+                  <input type="submit" value="not answer" class="user-pickAnswer-btn" id="user-pickAnswer-btn">     
+                </li>
+                
+                <li class="user-allAnswer-content picked">
+                  <p class="selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>  
+                  <input type="submit" value="not answer" class="user-pickAnswer-btn" id="user-pickAnswer-btn">     
+                </li>
+                
+    
+                <li class="user-allAnswer-content">
+                  <p class="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur in temporibus necessitatibus sunt atque quibusdam? Doloremque libero a iure quia?
+                  </p>  
+                  <input type="submit" value="pick answer" class="user-pickAnswer-btn" id="user-pickAnswer-btn">     
+                </li>                              
+              </ul>
+            </div>
+
+            <div class="answer-form">     
+              <h1 class="user-allAnswers-title">Add Answers</h1>      
+              <form class="user-addAnswers-form" id="user-addAnswers-form">
+    
+                <textarea class="allUser-addAnswer-input"  id="allUser-addAnswer-input" name="answer" id="" cols="30" rows="10" placeholder="Answer question"></textarea>
+                
+                <input type="submit" value="answer" id="user-AllAnswer-qtn-btn" class="user-AllAnswer-qtn-btn">
+              </form>
+            </div> 
+            
+        </div>         -->
+   
+      </div> 
+
+    </div>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

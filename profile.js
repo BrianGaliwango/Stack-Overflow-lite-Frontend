@@ -30,124 +30,124 @@ leftContainer.addEventListener('mouseleave', (e) => {
 });
 
 // Change categories eventListener
-profileContentBtns.addEventListener('click', (e) => {
-  e.preventDefault();
+// profileContentBtns.addEventListener('click', (e) => {
+//   e.preventDefault();
   
-  if(e.target.classList.contains('profile-qtns-btn')) {
-    rightContainer.innerHTML = '';
-    rightContainer.appendChild(profileQtnContentContainer);
-  }else if(e.target.classList.contains('recentProfile-qtns-btn')){
-    rightContainer.innerHTML = '';
-    profileAllRecentQtnsContentContainer.classList.remove('hide');
-    rightContainer.appendChild(profileAllRecentQtnsContentContainer);
-  }
-});
+//   if(e.target.classList.contains('profile-qtns-btn')) {
+//     rightContainer.innerHTML = '';
+//     rightContainer.appendChild(profileQtnContentContainer);
+//   }else if(e.target.classList.contains('recentProfile-qtns-btn')){
+//     rightContainer.innerHTML = '';
+//     profileAllRecentQtnsContentContainer.classList.remove('hide');
+//     rightContainer.appendChild(profileAllRecentQtnsContentContainer);
+//   }
+// });
 
 
 // Check answers eventListener
-myProAllQtnList.addEventListener('click', (e) => {
-  if(e.target.classList.contains('myPro-answers-btn')){
-    e.target.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add('hide')
+// myProAllQtnList.addEventListener('click', (e) => {
+//   if(e.target.classList.contains('myPro-answers-btn')){
+//     e.target.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add('hide')
 
-    myProAllQtnsDisplay.classList.add('hide');
-    myProAllQtnAnswers.classList.remove('hide'); 
-    profileQtnContentContainer.appendChild(myProAllQtnAnswers)
-  }
-})
+//     myProAllQtnsDisplay.classList.add('hide');
+//     myProAllQtnAnswers.classList.remove('hide'); 
+//     profileQtnContentContainer.appendChild(myProAllQtnAnswers)
+//   }
+// })
 
-// Back to questions eventlistener
+// // Back to questions eventlistener
 
-myProPostedQtnContent.addEventListener('click', (e) => {
-  e.preventDefault();
-  if(e.target.classList.contains('myPro-postedQtns-back-btn')){
-    e.target.parentElement.parentElement.parentElement.classList.add('hide');
+// myProPostedQtnContent.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   if(e.target.classList.contains('myPro-postedQtns-back-btn')){
+//     e.target.parentElement.parentElement.parentElement.classList.add('hide');
 
-    profileQtnContentContainer.innerHTML = '',
-    myProAllQtnsContainer.classList.remove('hide');
-    myProAllQtnContent.classList.remove('hide');
-    myProAllQtnList.classList.remove('hide');
-  }
-  profileQtnContentContainer.appendChild(myProAllQtnsContainer)
-})
+//     profileQtnContentContainer.innerHTML = '',
+//     myProAllQtnsContainer.classList.remove('hide');
+//     myProAllQtnContent.classList.remove('hide');
+//     myProAllQtnList.classList.remove('hide');
+//   }
+//   profileQtnContentContainer.appendChild(myProAllQtnsContainer)
+// })
 
-// Pick answer eventListener
-myProAnswersList.addEventListener('click', (e) => {
-  e.preventDefault();
-  if(e.target.classList.contains('myPro-pickAnswer-btn')){
+// // Pick answer eventListener
+// myProAnswersList.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   if(e.target.classList.contains('myPro-pickAnswer-btn')){
 
-    if(e.target.value === 'pick answer'){
-      e.target.value = 'not answer';
-    }else{
-      e.target.value = 'pick answer';
-    } 
-    e.target.parentElement.parentElement.classList.toggle('picked');
-  }
-  console.log(e.target.parentElement)
-})
+//     if(e.target.value === 'pick answer'){
+//       e.target.value = 'not answer';
+//     }else{
+//       e.target.value = 'pick answer';
+//     } 
+//     e.target.parentElement.parentElement.classList.toggle('picked');
+//   }
+//   console.log(e.target.parentElement)
+// })
 
-// Delete Question Eventlistener
-myProAllQtnList.addEventListener('click', (e) => {
-  e.preventDefault();
-  if(e.target.classList.contains('myPro-delete-qtn-btn')){
-    e.target.parentElement.parentElement.remove();
-  }
-})
+// // Delete Question Eventlistener
+// myProAllQtnList.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   if(e.target.classList.contains('myPro-delete-qtn-btn')){
+//     e.target.parentElement.parentElement.remove();
+//   }
+// })
 
-// Delete answers Eventlistener 
-myProAnswersList.addEventListener('click', (e) => {
-  if(e.target.classList.contains('myPro-delete-answer-btn')){
-    e.target.parentElement.parentElement.remove();
-  }
-})
+// // Delete answers Eventlistener 
+// myProAnswersList.addEventListener('click', (e) => {
+//   if(e.target.classList.contains('myPro-delete-answer-btn')){
+//     e.target.parentElement.parentElement.remove();
+//   }
+// })
 
-// MyPro recent check answers eventListener 
-myProRecQtnList.addEventListener('click', (e) => {
-  if(e.target.classList.contains('myPro-recentAnswers-btn')){
-    e.target.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add('hide');
+// // MyPro recent check answers eventListener 
+// myProRecQtnList.addEventListener('click', (e) => {
+//   if(e.target.classList.contains('myPro-recentAnswers-btn')){
+//     e.target.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add('hide');
 
-    myProRecAnswersContainer.classList.remove('hide');
-  }
-})
+//     myProRecAnswersContainer.classList.remove('hide');
+//   }
+// })
 
-// Back to qtns eventListener
-myProRecSelectedQtn.addEventListener('click', (e) => {
+// // Back to qtns eventListener
+// myProRecSelectedQtn.addEventListener('click', (e) => {
 
-  myProRecAnswersContainer.classList.add('hide');
-  myProRecQtnsContainer.classList.remove('hide');
-  myProAllQtnsContainer.classList.remove('hide');
-})
+//   myProRecAnswersContainer.classList.add('hide');
+//   myProRecQtnsContainer.classList.remove('hide');
+//   myProAllQtnsContainer.classList.remove('hide');
+// })
 
-// Delete recent Qtns eventListener
-myProRecQtnList.addEventListener('click', (e) => {
-  if(e.target.classList.contains('myPro-recentDeleteQtn-btn')){
-    e.target.parentElement.parentElement.remove();
-    console.log(e.target);
-  }
-});
+// // Delete recent Qtns eventListener
+// myProRecQtnList.addEventListener('click', (e) => {
+//   if(e.target.classList.contains('myPro-recentDeleteQtn-btn')){
+//     e.target.parentElement.parentElement.remove();
+//     console.log(e.target);
+//   }
+// });
 
-   // Pick answer eventListener
-  myProRecAnswersList.addEventListener('click', (e) => {
-  e.preventDefault();
-  if(e.target.classList.contains('myPro-pickAnswer-btn')){
+//    // Pick answer eventListener
+//   myProRecAnswersList.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   if(e.target.classList.contains('myPro-pickAnswer-btn')){
 
-    if(e.target.value === 'pick answer'){
-      e.target.value = 'not answer';
-    }else{
-      e.target.value = 'pick answer';
-    } 
+//     if(e.target.value === 'pick answer'){
+//       e.target.value = 'not answer';
+//     }else{
+//       e.target.value = 'pick answer';
+//     } 
 
-    e.target.parentElement.parentElement.classList.toggle('picked');
-  }
-});
+//     e.target.parentElement.parentElement.classList.toggle('picked');
+//   }
+// });
 
-// Delete recent answer eventListener
+// // Delete recent answer eventListener
 
-myProRecAnswersList.addEventListener('click', (e) => {
-  if(e.target.classList.contains('myPro-recentDelete-answer-btn')){
-    e.target.parentElement.parentElement.remove();
-    console.log(e.target);
-  }
-});
+// myProRecAnswersList.addEventListener('click', (e) => {
+//   if(e.target.classList.contains('myPro-recentDelete-answer-btn')){
+//     e.target.parentElement.parentElement.remove();
+//     console.log(e.target);
+//   }
+// });
 
 
 

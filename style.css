@@ -1,4 +1,6 @@
 
+/* view-question-link */
+
 
 :root {
   --main-color: rgb(216, 112, 14);
@@ -302,14 +304,8 @@ nav .logo {
   text-align: center;
 }
 
-.sidebar-menu ,
-.profile-sidebar-menu {
-  position: fixed;
-  top: 60;
-}
-
 .topics-title ,
-.profile-categories-title{
+.profile-categories-title {
   background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
   font-size: 18px;
@@ -320,22 +316,29 @@ nav .logo {
   padding: 5px;
 }
 
-.profile-sidebar-menu .profile-content-btns , 
+.sidebar-menu {
+  position: absolute;
+  top: 60;
+  width: 25vw;
+}
+
 .sidebar-menu .content-btns {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin-left: -40px;
+  text-align: center;
 }
 
-.profile-content-btns .profile-qtns-btn ,
-.allQtns-answers-btn ,
-.recentProfile-qtns-btn ,
-.post-qtn-btn , 
-.recent-qtns-btn ,
-.qtns-answers-btn {
+.post-questions-btn-content ,
+.questions-btn-content {
+  background-color: transparent;;
+  width: 100%;
+  margin: 15px 0 50px 0;
+}
+
+.post-questions-btn ,
+.questions-btn {
   background-color: transparent;
   border: none;
   color: var(--secondary-text-color);
@@ -343,31 +346,14 @@ nav .logo {
   font-family: inherit;
   letter-spacing: 1px;
   cursor: pointer;
-  width: 25vw;
   height: 80px;
   margin: 5px;
-  transition: all 0.1s ease-in-out;
-  margin: 0;
 }
 
-.allQtns-answers-btn:hover ,
-.profile-qtns-btn:hover ,
-.recentProfile-qtns-btn:hover , 
-.post-qtn-btn:hover ,
-.recent-qtns-btn:hover ,
-.qtns-answers-btn:hover {
-  background-color: var(--secondary-text-color);
+.post-questions-btn:hover ,
+.questions-btn:hover {
   color: var(--main-color);
-  font-size: 23px;
-}
-
-.profile-qtns-btn:focus ,
-.allQtns-answers-btn:focus  ,
-.recentProfile-qtns-btn:focus ,
-.post-qtn-btn:focus , 
-.recent-qtns-btn:focus ,
-.qtns-answers-btn:focus {
-  outline: none;
+  font-size: 24px;
 }
 
 .post-content ,
@@ -502,11 +488,6 @@ footer {
   top: 0;
   left: 0;
   width: 100%;
-}
-
-.user-recentAnswers-container ,
-.user-recentQtns-container {
-  /* height: 87vh; */
 }
 
 .ask-qtn-container {
@@ -648,6 +629,11 @@ footer {
   justify-content: center;
 }
 
+.profile-title-container ,
+.user-title-container {
+  display: inline-flex;
+}
+
 .user-answers-title ,
 .myPro-allQtns-title ,
 .myPro-answers-title ,
@@ -666,11 +652,6 @@ footer {
   color: var(--primary-text-color);
   letter-spacing: 1.2px;
   padding: 5px;
-}
-
-.user-recentQtns-title ,
-.allUser-qtns-title {
-  font-size: 24px;
 }
 
 .user-answers-title ,
@@ -713,16 +694,30 @@ footer {
   margin-right: 10px;
 }
 
-.myPro-allQtn-total-text , 
 .myPro-total-answers-text ,
 .myPro-total-recentQtns-text ,
 .myPro-total-recentAnswers-text {
-  letter-spacing: 1px;
+  /* letter-spacing: 1px;
   font-size: 18px;
   font-family: inherit;
   text-decoration: underline 2px var(--main-color);
   text-underline-offset: 3px;
-  margin: 8px;
+  margin: 8px; */
+}
+
+.view-recentQtns-btn ,
+.viewProfile-recentQtns-btn {
+  background-color: transparent;
+  border: none;
+  color: var(--primary-text-color);
+  text-decoration: underline 2px solid var(--main-color);
+  text-underline-offset: 2px;
+}
+
+.view-recentQtns-btn:active ,
+.viewProfile-recentQtns-btn:active {
+  transform: scale(0.98);
+  color: var(--main-color);
 }
 
 .user-answers-content ,
@@ -772,6 +767,10 @@ footer {
   letter-spacing: 1px;
   font-size: 18px;
   position: relative;
+}
+
+.view-question-link {
+  margin-top: 10px;
 }
 
 .total-answer-view ,
@@ -1164,24 +1163,18 @@ footer {
     font-size: 18px;
   }
 
-  .post-qtn-btn , 
-  .recent-qtns-btn ,
-  .qtns-answers-btn ,
-  .profile-content-btns .recentProfile-qtns-btn ,
-  .profile-content-btns .profile-qtns-btn {
+  .post-questions-btn , 
+  .questions-btn {
     font-size: 18px;
     padding-left: 4px;
   }
 
-  .recent-qtns-btn:hover ,
-  .qtns-answers-btn:hover ,
-  .profile-content-btns .recentProfile-qtns-btn:hover ,
-  .profile-content-btns .profile-qtns-btn:hover {
+  .questions-btn:hover {
     font-size: 20px;
     padding: 0;
   }
 
-  .post-qtn-btn:hover {
+  .post-questions-btn:hover {
     font-size: 19px;
   }
 
@@ -1288,11 +1281,8 @@ footer {
   letter-spacing: 1px;
 }
 
-  .post-qtn-btn:hover , 
-  .recent-qtns-btn:hover ,
-  .qtns-answers-btn:hover ,
-  .profile-content-btns .recentProfile-qtns-btn:hover ,
-  .profile-content-btns .profile-qtns-btn:hover {
+  .post-questions-btn:hover ,
+  .questions-btn:hover {
     font-size: 20px;
     padding: 0;
   }
@@ -1300,7 +1290,6 @@ footer {
   footer {
     font-size: 18px;
   }
-
 }
 
 /* Media 395 */
@@ -1377,11 +1366,8 @@ footer {
   .register-container h1 {
     font-size: 29px;
   }
-  .post-qtn-btn:hover , 
-  .recent-qtns-btn:hover ,
-  .qtns-answers-btn:hover ,
-  .profile-content-btns .recentProfile-qtns-btn:hover ,
-  .profile-content-btns .profile-qtns-btn:hover {
+  .post-questions-btn:hover , 
+  .questions-btn:hover {
     font-size: 19px;
     padding: 0;
   }
@@ -1452,19 +1438,13 @@ footer {
   font-size: 12px;
 }
 
-  .post-qtn-btn , 
-  .recent-qtns-btn ,
-  .qtns-answers-btn ,
-  .recentProfile-qtns-btn ,
-  .profile-content-btns .profile-qtns-btn {
+  .post-questions-btn , 
+  .questions-btn {
     font-size: 12px;
   }
 
-  .post-qtn-btn:hover , 
-  .recent-qtns-btn:hover ,
-  .qtns-answers-btn:hover ,
-  .profile-content-btns .recentProfile-qtns-btn:hover ,
-  .profile-content-btns .profile-qtns-btn:hover {
+  .post-questions-btn:hover , 
+  .questions-btn:hover {
     font-size: 14px;
   }
 

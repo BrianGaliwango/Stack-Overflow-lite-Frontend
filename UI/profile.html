@@ -42,31 +42,34 @@
     <div class="user-container">
 
       <div class="left-container hide" id="left-container">
+        <div class="left-header">
+          <div class="open-profile"></div>
+        </div>
 
-        <div class="profile-sidebar-menu">
-
-          <div class="postQtn-link-container">
-            <a href="user.html" class="postQtn-link">Home
-            </a>
+        <div class="sidebar-menu">
+          <div class="profile-link-container">
+            <a href="profile.html" class="profile-link">Profile</a>
           </div>
 
-          <h1 class="profile-categories-title">Categories</h1>
+          <h2 class="topics-title">Categories</h2>
 
-          <ul class="profile-content-btns" id="profile-content-btns">
-            <li>
-              <button class="profile-qtns-btn" id="profile-qtns-btn">
-                My Questions
-              </button>         
+          <ul class="content-btns" id="content-btns">
+            
+            <li class="questions-btn-content">
+              <a class="questions-btn" href="user.html">Questions</a>                
             </li>
-            <li>
-              <button class="recentProfile-qtns-btn" id="recentProfile-qtns-btn">
-              My Recent Questions
-            </button>
-          </li>
+
+            <li class="post-questions-btn-content">
+              <a class="post-questions-btn" href="post_question.html"> Post Question</a>
+            </li>
+      
           </ul>
         </div>
+
         <footer>Stack overflow lite</footer>
+
       </div>
+
 
       <div class="right-container" id="right-container">
                     <!-- Profile Questions -->
@@ -74,13 +77,20 @@
           <div class="myPro-allQtns-container" id="myPro-allQtns-container">
           
             <div class="myPro-allQtns-total-display" id="myPro-allQtns-total-display">
-                <h1 class="myPro-allQtns-title">
-                  My Questions:
-                </h1> 
+
+              <div class="profile-title-container">
                 <div class="myPro-allQtns-total-container">
-                  <div class="myPro-allQtns-total-number">50</div>
-                  <small class="myPro-allQtn-total-text">Total</small>
+                  <div class="myPro-allQtns-total-number">
+                    50
+                  </div>
                 </div>
+                <h1 class="myPro-allQtns-title">
+                  My Questions
+                </h1> 
+              </div>
+               
+              <button class="viewProfile-recentQtns-btn">View Recent Questions</button>
+
             </div> 
 
               <div class="myPro-allQuestions-content" id="myPro-allQuestions-content">
@@ -88,163 +98,227 @@
                 <ul class="myPro-allQuestions-list" id="myPro-allQuestions-list"> 
 
                   <li class="myPro-allQtn-content" id="myPro-allQtn-content">
+                    <div class="view-question-link">
+                      
+                    <a href="profile_questions.html" class="qtn-title">
+                      <small>Title : CSSerfewewfwefwefew wewewewe werwwrwer werwrwerwe</small>
+                    </a>
+                    </div>
+                    
+    
+                    <small class="total-answer-view">10 : Answers</small>
+
                     <p class="myPro-allQtn-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure quia?
                     </p>
-                    <div class="myPro-inQtn-total-answers-number">
+                    <!-- <div class="myPro-inQtn-total-answers-number">
                       10
-                    </div>  
+                    </div>   -->
                     
                     <div class="myPro-allAnswer-btns">
-                      <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn"> 
+                      <!-- <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn">  -->
                   
                       <input type="submit" value="x" class="myPro-delete-qtn-btn" id="myPro-delete-qtn-btn">  
                     </div>  
                   </li>
 
                   <li class="myPro-allQtn-content" id="myPro-allQtn-content">
-                    <p class="myPro-allQtn-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur in temporibus necessitatibus sunt atque quibusdam? Doloremque libero a iure quia?
-                    </p>  
-                    <div class="myPro-inQtn-total-answers-number">
-                      20
+                    <div class="view-question-link">
+                    <a href="questions.html" class="qtn-title">
+                      <small>Title : CSSerfewewfwefwefew wewewewe werwwrwer werwrwerwe</small>
+                    </a>
                     </div>
                     
-                    <div class="myPro-allAnswer-btns">
-                      <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn"> 
-                  
-                      <input type="submit" value="x" class="myPro-delete-qtn-btn" id="myPro-delete-qtn-btn">  
-                    </div>  
-                      
-                  </li>
+    
+                    <small class="total-answer-view">10 : Answers</small>
 
-                  <li class="myPro-allQtn-content">
                     <p class="myPro-allQtn-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur in temporibus necessitatibus sunt atque quibusdam? Doloremque libero a iure quia?
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure quia?
                     </p>
-                    <div class="myPro-inQtn-total-answers-number">
-                    40
-                    </div> 
+                    <!-- <div class="myPro-inQtn-total-answers-number">
+                      10
+                    </div>   -->
                     
                     <div class="myPro-allAnswer-btns">
-                      <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn"> 
+                      <!-- <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn">  -->
                   
                       <input type="submit" value="x" class="myPro-delete-qtn-btn" id="myPro-delete-qtn-btn">  
                     </div>  
-                    
                   </li>
 
-                  <li class="myPro-allQtn-content">
-                    <p class="myPro-allQtn-text">
-                      Lorem ipsum dolor sit aquibusdam? Doloremque libero a iure quia?
-                    </p> 
-                    <div class="myPro-inQtn-total-answers-number">
-                    17
+                  <li class="myPro-allQtn-content" id="myPro-allQtn-content">
+                    <div class="view-question-link">
+                    <a href="questions.html" class="qtn-title">
+                      <small>Title : CSSerfewewfwefwefew wewewewe werwwrwer werwrwerwe</small>
+                    </a>
                     </div>
                     
+    
+                    <small class="total-answer-view">10 : Answers</small>
+
+                    <p class="myPro-allQtn-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure quia?
+                    </p>
+                    <!-- <div class="myPro-inQtn-total-answers-number">
+                      10
+                    </div>   -->
+                    
                     <div class="myPro-allAnswer-btns">
-                      <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn"> 
+                      <!-- <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn">  -->
                   
                       <input type="submit" value="x" class="myPro-delete-qtn-btn" id="myPro-delete-qtn-btn">  
                     </div>  
-                      
                   </li>
 
-                  <li class="myPro-allQtn-content">
-                    <p class="myPro-allQtn-text">
-                      Lorem ipsum dolor sit ameariatur in temporibus necessitatibus sunt atque quibusdam? Doloremque libero a iure quia?
-                    </p> 
-                    <div class="myPro-inQtn-total-answers-number">
-                    35
+                  <li class="myPro-allQtn-content" id="myPro-allQtn-content">
+                    <div class="view-question-link">
+                    <a href="questions.html" class="qtn-title">
+                      <small>Title : CSSerfewewfwefwefew wewewewe werwwrwer werwrwerwe</small>
+                    </a>
                     </div>
                     
-                    <div class="myPro-allAnswer-btns">
-                      <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn"> 
-                  
-                      <input type="submit" value="x" class="myPro-delete-qtn-btn" id="myPro-delete-qtn-btn">  
-                    </div>   
-                      
-                  </li>
+    
+                    <small class="total-answer-view">10 : Answers</small>
 
-                  <li class="myPro-allQtn-content">
                     <p class="myPro-allQtn-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimusquibusdam? Doloremque libero a iure quia?
-                    </p>  
-                    <div class="myPro-inQtn-total-answers-number">
-                    13
-                    </div>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure quia?
+                    </p>
+                    <!-- <div class="myPro-inQtn-total-answers-number">
+                      10
+                    </div>   -->
                     
                     <div class="myPro-allAnswer-btns">
-                      <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn"> 
+                      <!-- <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn">  -->
                   
                       <input type="submit" value="x" class="myPro-delete-qtn-btn" id="myPro-delete-qtn-btn">  
                     </div>  
-                      
                   </li>
 
-                  <li class="myPro-allQtn-content">
-                    <p class="myPro-allQtn-text">
-                      Lorem ipsum dolor sit amet consectetur aduibusdam? Doloremque libero a iure quia?
-                    </p> 
-                    <div class="myPro-inQtn-total-answers-number">
-                    15
+
+                  <li class="myPro-allQtn-content" id="myPro-allQtn-content">
+                    <div class="view-question-link">
+                    <a href="questions.html" class="qtn-title">
+                      <small>Title : CSSerfewewfwefwefew wewewewe werwwrwer werwrwerwe</small>
+                    </a>
                     </div>
                     
-                    <div class="myPro-allAnswer-btns">
-                      <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn"> 
-                  
-                      <input type="submit" value="x" class="myPro-delete-qtn-btn" id="myPro-delete-qtn-btn">  
-                    </div>    
-                      
-                  </li>
+    
+                    <small class="total-answer-view">10 : Answers</small>
 
-                  <li class="myPro-allQtn-content">
                     <p class="myPro-allQtn-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Liure quia?
-                    </p> 
-                    <div class="myPro-inQtn-total-answers-number">
-                    30
-                    </div> 
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure quia?
+                    </p>
+                    <!-- <div class="myPro-inQtn-total-answers-number">
+                      10
+                    </div>   -->
                     
                     <div class="myPro-allAnswer-btns">
-                      <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn"> 
+                      <!-- <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn">  -->
                   
                       <input type="submit" value="x" class="myPro-delete-qtn-btn" id="myPro-delete-qtn-btn">  
                     </div>  
-                    
                   </li>
 
-                  <li class="myPro-allQtn-content">
-                    <p class="myPro-allQtn-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing e! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur in temporibus 
-                    </p> 
-                    <div class="myPro-inQtn-total-answers-number">
-                    18
+                  <li class="myPro-allQtn-content" id="myPro-allQtn-content">
+                    <div class="view-question-link">
+                    <a href="questions.html" class="qtn-title">
+                      <small>Title : CSSerfewewfwefwefew wewewewe werwwrwer werwrwerwe</small>
+                    </a>
                     </div>
                     
+    
+                    <small class="total-answer-view">10 : Answers</small>
+
+                    <p class="myPro-allQtn-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure quia?
+                    </p>
+                    <!-- <div class="myPro-inQtn-total-answers-number">
+                      10
+                    </div>   -->
+                    
                     <div class="myPro-allAnswer-btns">
-                      <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn"> 
+                      <!-- <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn">  -->
                   
                       <input type="submit" value="x" class="myPro-delete-qtn-btn" id="myPro-delete-qtn-btn">  
                     </div>  
-                      
                   </li>
 
-                  <li class="myPro-allQtn-content">
-                    <p class="myPro-allQtn-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, 
-                    </p>  
-                    <div class="myPro-inQtn-total-answers-number">
-                    19
+                  <li class="myPro-allQtn-content" id="myPro-allQtn-content">
+                    <div class="view-question-link">
+                    <a href="questions.html" class="qtn-title">
+                      <small>Title : CSSerfewewfwefwefew wewewewe werwwrwer werwrwerwe</small>
+                    </a>
                     </div>
-                  
+                    
+    
+                    <small class="total-answer-view">10 : Answers</small>
+
+                    <p class="myPro-allQtn-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure quia?
+                    </p>
+                    <!-- <div class="myPro-inQtn-total-answers-number">
+                      10
+                    </div>   -->
+                    
                     <div class="myPro-allAnswer-btns">
-                      <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn"> 
+                      <!-- <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn">  -->
                   
                       <input type="submit" value="x" class="myPro-delete-qtn-btn" id="myPro-delete-qtn-btn">  
                     </div>  
+                  </li>
+
+                  <li class="myPro-allQtn-content" id="myPro-allQtn-content">
+                    <div class="view-question-link">
+                    <a href="questions.html" class="qtn-title">
+                      <small>Title : CSSerfewewfwefwefew wewewewe werwwrwer werwrwerwe</small>
+                    </a>
+                    </div>
                     
-                  </li>                                
+    
+                    <small class="total-answer-view">10 : Answers</small>
+
+                    <p class="myPro-allQtn-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure quia?
+                    </p>
+                    <!-- <div class="myPro-inQtn-total-answers-number">
+                      10
+                    </div>   -->
+                    
+                    <div class="myPro-allAnswer-btns">
+                      <!-- <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn">  -->
+                  
+                      <input type="submit" value="x" class="myPro-delete-qtn-btn" id="myPro-delete-qtn-btn">  
+                    </div>  
+                  </li>
+
+                  <li class="myPro-allQtn-content" id="myPro-allQtn-content">
+                    <div class="view-question-link">
+                    <a href="questions.html" class="qtn-title">
+                      <small>Title : CSSerfewewfwefwefew wewewewe werwwrwer werwrwerwe</small>
+                    </a>
+                    </div>
+                    
+    
+                    <small class="total-answer-view">10 : Answers</small>
+
+                    <p class="myPro-allQtn-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure quia?
+                    </p>
+                    <!-- <div class="myPro-inQtn-total-answers-number">
+                      10
+                    </div>   -->
+                    
+                    <div class="myPro-allAnswer-btns">
+                      <!-- <input type="submit" value="answers:" class="myPro-answers-btn" id="myPro-answers-btn">  -->
+                  
+                      <input type="submit" value="x" class="myPro-delete-qtn-btn" id="myPro-delete-qtn-btn">  
+                    </div>  
+                  </li>
+
+                 
+    
+
+                  
                 </ul>
               </div> 
 
@@ -390,8 +464,7 @@
         </div>    
       
       </div>
-
-        
+       
                   <!-- Profile Recent Questions Data -->
           
       <div class="myPro-allRecentQtns-content-container hide" id="myPro-allRecentQtns-content-container">   

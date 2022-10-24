@@ -52,9 +52,15 @@
           <h2 class="topics-title">Categories</h2>
 
           <ul class="content-btns" id="content-btns">
-            <li><button class="post-qtn-btn">Post Question</button></li>
-            <li><button class="recent-qtns-btn">Recent Questions</button></li>
-            <li><button class="qtns-answers-btn">Questions and Answers</button></li>
+            
+            <li class="questions-btn-content">
+              <a class="questions-btn" href="user.html">Questions</a>                
+            </li>
+
+            <li class="post-questions-btn-content">
+              <a class="post-questions-btn" href="post_question.html"> Post Question</a>
+            </li>
+      
           </ul>
         </div>
 
@@ -68,7 +74,7 @@
 
         <div class="post-content" id="post-content"> 
                              <!-- Ask question container -->
-           <div class="ask-qtn-container" id="ask-qtn-container">
+           <!-- <div class="ask-qtn-container" id="ask-qtn-container">
             <div class="post-title">
               <h1 class="app-title">
                 Don't <strong>Get</strong> Stuck
@@ -88,7 +94,7 @@
               <p class="post-slogan">
                 <em>Millions</em> of people <em>find</em> the best <em>answers</em> to <em>technical problems</em> <br> and <em>help</em> others <em>answer</em> theirs.
               </p>
-          </div>  
+          </div>   -->
             
                      <!-- Posted Qtn answer Space-->
 
@@ -193,9 +199,9 @@
 
                      <!-- Recent Questions Content -->
 
-       <div class="user-recentQtns-content-container hide" id="user-recentQtns-content-container">
+       <div class="user-recentQtns-content-container" id="user-recentQtns-content-container">
 
-          <div class="user-recentQtns-container" id="user-recentQtns-container">
+          <div class="user-recentQtns-container hide" id="user-recentQtns-container">
 
               <div class="user-recentQtns-display" id="user-recentQtns-display">
                 <h1 class="user-recentQtns-title">Recently asked Questions</h1>
@@ -509,20 +515,26 @@
       
                         <!-- All Questions Content  --> 
                
-        <div class="user-allQtns-content-container hide" id="user-allQtns-content-container">
+        <div class="user-allQtns-content-container" id="user-allQtns-content-container">
 
                         <!-- Questions -->
 
           <div class="user-allQtns-container" id="user-allQtns-container">
 
             <div class="allUser-qtns-display" id="allUser-qtns-display">
-              <h1 class="allUser-qtns-title">
-                All Questions:
-              </h1> 
-              <div class="allUser-total-qtns-container">
-                <div class="allUser-total-qtns-number">10</div>
-              
+
+              <div class="user-title-container"> 
+                <div class="allUser-total-qtns-container">
+                  <div class="allUser-total-qtns-number">10</div>
+                </div>
+                <h1 class="allUser-qtns-title">
+                  Questions
+                </h1> 
               </div>
+              
+              
+              <button class="view-recentQtns-btn">View Recent Questions</button>
+
             </div>            
           
           <div class="user-allQtns-content" id="user-allQtns-content"> 
@@ -767,11 +779,9 @@
                 </li>                                 -->
               </ul>
             </div>
-          </div> 
-              
+          </div>               
         </div> 
         
-
       </div> 
     </div>
   </div>

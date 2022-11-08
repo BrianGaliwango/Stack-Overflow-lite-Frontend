@@ -1,0 +1,87 @@
+ <ul class="user-allAnswers-list" id="user-allAnswers-list">                
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                  
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>
+                <li class="user-allAnswer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="selected selected-user-allAnswer-text" id="selected-user-allAnswer-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure qui
+                  </p>      
+                </li>                            
+              </ul>

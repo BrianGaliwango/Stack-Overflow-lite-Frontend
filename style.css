@@ -1,5 +1,5 @@
 
-/* view-question-link */
+/* strong */
 
 
 :root {
@@ -506,6 +506,7 @@ footer {
   font-size: 18px;
   letter-spacing: 0.5px;
   word-break: break-all;
+  padding: 5px;
 }
 
 .user-postedQtn-content ,
@@ -644,6 +645,7 @@ footer {
 .recent-answers-title ,
 .allUser-qtns-title ,
 .user-allAnswers-title ,
+.add-comment-title,
 .selected-questions-title {
   text-decoration: underline 2px solid var(--main-color);
   text-underline-offset: 2px;
@@ -657,6 +659,7 @@ footer {
 .user-answers-title ,
 .recent-answers-title ,
 .user-allAnswers-title ,
+.add-comment-title,
 .selected-questions-title {
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -769,10 +772,6 @@ footer {
   position: relative;
 }
 
-.view-question-link {
-  margin-top: 10px;
-}
-
 .total-answer-view ,
 .answer-date ,
 .answer-author {
@@ -783,13 +782,20 @@ footer {
 }
 
 .qtn-title {
-  margin: 5px 0 0 10px;
-  text-decoration: underline 1px solid var(--dark-text-color);
+  margin: 5px 10px;
   text-underline-offset: 2px;
+  font-size: 20px;
+  border-bottom: solid 1px;
+  padding-bottom: 2px;
+}
+
+.selected-userQuestion-text strong ,
+.qtn-title strong {
+  text-decoration: underline 1px solid var(--dark-text-color);
 }
 
 .user-answer-text ,
-.selected-user-allAnswer-text ,
+.selected-userQuestion-text,
 .user-recentQtn-text ,
 .user-recentAnswer-text ,
 .user-allQtn-body ,
@@ -869,8 +875,8 @@ footer {
 }
 
 .myPro-allAnswer-btns {
-  display: flex;
-  justify-content: space-between;  
+  /* display: flex; */
+  /* justify-content: space-between;   */
 }
 
 .myPro-answers-btn ,
@@ -902,8 +908,8 @@ footer {
 }
 
 /* .allUsers-addAnswers-form , */
-.user-addAnswers-form {
-  /* position: sticky; */
+.user-addAnswers-form ,
+.user-addComments-form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -912,7 +918,8 @@ footer {
 }
 
 /* .user-addAnswer-input , */
-.allUser-addAnswer-input {
+.allUser-addAnswer-input ,
+.allUser-addComment-input {
   background-color: var(--secondary-text-color);
   border: none;
   border-radius: 5px;
@@ -922,12 +929,14 @@ footer {
 } 
 
 .user-addAnswer-input:focus ,
-.allUser-addAnswer-input:focus {
+.allUser-addAnswer-input:focus ,
+.allUser-addComment-input:focus {
   outline-color: var(--main-color);
 }
 
 /* .answer-qtn-btn , */
-.user-AllAnswer-qtn-btn {
+.user-AllAnswer-qtn-btn ,
+.user-AllComment-qtn-btn {
   width: 80px;
   background-color: var(--happy-text-color);
   border: none;
@@ -936,12 +945,21 @@ footer {
   color: var(--secondary-text-color);
 }
 
+.user-AllComment-qtn-btn {
+  width: 100px
+}
+
 .answer-qtn-btn:focus ,
-.user-AllAnswer-qtn-btn:focus {
+.user-AllAnswer-qtn-btn:focus 
+.user-AllComment-qtn-btn:focus {
   outline: none;
 }
 
-.myPro-deleteBtn-content ,
+.myPro-deleteBtn-content {
+  position: absolute;
+  right: 5
+}
+
 .myPro-recentDeleteBtn-content ,
 .myPro-recentQtn-btns {
   display: flex;
@@ -950,10 +968,12 @@ footer {
 
 .myPro-pickAnswer-btn {
   border: none;
-  width: 80px;
+  width: 60px;
   border-radius: 15px;
   box-shadow: var(--box-shadow-color);
-  font-size: 13px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
   color: var(--happy-text-color);
   margin: 5px;
@@ -965,7 +985,7 @@ footer {
 .myPro-delete-answer-btn {
   position: absolute;
   right: 8;
-  bottom: 4;
+  top: 5;
   width: 20px;
   height: 20px;
   border: none;

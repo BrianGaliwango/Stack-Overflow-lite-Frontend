@@ -1,6 +1,6 @@
 
-/* strong */
-
+/*allUser-addAnswer-input */
+ 
 
 :root {
   --main-color: rgb(216, 112, 14);
@@ -450,9 +450,7 @@ footer {
 .user-answers-container ,
 .user-recentQtns-container ,
 .myPro-allQtns-container ,
-.myPro-allAnswers-container ,
 .myPro-recentQtns-container ,
-.myPro-recentAnswers-container ,
 .user-recentAnswers-container ,
 .user-allQtns-container ,
 .answer-container {
@@ -504,15 +502,14 @@ footer {
   width: 98%;
   margin: 10px;
   font-size: 18px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   word-break: break-all;
   padding: 5px;
 }
 
+/* .myPro-recentPostedQtn-content */
 .user-postedQtn-content ,
-.user-postedRecentQtn-content ,
-.myPro-postedQtn-content ,
-.myPro-recentPostedQtn-content {
+.user-postedRecentQtn-content  {
   position: fixed;
   background-color: var(--form-bg-color);
   border-radius: 5px;
@@ -527,45 +524,44 @@ footer {
   word-break: break-all;
 }
 
+
+/* .user-allSelectedQtn-text */
 .user-postedQtn-text ,
-.user-postedRecentQtn-text ,
-.user-allSelectedQtn-text ,
-.myPro-postedQtn-text ,
-.myPro-recentPostedQtn-text{
+.user-postedRecentQtn-text {
   font-size: 20px;
   color: var(--dark-text-color);
   margin: 5px;
 }
 
+/* .myPro-postedQtn-btns , */
+/* .myPro-recentPostedQtn-btns */
 .user-postedQtn-btns ,
 .user-postedRecentQtn-btns ,
-.user-allSelectedQtns-btns ,
-.myPro-postedQtn-btns ,
-.myPro-recentPostedQtn-btns {
+.user-allSelectedQtns-btns {
   position: relative;
   justify-content: end;
   margin: 5px;
 }
 
+/* .myPro-postedQtns-back-btn , */
+/* .myPro-recentPostedQtn-back-btn */
+/* .user-allSelectedQtns-back-btn  */
 .user-postedQtns-back-btn ,
-.user-postedRecentQtns-back-btn ,
-.user-allSelectedQtns-back-btn ,
-.myPro-postedQtns-back-btn ,
-.myPro-recentPostedQtn-back-btn{
-  border: none;
+.user-postedRecentQtns-back-btn {
+  /* border: none;
   border-radius: 15px;
   box-shadow:var(--box-shadow-color);
   color: var(--danger-color);
   font-size: 13px;
   margin: 5px;
-  cursor: pointer;  
+  cursor: pointer;   */
 }
 
+/* .myPro-postedQtns-back-btn:active , */
+/* .myPro-recentPostedQtn-back-btn:active */
 .user-postedQtns-back-btn:active ,
 .user-postedRecentQtns-back-btn:active ,
-.user-allSelectedQtns-back-btn:active ,
-.myPro-postedQtns-back-btn:active ,
-.myPro-recentPostedQtn-back-btn:active {
+.user-allSelectedQtns-back-btn:active {
   transform: scale(0.98);
 }
 
@@ -608,9 +604,9 @@ footer {
 }
 
 .myPro-allQtns-total-display ,
-.myPro-total-answers-display ,
-.myPro-recentQtns-display ,
-.myPro-recentTotalAnswers-display ,
+/* .myPro-total-answers-display , */
+/* .myPro-recentQtns-display , */
+/* .myPro-recentTotalAnswers-display , */
 .user-recentQtns-display ,
 .allUser-qtns-display {
   background-color: rgb(23, 23, 23);
@@ -638,8 +634,6 @@ footer {
 .user-answers-title ,
 .myPro-allQtns-title ,
 .myPro-answers-title ,
-.myPro-recentQtns-title ,
-.myPro-recentAnswers-title ,
 .all-qtns-title ,
 .user-recentQtns-title ,
 .recent-answers-title ,
@@ -656,6 +650,10 @@ footer {
   padding: 5px;
 }
 
+.myPro-allQtns-title {
+  margin-left: 20px;
+}
+
 .user-answers-title ,
 .recent-answers-title ,
 .user-allAnswers-title ,
@@ -666,8 +664,8 @@ footer {
 
 .myPro-allQtns-total-container ,
 .myPro-total-answers-container ,
-.myPro-total-recentQtns-container ,
-.myPro-total-recentAnswers-container ,
+/* .myPro-total-recentQtns-container , */
+/* .myPro-total-recentAnswers-container , */
 .allUser-total-qtns-container {
   display: flex;
   align-items: center;
@@ -677,8 +675,8 @@ footer {
 
 .myPro-allQtns-total-number ,
 .myPro-total-answers-number ,
-.myPro-total-recentQtns-number ,
-.myPro-total-recentAnswers-number ,
+/* .myPro-total-recentQtns-number , */
+/* .myPro-total-recentAnswers-number , */
 .allUser-total-qtns-number {
   border-right: 3px solid var(--happy-text-color);
   border-left: 3px solid var(--happy-text-color);
@@ -697,9 +695,9 @@ footer {
   margin-right: 10px;
 }
 
-.myPro-total-answers-text ,
-.myPro-total-recentQtns-text ,
-.myPro-total-recentAnswers-text {
+/* .myPro-total-recentQtns-text , */
+/* .myPro-total-recentAnswers-text  */
+.myPro-total-answers-text {
   /* letter-spacing: 1px;
   font-size: 18px;
   font-family: inherit;
@@ -723,20 +721,19 @@ footer {
   color: var(--main-color);
 }
 
+
 .user-answers-content ,
 .user-recentQtns-content ,
 .user-recentAnswers-content ,
 .user-allQtns-content ,
 .user-allAnswers-content ,
-.myPro-allAnswers-content ,
-.myPro-allQuestions-content ,
-.myPro-recentQtns-content ,
-.myPro-recentAnswers-content {
+.myPro-allQuestions-content {
   border-radius: 5px;
   overflow-y: scroll;
   word-break: break-all;
   height: 87vh;
 }
+
 
 .user-recentAnswers-list ,
 .user-answers-list ,
@@ -744,9 +741,7 @@ footer {
 .user-allQtns-list ,
 .user-allAnswers-list ,
 .myPro-allQuestions-list ,
-.myPro-allQtnAnswers-list ,
-.myPro-recentQtns-list ,
-.myPro-recentAnswers-list {
+.myPro-allQtnAnswers-list  {
   list-style-type: none;
   padding: 5px;
 }
@@ -757,9 +752,7 @@ footer {
 .user-recentQtn-content , 
 .user-recentAnswer-content ,
 .myPro-allQtn-content ,
-.myPro-answer-content ,
-.myPro-recentQtn-content ,
-.myPro-recentAnswer-content {
+.myPro-answer-content {
   background-color: var(--form-bg-color);
   border-radius: 5px;
   display: flex;
@@ -801,9 +794,7 @@ footer {
 .user-allQtn-body ,
 .allUser-answers-text ,
 .myPro-allQtn-text ,
-.myPro-answer-text ,
-.myPro-recentQtn-text ,
-.myPro-recentAnswer-text{
+.answer-body {
   margin: 2px 10px 5px ;
 }
 
@@ -823,34 +814,6 @@ footer {
   /* margin-right:10px ; */
 }
 
-.user-all-inQtn-total-answers-number {
-  position: absolute;
-  left: 10;
-  bottom: 5;
-  border-left: 3px solid var(--happy-text-color);
-  border-right: 3px solid var(--happy-text-color);
-  border-radius: 50%;
-  box-shadow: var(--secondary-box-shadow-color);
-  padding: 1px;
-  text-align: center;
-  font-size: 15px;
-}
-
-.myPro-inQtn-total-answers-number ,
-.myPro-inQtn-recentTotal-answers-number {
-  position: absolute;
-  bottom: 5;
-  left: 85;
-  border-right: 3px solid var(--happy-text-color);
-  border-left: 3px solid var(--happy-text-color);
-  border-radius: 50%;
-  box-shadow: var(--secondary-box-shadow-color);
-  color: var(--main-color);
-  text-align: center;
-  font-size: 15px;
-  padding: 1px;
-  
-}
 
 .btns-answers-content {
   display: flex;
@@ -874,40 +837,7 @@ footer {
   transition: transform 0.1s ease;
 }
 
-.myPro-allAnswer-btns {
-  /* display: flex; */
-  /* justify-content: space-between;   */
-}
 
-.myPro-answers-btn ,
-.myPro-recentAnswers-btn , 
-.user-answers-btn ,
-.user-addAnswer-btn {
-  background-color: var(--happy-text-color);
-  width: 70px;
-  border: none;
-  border-radius: 15px;
-  box-shadow: var(--secondary-box-shadow-color);
-  color: var(--primary-text-color);
-  font-family: inherit;
-  font-size: 15px;
-  letter-spacing: 1px;
-  margin: -5px 5px 5px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.user-answers-btn {
-  margin-left: 50px; 
-}
-
-.user-addAnswer-btn {
-  width: 90px;
-  background-color: var(--main-color);
-  /* position: absolute; */
-}
-
-/* .allUsers-addAnswers-form , */
 .user-addAnswers-form ,
 .user-addComments-form {
   width: 100%;
@@ -918,7 +848,7 @@ footer {
 }
 
 /* .user-addAnswer-input , */
-.allUser-addAnswer-input ,
+.allUser-addAnswer-textarea ,
 .allUser-addComment-input {
   background-color: var(--secondary-text-color);
   border: none;
@@ -955,15 +885,9 @@ footer {
   outline: none;
 }
 
-.myPro-deleteBtn-content {
+.myPro-pickAnswerBtn-content {
   position: absolute;
   right: 5
-}
-
-.myPro-recentDeleteBtn-content ,
-.myPro-recentQtn-btns {
-  display: flex;
-  justify-content: space-between;
 }
 
 .myPro-pickAnswer-btn {
@@ -980,8 +904,6 @@ footer {
 }
 
 .myPro-delete-qtn-btn ,
-.myPro-recentDeleteQtn-btn ,
-.myPro-recentDelete-answer-btn ,
 .myPro-delete-answer-btn {
   position: absolute;
   right: 8;
@@ -1000,20 +922,12 @@ footer {
 }
 
 .answer-qtn-btn:active ,
-.user-addAnswer-btn:active ,
 .myQtn-answers-btn:active ,
 .myQtn-delete-btn:active ,
 .recent-answers-btn:active ,
-.allUser-answers-btn:active ,
-.user-addAnswer-btn:active ,
-.user-answers-btn:active ,
 .user-recentAnswers-btn:active ,
 .myPro-pickAnswer-btn:active ,
 .myPro-delete-qtn-btn:active ,
-.myPro-answers-btn:active ,
-.myPro-recentAnswers-btn:active ,
-.myPro-recentDeleteQtn-btn:active ,
-.myPro-recentDelete-answer-btn:active ,
 .myPro-delete-answer-btn:active  {
   transform: scale(0.98);
 }
@@ -1022,16 +936,9 @@ footer {
 .myQtn-answers-btn:focus ,
 .myQtn-delete-btn:focus ,
 .recent-answers-btn:focus ,
-.allUser-answers-btn:focus ,
-.user-addAnswer-btn:focus ,
-.user-answers-btn:focus ,
 .user-recentAnswers-btn:focus ,
 .myPro-pickAnswer-btn:focus ,
 .myPro-delete-qtn-btn:focus ,
-.myPro-answers-btn:focus ,
-.myPro-recentAnswers-btn:focus ,
-.myPro-recentDeleteQtn-btn:focus ,
-.myPro-recentDelete-answer-btn:focus ,
 .myPro-delete-answer-btn:focus  {
   outline: none;
 }

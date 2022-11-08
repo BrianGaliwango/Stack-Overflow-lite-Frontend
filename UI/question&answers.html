@@ -1,0 +1,146 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>User Page</title>
+</head>
+<body>
+  <div class="main-container">
+
+    <nav class="navbar">
+      <div class="nav-content">
+        <div class="logo-container">
+         <img src="/img/stack-overflow.svg" class="logo">
+        </div>
+
+        <div class="menuBtn-container">
+          <button class="menu-button" id="menu-button">
+           <img src="/img/menu-symbol.svg" alt="" class="menu-symbol">
+          </button>            
+        </div>
+
+        <div class="title-container">
+          <h1 class="user-title"> 
+          Stack Overflow lite
+          </h1>
+        </div>
+
+        <form action="search" method="post" id="searchForm" class="searchForm">
+          <input type="text" name="search" placeholder="Search..." autocomplete="off">
+        </form>
+
+        <div id="form-btn" class="form-btn">
+          <a href="login.html" class="logout-btn" id="logout-btn">logout</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="user-container">  
+      
+      <div class="left-container hide" id="left-container">
+        <div class="left-header">
+          <div class="open-profile"></div>
+        </div>
+
+        <div class="sidebar-menu">
+          <div class="profile-link-container">
+            <a href="profile.html" class="profile-link">Profile</a>
+          </div>
+
+          <h2 class="topics-title">Categories</h2>
+
+          <ul class="content-btns" id="content-btns">
+            
+            <li class="questions-btn-content">
+              <a class="questions-btn" href="user.html">Questions</a>                
+            </li>
+
+            <li class="post-questions-btn-content">
+              <a class="post-questions-btn" href="post_question.html"> Post Question</a>
+            </li>
+      
+          </ul>
+        </div>
+
+        <footer>Stack overflow lite</footer>
+
+      </div>
+
+      <div class="right-container" id="right-container">
+
+        <div class="user-allAnswers-container" id="user-allAnswers-container">
+
+          <div class="question-container">
+            
+            <h1 class="selected-questions-title" >Question</h1>
+
+            <div class="user-allSelectedQtn-content">  
+              <small class="answer-date">
+                Asked date : 2022-10-24 09:07:32
+              </small>
+              <br> 
+              <small class="total-answer-view">
+                10 : Answers
+              </small>
+              <br>                                 
+              <p class="selected-userQuestion-text">
+                <strong>Title</strong> : 
+                <br>
+                  CSSerfewewfwefwefew wewewewe werwwrwer werwrwerwe Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis vel aliquid veniam consequatur neque quod molestias, ut odit temporibus adipisci.
+              </p>
+
+              <hr>
+                      
+              <p class="selected-userQuestion-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur in temporibus necessitatibus sunt atque quibusdam? Doloremque libero a iure quia?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum quasi similique nostrum eos, eaque eligendi dolorum nobis id? Optio, adipisci.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse provident harum fugit repellendus doloremque sequi officiis nihil ab explicabo velit, enim aliquid eius vero mollitia aliquam voluptatum tempore illum aut asperiores dolores quos omnis. Eos in eius voluptatibus, nam numquam magnam repellat molestiae ipsum sapiente architecto maiores corrupti. Modi nostrum qui molestias, perspiciatis officia corrupti est doloremque iure nobis quae maxime suscipit debitis, reiciendis similique, tempora culpa accusantium eos sint necessitatibus ea incidunt sit. Reiciendis, quam! Hic, rerum iste delectus maiores excepturi sunt modi illo aperiam saepe? Repellat ipsa praesentium accusamus quasi, nesciunt inventore incidunt rem aliquam necessitatibus debitis est.
+              </p> 
+            </div>
+
+            <div class="answers-list">
+              <h1 class="user-allAnswers-title">Answers</h1>
+              <ul class="user-allAnswers-list" id="user-allAnswers-list">                
+                
+                <li class="user-allAnswer-content" id="myPro-answer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="answer-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure quia?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto perspiciatis veritatis repellendus voluptates eligendi ipsam libero molestias incidunt deserunt! Officiis mollitia laudantium, totam ut, id eum rerum natus architecto inventore ducimus sunt ab, vel deleniti aliquam corrupti. Itaque autem, voluptatibus ducimus dolor ipsum unde perspiciatis id magni, perferendis maxime consequuntur!
+                  </p>
+                                   
+                </li>
+
+                <li class="user-allAnswer-content" id="myPro-answer-content">
+                  <small class="answer-date">Answered date : 2022-10-24 09:07:32</small>
+                  <small class="answer-author">Answer author : John Doe</small>
+                  <p class="answer-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, harum! Lorem ipsuloremque libero a iure quia?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto perspiciatis veritatis repellendus voluptates eligendi ipsam libero molestias incidunt deserunt! Officiis mollitia laudantium, totam ut, id eum rerum natus architecto 
+                  </p>                                   
+                </li>
+              </ul>
+            </div>
+
+            <div class="answer-form">     
+              <h1 class="user-allAnswers-title">Add Answers</h1>      
+              <form class="user-addAnswers-form" id="user-addAnswers-form">
+   
+                <textarea class="allUser-addAnswer-textarea"  id="allUser-addAnswer-textarea" name="answer" id="" cols="30" rows="10" placeholder="Answer question"></textarea>
+                
+                <input type="submit" value="answer" id="user-AllAnswer-qtn-btn" class="user-AllAnswer-qtn-btn">
+              </form>
+            </div> 
+                       
+          </div>
+   
+      </div> 
+
+    </div>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

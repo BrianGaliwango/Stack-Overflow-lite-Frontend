@@ -7,7 +7,7 @@
   <title>User Page</title>
 </head>
 <body>
-  <div class="main-container">
+  <div class="main-container" id="main-container">
 
     <nav class="navbar">
       <div class="nav-content">
@@ -27,7 +27,7 @@
           </h1>
         </div>
 
-        <form action="search" method="post" id="searchForm" class="searchForm">
+        <form action="#" id="searchForm" class="searchForm">
           <input type="text" name="search" placeholder="Search..." autocomplete="off">
         </form>
 
@@ -37,7 +37,7 @@
       </div>
     </nav>
 
-    <div class="user-container">  
+    <div class="user-container" id="user-container">  
       
       <div class="left-container hide" id="left-container">
         <div class="left-header">
@@ -72,12 +72,12 @@
 
         <div class="user-allAnswers-container" id="user-allAnswers-container">
 
-          <div class="question-container">
+          <div class="question-container" id="question-container">
             
             <h1 class="selected-questions-title" >Question</h1>
 
-            <div class="user-allSelectedQtn-content">  
-              <small class="question-date">
+            <div class="user-allSelectedQtn-content" id="user-allSelectedQtn-content">  
+              <small class="selectedQuestion-date">
                 Asked date : 2022-10-24 09:07:32
               </small>
               <br> 
@@ -100,7 +100,7 @@
               </p> 
             </div>
 
-            <div class="answers-list">
+            <div class="answers-list-container" id="answers-list-container">
               <h1 class="user-allAnswers-title">Answers</h1>
               <ul class="user-allAnswers-list" id="user-allAnswers-list">                
                 
@@ -125,11 +125,11 @@
               </ul>
             </div>
 
-            <div class="answer-form">     
+            <div class="answer-form-container" id="answer-form-container">     
               <h1 class="user-allAnswers-title">Add Answers</h1>      
               <form class="user-addAnswers-form" id="user-addAnswers-form">
    
-                <textarea class="user-addAnswer-textarea"  id="user-addAnswer-textarea" name="answer" id="" cols="30" rows="10" placeholder="Answer question"></textarea>
+                <textarea class="user-addAnswer-textarea"  id="user-addAnswer-textarea" name="answer" cols="30" rows="10" placeholder="Answer question"></textarea>
                 
                 <input type="submit" value="answer" id="user-addAnswer-btn" class="user-addAnswer-btn">
               </form>
@@ -141,6 +141,6 @@
 
     </div>
   </div>
-  <script src="/app.js"></script>
+  <script src="/question&answers.js"></script>
 </body>
 </html>

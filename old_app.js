@@ -180,53 +180,53 @@ leftContainer.addEventListener('mouseleave', (e) => {
 
 
 //  // Ask Question func
-// function askQuestion(){
-//   let question = postQtnInput.value;
-//   if(question !== '') {
-//   askQtnContainer.classList.toggle('hide');
-//   userAnswersContainer.classList.toggle('hide');
-//   userQtnEl.innerHTML = question;
+function askQuestion(){
+  let question = postQtnInput.value;
+  if(question !== '') {
+  askQtnContainer.classList.toggle('hide');
+  userAnswersContainer.classList.toggle('hide');
+  userQtnEl.innerHTML = question;
 
-//     if(question) {
-//       const questionEl = document.createElement('li'); 
-//       questionEl.classList.add('user-allQtn-content');
+    if(question) {
+      const questionEl = document.createElement('li'); 
+      questionEl.classList.add('user-allQtn-content');
 
-//       const paragraph = document.createElement('p');
-//       paragraph.classList.add('user-allQtn-text');
-//       paragraph.innerText = question;
+      const paragraph = document.createElement('p');
+      paragraph.classList.add('user-allQtn-text');
+      paragraph.innerText = question;
 
-//       const divTotal = document.createElement('div');
-//       divTotal.className = 'user-all-inQtn-total-answers-number'
-//       divTotal.innerHTML = 10;
+      const divTotal = document.createElement('div');
+      divTotal.className = 'user-all-inQtn-total-answers-number'
+      divTotal.innerHTML = 10;
 
-//       const divBtns = document.createElement('div');
-//       divBtns.classList.add('user-allAddAns-btns')
+      const divBtns = document.createElement('div');
+      divBtns.classList.add('user-allAddAns-btns')
       
-//       const addAnsBtn = document.createElement('input');
-//       addAnsBtn.type = 'submit';
-//       addAnsBtn.value = 'add answers';
-//       addAnsBtn.className = 'user-addAnswer-btn'
-//       addAnsBtn.id = 'user-addAnswer-btn';
+      const addAnsBtn = document.createElement('input');
+      addAnsBtn.type = 'submit';
+      addAnsBtn.value = 'add answers';
+      addAnsBtn.className = 'user-addAnswer-btn'
+      addAnsBtn.id = 'user-addAnswer-btn';
 
-//       const answersBtn = document.createElement('input');
-//       answersBtn.type = 'submit';
-//       answersBtn.value = 'answers';
-//       answersBtn.className = 'user-answers-btn'
-//       answersBtn.id = 'user-answers-btn';
+      const answersBtn = document.createElement('input');
+      answersBtn.type = 'submit';
+      answersBtn.value = 'answers';
+      answersBtn.className = 'user-answers-btn'
+      answersBtn.id = 'user-answers-btn';
 
-//       divBtns.appendChild(answersBtn);
-//       questionEl.appendChild(divBtns);
-//       questionEl.appendChild(divTotal)
-//       questionEl.appendChild(paragraph)
-//       questionEl.appendChild(answersBtn);
+      divBtns.appendChild(answersBtn);
+      questionEl.appendChild(divBtns);
+      questionEl.appendChild(divTotal)
+      questionEl.appendChild(paragraph)
+      questionEl.appendChild(answersBtn);
 
-//       userAllQtnsList.appendChild(questionEl);
-//       }
-//   }else{
-//     showError();
-//   }
-//   postQtnInput.value = '';
-// }
+      userAllQtnsList.appendChild(questionEl);
+      }
+  }else{
+    showError();
+  }
+  postQtnInput.value = '';
+}
 
 //                       // Error func
 // function showError(){
@@ -337,3 +337,83 @@ leftContainer.addEventListener('mouseleave', (e) => {
 //     })
 //   })
 // }
+
+
+
+
+
+// from new app.js
+function postQuestion(){
+  let questionBody = postQtnInput.value
+  let title = postTitleInput.value;
+
+  // Validate inputs
+  if(questionBody !== '' && title !== ''){
+      const questionEl = document.createElement('li');
+      questionEl.classList.add('user-allQtns-content');
+      
+      const totalAnswerView = document.createElement('small');
+      totalAnswerView.classList.add('total-answer-view');
+      totalAnswerView.innerText = "10 : Answers"
+
+      const dateView = document.createElement('small');
+      dateView.classList.add('question-date');
+      dateView.innerText = "2022-10-24 19:55:02"
+
+      const qtnTitle = document.createElement('a');
+      qtnTitle.classList.add('qtn-title');
+      qtnTitle.value = title;
+
+      const paragraph = document.createElement('p');
+      paragraph.classList.add('user-allQtn-body');
+      paragraph.innerText = questionBody
+
+      questionEl.appendChild(totalAnswerView);
+      questionEl.appendChild(dateView);
+      questionEl.appendChild(qtnTitle);
+      questionEl.appendChild(paragraph);
+     
+      questions.push(questionEl);
+  }else{
+    showError()
+  }
+  postTitleInput.value = '';
+  postQtnInput.value = '';
+}
+
+
+
+
+// questionsjs
+function addAnswer2() {
+  let answer = addAnswerInput.value
+  if(answer !== ''){
+  // if(addAnswerInput.value !== ''){
+      // let answer = addAnswerInput.value
+      const answerEl = document.createElement('li');
+      answerEl.classList.add('user-allAnswer-content');
+
+      const answerDate = document.createElement('small')
+      answerDate.classList.add('answer-date');
+      answerDate.innerText = "2022-10-24 19:55:02";
+
+      const answerAuthor = document.createElement('small')
+      answerAuthor.classList.add('answer-author');
+      answerAuthor.innerText = "Galice";
+      
+      const paragraph = document.createElement('p');
+      paragraph.classList.add('answer-body');
+      paragraph.innerText = answer;
+
+      answerEl.appendChild(answerDate);
+      answerEl.appendChild(answerAuthor);
+      answerEl.appendChild(paragraph);
+      print(answerEl)
+      answerList.appendChild(answerEl);
+      showSuccess();
+      
+  }else{
+    showError();
+  }
+  addAnswerInput.value = ''
+}

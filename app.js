@@ -5,17 +5,17 @@ const allUserQtnsContainer = document.getElementById('user-allQtns-content-conta
 const recentQtnsContainer = document.getElementById('user-recentQtns-content-container');
 const backQtnsBtn = document.getElementById('back-Qtns-btn');
 
-
-
+let questions = []
 
 // Show sidebar eventListener
 menuBtn.addEventListener('click', (e) => {
-  leftContainer.classList.toggle('hide')
+   leftContainer.classList.toggle('hide')
 });
+
 
 // Hide sidebar eventListener
 leftContainer.addEventListener('mouseleave', (e) => {
-  leftContainer.classList.add('hide')
+   leftContainer.classList.add('hide')
 });
 
 
@@ -28,6 +28,14 @@ viewRecentQtnBtn.addEventListener('click', (e) => {
 
 // Return to questions eventListener
 backQtnsBtn.addEventListener('click', (e) => {
-  recentQtnsContainer.classList.add('hide')
-  allUserQtnsContainer.classList.remove('hide')
+    recentQtnsContainer.classList.add('hide')
+    allUserQtnsContainer.classList.remove('hide')
  });
+
+
+
+
+
+
+
+

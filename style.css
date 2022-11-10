@@ -1,4 +1,4 @@
-/* left-container */
+/* answer-form */
 
 :root {
   --main-color: rgb(216, 112, 14);
@@ -664,7 +664,7 @@ footer {
   position: relative;
 }
 
-.question-date ,
+.selectedQuestion-date ,
 .selectedQuestion-total-answer-view {
   color: var(--happy-text-color);
   text-decoration: underline 1px solid var(--dark-text-color);
@@ -673,6 +673,7 @@ footer {
 
 .total-answer-view ,
 .answer-date ,
+.question-date ,
 .answer-author {
   margin: 5px 0 0 10px;
   color: var(--happy-text-color);
@@ -798,12 +799,24 @@ footer {
   outline: none;
 }
 
-.error {
-  background-color: var(--danger-color);
+.success {
+  background-color: var(--happy-text-color);
+  width: 60vw;
   border-radius: 5px;
   color: var(--secondary-text-color);
   text-align: center;
   font-size: 18px; 
+  margin-left: 135px;
+}
+
+.error {
+  background-color: var(--danger-color);
+  width: 60vw;
+  border-radius: 5px;
+  color: var(--secondary-text-color);
+  text-align: center;
+  font-size: 18px; 
+  margin-left: 135px;
 }
 
 /* Media 1135px */

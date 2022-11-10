@@ -1,154 +1,97 @@
-const rightContainer = document.getElementById('right-container');
-const leftContainer = document.getElementById('left-container');
 const menuBtn = document.getElementById('menu-button');
-const profileQtnContentContainer = document.getElementById('myPro-allQtns-content-container');
-const profileAllRecentQtnsContentContainer = document.getElementById('myPro-allRecentQtns-content-container');
-const myProRecQtnsContainer = document.getElementById('myPro-recentQtns-container');
-const myProRecAnswersContainer = document.getElementById('myPro-recentAnswers-container');
-const myProAllQtnsContainer = document.getElementById('myPro-allQtns-container');
-const myProAllQtnContent = document.getElementById('myPro-allQuestions-content');
-const profileContentBtns = document.getElementById('profile-content-btns');
-const myProAllQtnList = document.getElementById('myPro-allQuestions-list');
-const myProAllQtnAnswers = document.getElementById('myPro-allAnswers-container');
-const myProAnsCont = document.getElementById('myPro-answer-content')
-const myProPostedQtnContent = document.getElementById('myPro-postedQtn-content');
-const myProAnswersList = document.getElementById('myPro-allQtnAnswers-list');
-const myProAllQtnsDisplay = document.getElementById('myPro-allQtns-total-display');
-const myProQtnCont = document.getElementById('myPro-allQtn-content');
-const myProRecSelectedQtn = document.getElementById('myPro-recentPostedQtn-content');
-const myProRecQtnList = document.getElementById('myPro-recentQtns-list');
-const myProRecAnswersList = document.getElementById('myPro-recentAnswers-list');
+const leftContainer = document.getElementById('left-container');
+const rightContainer = document.getElementById('right-container');
+const myProQtnsContainer = document.getElementById('myPro-allQtns-content-container');
+const mostAnsweredQtnsContainer = document.getElementById('myPro-mostAnsweredQtns-content-container');
+const myProRecentQtnsContainer = document.getElementById('myPro-allRecentQtns-content-container');
+const viewMostAnsweredQtnsBtn = document.getElementById('view-mostAnsweredQtns-btn');
+const mostAnsweredQtnsBackBtn = document.getElementById('myPro-mostAnsweredQtns-backBtn')
+const viewRecentQtnBtn = document.getElementById('myPro-view-recentQtns-btn');
+const myProBackQtnsBtn = document.getElementById('myPro-backQtns-btn');
+const myProAllQtnsList = document.getElementById('myPro-allQuestions-list');
+const myProQtnContent = document.getElementById('myPro-allQtn-content');
+const myProRecentQtnsList = document.getElementById('myPro-recentAllQuestions-list');
+const myProMostAnswerQtnsList = document.getElementById('myPro-mostAnsweredQuestions-list');
+
 
 // Show sidebar eventListener
 menuBtn.addEventListener('click', (e) => {
+  e.preventDefault();
   leftContainer.classList.toggle('hide')
 });
 
+
 // Hide sidebar eventListener
 leftContainer.addEventListener('mouseleave', (e) => {
+  e.preventDefault();
   leftContainer.classList.add('hide')
 });
 
-// Change categories eventListener
-// profileContentBtns.addEventListener('click', (e) => {
-//   e.preventDefault();
-  
-//   if(e.target.classList.contains('profile-qtns-btn')) {
-//     rightContainer.innerHTML = '';
-//     rightContainer.appendChild(profileQtnContentContainer);
-//   }else if(e.target.classList.contains('recentProfile-qtns-btn')){
-//     rightContainer.innerHTML = '';
-//     profileAllRecentQtnsContentContainer.classList.remove('hide');
-//     rightContainer.appendChild(profileAllRecentQtnsContentContainer);
-//   }
-// });
+
+//View most answered questions eventListener
+viewMostAnsweredQtnsBtn.addEventListener('click', (e) => {
+    myProQtnsContainer.classList.add('hide')
+    mostAnsweredQtnsContainer.classList.remove('hide')
+});
 
 
-// Check answers eventListener
-// myProAllQtnList.addEventListener('click', (e) => {
-//   if(e.target.classList.contains('myPro-answers-btn')){
-//     e.target.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add('hide')
+mostAnsweredQtnsBackBtn.addEventListener('click', (e) => {
+  mostAnsweredQtnsContainer.classList.add('hide')
+  myProQtnsContainer.classList.remove('hide')
+});
 
-//     myProAllQtnsDisplay.classList.add('hide');
-//     myProAllQtnAnswers.classList.remove('hide'); 
-//     profileQtnContentContainer.appendChild(myProAllQtnAnswers)
-//   }
-// })
 
-// // Back to questions eventlistener
+// Delete most Answered Questions eventListener
+myProMostAnswerQtnsList.addEventListener('click', (e) => {
+  if(e.target.classList.contains('myPro-delete-qtn-btn')){
+       e.target.parentElement.parentElement.remove()
+  }
+});
 
-// myProPostedQtnContent.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   if(e.target.classList.contains('myPro-postedQtns-back-btn')){
-//     e.target.parentElement.parentElement.parentElement.classList.add('hide');
 
-//     profileQtnContentContainer.innerHTML = '',
-//     myProAllQtnsContainer.classList.remove('hide');
-//     myProAllQtnContent.classList.remove('hide');
-//     myProAllQtnList.classList.remove('hide');
-//   }
-//   profileQtnContentContainer.appendChild(myProAllQtnsContainer)
-// })
+// View profile recent questions
+viewRecentQtnBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+  myProQtnsContainer.classList.add('hide')
+  myProRecentQtnsContainer.classList.remove('hide')
+  rightContainer.appendChild(myProRecentQtnsContainer)
+});
 
-// // Pick answer eventListener
-// myProAnswersList.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   if(e.target.classList.contains('myPro-pickAnswer-btn')){
 
-//     if(e.target.value === 'pick answer'){
-//       e.target.value = 'not answer';
-//     }else{
-//       e.target.value = 'pick answer';
-//     } 
-//     e.target.parentElement.parentElement.classList.toggle('picked');
-//   }
-//   console.log(e.target.parentElement)
-// })
+// Back to profile questions eventListener
+myProBackQtnsBtn.addEventListener('click', (e) => {
+  myProRecentQtnsContainer.classList.add('hide')
+  myProQtnsContainer.classList.remove('hide')
+});
 
-// // Delete Question Eventlistener
-// myProAllQtnList.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   if(e.target.classList.contains('myPro-delete-qtn-btn')){
-//     e.target.parentElement.parentElement.remove();
-//   }
-// })
 
-// // Delete answers Eventlistener 
-// myProAnswersList.addEventListener('click', (e) => {
-//   if(e.target.classList.contains('myPro-delete-answer-btn')){
-//     e.target.parentElement.parentElement.remove();
-//   }
-// })
+// Delete question
+myProAllQtnsList.addEventListener('click', (e) => {
 
-// // MyPro recent check answers eventListener 
-// myProRecQtnList.addEventListener('click', (e) => {
-//   if(e.target.classList.contains('myPro-recentAnswers-btn')){
-//     e.target.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add('hide');
+  if(e.target.classList.contains('myPro-delete-qtn-btn')) {
+       e.target.parentElement.parentElement.remove()
+      }
+});
 
-//     myProRecAnswersContainer.classList.remove('hide');
-//   }
-// })
+// Delete recent question
+myProRecentQtnsList.addEventListener('click', (e) => {
+  if(e.target.classList.contains('myPro-delete-recentQtn-btn')){
+      e.target.parentElement.parentElement.remove()
+  }
+});
 
-// // Back to qtns eventListener
-// myProRecSelectedQtn.addEventListener('click', (e) => {
 
-//   myProRecAnswersContainer.classList.add('hide');
-//   myProRecQtnsContainer.classList.remove('hide');
-//   myProAllQtnsContainer.classList.remove('hide');
-// })
 
-// // Delete recent Qtns eventListener
-// myProRecQtnList.addEventListener('click', (e) => {
-//   if(e.target.classList.contains('myPro-recentDeleteQtn-btn')){
-//     e.target.parentElement.parentElement.remove();
-//     console.log(e.target);
-//   }
-// });
+// if(e.target.classList.contains('myPro-pickAnswer-btn')){
 
-//    // Pick answer eventListener
-//   myProRecAnswersList.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   if(e.target.classList.contains('myPro-pickAnswer-btn')){
-
-//     if(e.target.value === 'pick answer'){
-//       e.target.value = 'not answer';
-//     }else{
-//       e.target.value = 'pick answer';
-//     } 
-
-//     e.target.parentElement.parentElement.classList.toggle('picked');
-//   }
-// });
-
-// // Delete recent answer eventListener
-
-// myProRecAnswersList.addEventListener('click', (e) => {
-//   if(e.target.classList.contains('myPro-recentDelete-answer-btn')){
-//     e.target.parentElement.parentElement.remove();
-//     console.log(e.target);
-//   }
-// });
-
+  //     if(e.target.value === 'pick answer'){
+  //       e.target.value = 'not answer';
+  //     }else{
+  //       e.target.value = 'pick answer';
+  //     } 
+  //     e.target.parentElement.parentElement.classList.toggle('picked');
+  //   }
+  //   console.log(e.target.parentElement)
 
 
 

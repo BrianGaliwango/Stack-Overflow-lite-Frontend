@@ -1,4 +1,4 @@
-/* user-addComment-btn */
+/* left-container */
 
 :root {
   --main-color: rgb(216, 112, 14);
@@ -262,6 +262,13 @@ nav .logo {
   color: var(--primary-text-color);
   position: relative;
   z-index: 5;
+  transform: translateX(0);
+  transition: transform 0.3s linear;
+}
+
+.left-container.hide {
+  transform: translateX(-100);
+  transform-origin: left ;
 }
 
 .right-container {
@@ -358,6 +365,7 @@ nav .logo {
 .user-recentQtns-content-container ,
 .user-allQtns-content-container ,
 .myPro-allQtns-content-container ,
+.myPro-mostAnsweredQtns-content-container ,
 .myPro-allRecentQtns-content-container ,
 .answer-content-container {
   height: 85vh;
@@ -576,7 +584,7 @@ footer {
   margin: 5px 0 0;
 }
 
-.view-questions-btn {
+.view-questions-container {
   position: absolute;
   top: 50;
   width: 100%;
@@ -587,7 +595,11 @@ footer {
   padding: 0 10px 0 10px;
 }
 
+.back-Qtns-btn ,
 .view-recentQtns-btn ,
+.myPro-backQtns-btn ,
+.myPro-mostAnsweredQtns-backBtn ,
+.myPro-view-recentQtns-btn ,
 .view-mostAnsweredQtns-btn {
   background-color: var(--main-color);
   border: none;
@@ -599,7 +611,11 @@ footer {
   padding: 5px;
 }
 
+.back-Qtns-btn:active ,
 .view-recentQtns-btn:active ,
+.myPro-backQtns-btn:active ,
+.myPro-mostAnsweredQtns-backBtn:active ,
+.myPro-view-recentQtns-btn:active ,
 .view-mostAnsweredQtns-btn:active{
   transform: scale(0.98);
 }
@@ -620,6 +636,7 @@ footer {
 .user-allQtns-list ,
 .user-allAnswers-list ,
 .myPro-allQuestions-list ,
+.myPro-mostAnsweredQuestions-list ,
 .myPro-allQtnAnswers-list  ,
 .myPro-recentAllQuestions-list {
   list-style-type: none;
@@ -748,8 +765,9 @@ footer {
   margin: 5px;
 }
 
+/* .myPro-delete-answer-btn  */
 .myPro-delete-qtn-btn ,
-.myPro-delete-answer-btn {
+.myPro-delete-recentQtn-btn {
   position: absolute;
   right: 8;
   top: 5;
@@ -768,13 +786,15 @@ footer {
 
 .myPro-pickAnswer-btn:active ,
 .myPro-delete-qtn-btn:active ,
-.myPro-delete-answer-btn:active  {
+.myPro-delete-answer-btn:active ,
+.myPro-delete-recentQtn-btn:active {
   transform: scale(0.98);
 }
 
 .myPro-pickAnswer-btn:focus ,
 .myPro-delete-qtn-btn:focus ,
-.myPro-delete-answer-btn:focus  {
+.myPro-delete-answer-btn:focus ,
+.myPro-delete-recentQtn-btn:focus {
   outline: none;
 }
 

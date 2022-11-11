@@ -52,7 +52,7 @@ function showSuccess(){
   const postForm = document.querySelector('.post-form');
   divError.appendChild(document.createTextNode('Question posted successfully'));
   askQtnContainer.insertBefore(divError, postForm);
-  setTimeout(() => {divError.remove()}, 2000);
+  setTimeout(() => {divError.remove()}, 1500);
 }
 
 
@@ -63,5 +63,5 @@ function showError(){
   const postForm = document.querySelector('.post-form');
   divError.appendChild(document.createTextNode('Please fill in all fields'));
   askQtnContainer.insertBefore(divError, postForm);
-  setTimeout(() => {divError.remove()}, 2000);
+  setTimeout(() => {divError.remove()}, 1500);
 }

@@ -35,6 +35,7 @@ viewMostAnsweredQtnsBtn.addEventListener('click', (e) => {
 });
 
 
+// Back to questions eventListener
 mostAnsweredQtnsBackBtn.addEventListener('click', (e) => {
   mostAnsweredQtnsContainer.classList.add('hide')
   myProQtnsContainer.classList.remove('hide')
@@ -72,6 +73,7 @@ myProAllQtnsList.addEventListener('click', (e) => {
        e.target.parentElement.parentElement.remove()
       }
 });
+
 
 // Delete recent question
 myProRecentQtnsList.addEventListener('click', (e) => {

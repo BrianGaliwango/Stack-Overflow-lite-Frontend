@@ -31,17 +31,6 @@ function login(){
 }
 
 
-// Show error func
-function showRegistrySuccess(){
-  const divRegistrySuccess = document.createElement('div');
-  divRegistrySuccess.className = 'registerSuccess';
-  const registerForm = document.querySelector('.register-form');
-  divRegistrySuccess.appendChild(document.createTextNode('Successfully registered'))
-  registerContainer.insertBefore(divRegistrySuccess, registerForm);
-  setTimeout(() => {divRegistrySuccess.remove()}, 1500);
-}
-
-
 // Login error func
 function showLoginError(){
   const divLoginError = document.createElement('div');

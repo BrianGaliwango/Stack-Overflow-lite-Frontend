@@ -17,7 +17,6 @@ leftContainer.addEventListener('mouseleave', (e) => {
 // Pick answer eventListener
 myProAnswerList.addEventListener('click', (e) => {
   if(e.target.classList.contains('myPro-pickAnswer-btn')){
-    // e.preventDefault()
     if(e.target.value === 'pick answer'){
       e.target.value = 'not answer';
     }else{

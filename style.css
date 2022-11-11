@@ -1,3 +1,6 @@
+/* myPro-allQtns-total-display */
+/* myPro-allQtns-total-number */
+
 :root {
   --main-color: rgb(216, 112, 14);
   --background-main-color: rgb(33, 33, 33);
@@ -560,6 +563,7 @@ footer {
 }
 
 .myPro-allQtns-title ,
+.myPro-mostAnsweredQtns-title ,
 .myPro-answers-title ,
 .allUser-qtns-title ,
 .user-allAnswers-title ,
@@ -577,7 +581,8 @@ footer {
   width: 100%;
 }
 
-.myPro-allQtns-title {
+.myPro-allQtns-title ,
+.myPro-mostAnsweredQtns-title {
   margin-left: 20px;
 }
 
@@ -596,6 +601,7 @@ footer {
 }
 
 .myPro-allQtns-total-number ,
+.myPro-mostAnsweredQtns-total-number ,
 .myPro-total-answers-number  {
   border-right: 3px solid var(--happy-text-color);
   border-left: 3px solid var(--happy-text-color);
@@ -1103,11 +1109,39 @@ footer {
   }
 }
 
-@media screen and (max-width: 430px){
+
+/* Media 470 */
+@media screen and (max-width: 470px) {
+  .form-control {
+    width: 350px;
+  }
+
+  .searchForm input {
+    width: 240px;
+  }
+
+  .myPro-view-recentQtns-btn {
+    font-size: 10px;
+  }
+
+  .myPro-mostAnsweredQtns-title {
+    font-size: 17px;
+    margin-left: 5px;
+  }
+
+}
+
+@media screen and (max-width: 435px){
   .app-title-container h3 {
     font-size: 26px;
   }
+
+  .myPro-mostAnsweredQtns-title {
+    font-size: 15px;
+  }
+
 }
+
 
 /* Media 414 */
 @media screen and (max-width: 414px) {
@@ -1244,12 +1278,29 @@ footer {
   footer {
     font-size: 18px;
   }
-}
 
-/* Media 460 */
-@media screen and (max-width: 460px) {
-  .form-control {
-    width: 350px;
+
+  .myPro-mostAnsweredQtns-total-number {
+    font-size: 13px;
+    padding: 3;
+  }
+
+  .myPro-mostAnsweredQtns-title {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+
+  .myPro-mostAnsweredQtns-backBtn {
+    font-size: 10px;
+  }
+
+  .myPro-answer-content {
+    padding-bottom: 25px;
+  }
+
+  .myPro-pickAnswerBtn-content {
+    right: 0;
+    bottom: 0;
   }
 }
 
@@ -1290,10 +1341,14 @@ footer {
   .post-title {
     font-size: 18px;
   }
+
+  .myPro-mostAnsweredQtns-title {
+    font-size: 15px;
+  }
 }
 
-/* Media 380 */
-@media screen and (max-width: 380px) {
+/* Media 385 */
+@media screen and (max-width: 385px) {
   .menu-symbol {
     height: 18px;
     width: 13px;
@@ -1338,10 +1393,45 @@ footer {
   .success {
     font-size: 13px;
   }
+
+  .allUser-qtns-title {
+    font-size: 16px;
+  }
+
+  .view-recentQtns-btn {
+    font-size: 10px;
+  }
+
+  .view-mostAnsweredQtns-btn {
+    font-size: 10px;
+    width: 100px;
+  }
+
+  .view-questions-container {
+    top: 46;
+  }
+
+  .myPro-view-recentQtns-btn {
+    font-size: 10px;
+  }
+
+  /* .myPro-allQtns-total-number , */
+  .myPro-mostAnsweredQtns-total-number  {
+    font-size: 10px;
+  }
+
+  .myPro-mostAnsweredQtns-title {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+
+  .myPro-mostAnsweredQtns-backBtn {
+    font-size: 10px;
+  }
 }
 
-/* Media 360 */
-@media screen and (max-width: 360px) {
+/* Media 365 */
+@media screen and (max-width: 365px) {
   nav .logo {
     height: 19px;
   }
@@ -1360,10 +1450,13 @@ footer {
     padding: 0;
   }
 
+  .myPro-mostAnsweredQtns-title {
+    font-size: 13px;
+  }
 }
 
-/* Media 340 */
-@media screen and (max-width: 340px) {
+/* Media 350 */
+@media screen and (max-width: 350px) {
   .app-title-container h3 {
     font-size: 18px;
   }
@@ -1371,6 +1464,19 @@ footer {
   .form-control {
     width: 280px;
   }
+
+  .myPro-mostAnsweredQtns-title {
+    font-size: 12px;
+  }
+
+  .myPro-view-recentQtns-btn {
+    font-size: 10px;
+  }
+
+  .myPro-mostAnsweredQtns-backBtn {
+    font-size: 8px;
+  }
+
 }
 
 /* Media 320px */
@@ -1420,9 +1526,9 @@ footer {
     width: 200px;
   } 
 
-  .register-container .form-control {
-    margin: 10px;
-  }
+  .register-container .register-btn {
+    width: 100%;
+  } 
 
   .form-btn .login-btn {
     padding: 4px;
@@ -1489,5 +1595,30 @@ footer {
 
   footer {
     font-size: 12px;
+  }
+
+  .myPro-view-recentQtns-btn {
+    font-size: 10px;
+  }
+
+  .profile-title-container {
+    margin-left: 30px;
+  }
+
+  .myPro-allQtns-title {
+    font-size: 18px;
+  }
+
+  .myPro-allQtns-total-number {
+    font-size: 12px;
+    padding: 2px;
+  }
+
+  .myPro-mostAnsweredQtns-total-number {
+    font-size: 15px;
+  }
+
+  .myPro-mostAnsweredQtns-title {
+    font-size: 14px;
   }
 }

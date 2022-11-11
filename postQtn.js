@@ -33,9 +33,10 @@ function postQuestion(){
   let questionBody = postQtnInput.value;
 
   if(title !== '' && questionBody !== ''){
-
-    questions.push({questionBody, title});
+    let question = ({title, questionBody})
+    questions.push({question});
     showSuccess();
+    console.log(question)
   }else{
     showError()
   }

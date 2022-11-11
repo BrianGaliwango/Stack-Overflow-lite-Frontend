@@ -82,17 +82,4 @@ myProRecentQtnsList.addEventListener('click', (e) => {
 
 
 
-// if(e.target.classList.contains('myPro-pickAnswer-btn')){
-
-  //     if(e.target.value === 'pick answer'){
-  //       e.target.value = 'not answer';
-  //     }else{
-  //       e.target.value = 'pick answer';
-  //     } 
-  //     e.target.parentElement.parentElement.classList.toggle('picked');
-  //   }
-  //   console.log(e.target.parentElement)
-
-
-
 

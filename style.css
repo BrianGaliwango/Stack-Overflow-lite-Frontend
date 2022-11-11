@@ -1,4 +1,4 @@
-/* answer-form */
+/* register */
 
 :root {
   --main-color: rgb(216, 112, 14);
@@ -78,14 +78,14 @@ a {
 
 .nav-content 
 .user-title ,
-.login-title ,
+.nav-app-title ,
 .createAcc-title {
   color: var(--main-color);
   letter-spacing: 2px;
   margin: 0;
 }
  
-.login-title ,
+.nav-app-title ,
 .createAcc-title {
   letter-spacing: 5px;
   font-size: 30px;
@@ -163,7 +163,9 @@ nav .logo {
 }
 
 .login-container ,
-.register-container {
+.login-success-container ,
+.register-container ,
+.register-success-container {
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -179,22 +181,38 @@ nav .logo {
   margin-top: 30px ;
 }
 
-.login-logo {
-  width: 40px;
+.login-logo ,
+.register-logo  {
+  width: 30px;
+}
+
+.register-success-logo ,
+.login-success-logo {
+  width: 20px;
 }
 
 .login-container h1 
-.register-container h1{
+.register-container h1 {
   text-align: center;
+  margin-bottom: 0;
 }
 
 .form-control {
-  margin: 15px 0 30px;
+  margin: 10px 0 15px;
   width: 400px;
 } 
 
+.login-success-container a ,
+.register-success-container a{
+  font-size: 20px;
+  text-decoration: underline 1px solid var(--dark-text-color);
+  text-underline-offset: 2px;
+}
+
 .login-container a ,
-.register-container a {
+.login-success-container a ,
+.register-container a ,
+.register-success-container a{
   color: var(--btn-main-color);
 }
 
@@ -204,8 +222,8 @@ nav .logo {
   border-radius: 5px;
   border-bottom: 2px solid var(--main-color);
   display: block;
-  font-size: 20px;
-  padding: 10px 0;
+  font-size: 16px;
+  padding: 5px;
   cursor: pointer;
 }
 
@@ -236,6 +254,10 @@ nav .logo {
 .login-container .login-btn:active ,
 .register-container .register-btn:active {
   transform: scale(0.98);
+}
+
+.register-text {
+  color: var(--dark-text-color);
 }
 
 .user-container {
@@ -766,7 +788,6 @@ footer {
   margin: 5px;
 }
 
-/* .myPro-delete-answer-btn  */
 .myPro-delete-qtn-btn ,
 .myPro-delete-recentQtn-btn {
   position: absolute;
@@ -807,6 +828,17 @@ footer {
   text-align: center;
   font-size: 18px; 
   margin-left: 135px;
+}
+
+.registerError ,
+.login-error {
+  background-color: var(--danger-color);
+  width: 300px;
+  border-radius: 5px;
+  color: var(--secondary-text-color);
+  text-align: center;
+  font-size: 16px;
+  z-index: 1;
 }
 
 .error {
@@ -909,7 +941,7 @@ footer {
     margin-left: -5px; 
  }
 
- .login-title {
+  .nav-app-title {
   font-size: 30px;
   letter-spacing: 2px;
   margin-right: 25px;
@@ -992,7 +1024,7 @@ footer {
     font-size: 28px;
   }
 
-  .login-title {
+  .nav-app-title {
     font-size: 30px;
     letter-spacing: 1px;
   }
@@ -1120,7 +1152,7 @@ footer {
     width: 13px;
   }
 
-  .login-title {
+  .nav-app-title {
     font-size: 25px;
     letter-spacing: 0.5px;
   }
@@ -1187,7 +1219,7 @@ footer {
     font-size: 13px;
   }
 
-  .login-title {
+  .nav-app-title {
     font-size: 18px;
     letter-spacing: 0.5px;
   }

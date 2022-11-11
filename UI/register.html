@@ -15,7 +15,7 @@
         </div>
         
         <div class="app-title-container">
-          <h3 class="login-title"> 
+          <h3 class="nav-app-title"> 
           Stack Overflow lite
           </h3>  
       </div>
@@ -29,45 +29,54 @@
 
     <div class="main-content">
 
-      <div class="register-container">
+      <div class="register-container" id="register-container">
 
-        <img src="/img/stack-overflow.svg" class="login-logo">
+        <img src="/img/stack-overflow.svg" class="register-logo">
 
-        <h1 class="register-acoout-title">Create an Account</h1>
+        <h1 class="register-account-title">Create an Account</h1>
+       
+          <form action="#" method="post" id="register-form" class="register-form">
 
-        <form action="#" method="post" id="login-form" class="login-form">
-
-          <div class="form-control">         
-           <input type="text" name="name" placeholder="Name" id="name" autocomplete="off" required>
-         </div>
-
-          <div class="form-control">         
-            <input type="email" name="email" placeholder="Email" id="name" autocomplete="off" required>
-          </div> 
-
-          <div class="form-control">         
-            <input type="text" name="username" placeholder="Username" id="username" autocomplete="off" required>
-          </div> 
-
-          <div class="form-control">        
-            <input type="text" name="password" placeholder="Password"id="password" autocomplete="off" required>
-          </div> 
-
-          <div>
-            <a class="register-btn" id="register-btn" href="login.html">Create Account</a>
+            <div class="form-control">         
+            <input type="text" name="name" placeholder="Name" id="name" autocomplete="off">
           </div>
 
-          <div class="register">
-            <p class="register-text">
-              Already have an Account?
-              <br>
-              <a href="login.html">Sign In here</a>
-            </p>
-          </div>
-        </form>
+            <div class="form-control">         
+              <input type="email" name="email" placeholder="Email" id="email" autocomplete="off">
+            </div> 
+
+            <div class="form-control">         
+              <input type="text" name="username" placeholder="Username" id="username" autocomplete="off">
+            </div> 
+
+            <div class="form-control">        
+              <input type="text" name="password" placeholder="Password" id="password" autocomplete="off">
+            </div> 
+
+            <div>
+              <input type="submit" class="register-btn" id="register-btn" value="Create Account">
+            </div>
+
+            <div class="register">
+              <p class="register-text">
+                Already have an Account?
+                <br>
+                <a href="login.html">Sign In here</a>
+              </p>
+            </div>
+          </form>      
       </div>
+
+      <div class="register-success-container hide" id="register-success-container">
+        <img src="/img/stack-overflow.svg" class="register-success-logo">
+        <h2>
+          You are now registered.          
+        </h2>
+        <a href="login.html">Sign in here</a>
+      </div>
+
     </div>
   </div>
-  <!-- <script src="/app.js"></script> -->
+  <script src="/register.js"></script>
 </body>
 </html>

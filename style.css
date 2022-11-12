@@ -1601,10 +1601,6 @@ footer {
     font-size: 10px;
   }
 
-  .profile-title-container {
-    margin-left: 30px;
-  }
-
   .myPro-allQtns-title {
     font-size: 18px;
   }
@@ -1619,6 +1615,6 @@ footer {
   }
 
   .myPro-mostAnsweredQtns-title {
-    font-size: 14px;
+    font-size: 13px;
   }
 }

@@ -1,8 +1,7 @@
 const loginContainer = document.getElementById('login-container');
-const loginBtn = document.getElementById('login-btn')
+const loginBtn = document.getElementById('login-btn');
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
-const loginSuccessContainer = document.getElementById('login-success-container');
 
 
 // Login eventListener
@@ -20,8 +19,8 @@ function login(){
 
         let loggedInUser = ({username, password})
 
-        loginContainer.classList.add('hide')
-        loginSuccessContainer.classList.remove('hide')
+        // Redirect to users_dashboard
+        window.location.href = 'users_dashboard.html'
         console.log(loggedInUser)
   }else{
     showLoginError()

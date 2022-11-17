@@ -36,7 +36,10 @@ function postQuestion(){
     let question = ({title, questionBody})
     questions.push({question});
     showSuccess();
-    console.log(question)
+
+    // Redirect to users dashboard
+    setTimeout(() => {window.location.href = 'users_dashboard.html'}, 1400);
+
   }else{
     showError()
   }

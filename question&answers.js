@@ -9,7 +9,6 @@ const addAnswerInput = document.getElementById('user-addAnswer-textarea');
 const addAnswerBtn = document.getElementById('user-addAnswer-btn');
 
 
-
 let answers = [];
 
 
@@ -54,9 +53,39 @@ function searchQuestion(){
 function addAnswer(){
     if(addAnswerInput.value !== ''){
         let answer = addAnswerInput.value
-        answers.push({answer});
+    
+        // Create element
+        const answerEl = document.createElement('li');
+        answerEl.classList.add('user-allAnswer-content');
+        // Date
+        const date = document.createElement('small');
+        date.className = 'answer-date';
+        let todayDate = new Date(); 
+        // Date
+        dateYear =   todayDate.getFullYear() + '-' +(todayDate.getMonth() + 1) + '-' + todayDate.getDate();
+        // Time
+        dateTime = todayDate.getHours() + ':' + todayDate.getMinutes();
+        date.innerText = dateYear + ' ' + dateTime;
+               
+        // Author
+        const author = document.createElement('small');
+        author.className = 'answer-author';
+        author.innerText = 'John Smith'
+        // Paragraph
+        const paragraph = document.createElement('p');
+        paragraph.className ='answer-body';
+        paragraph.innerText = answer;
+
+        // Append
+        answerEl.appendChild(date);
+        answerEl.appendChild(author);
+        answerEl.appendChild(paragraph);
+
+        // Append li to list
+        answerList.appendChild(answerEl);
+
+        // Show success message
         showSuccess()
-        console.log(answer)
     }else{
       showError()
     }

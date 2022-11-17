@@ -9,7 +9,6 @@ const registerSuccessContainer = document.getElementById('register-success-conta
 
 let users = [];
 
-
 // Register user eventListener
 registerBtn.addEventListener('click', (e) => {
   e.preventDefault()
@@ -21,6 +20,7 @@ registerBtn.addEventListener('click', (e) => {
 function registerUser(){
   if(nameInput.value !== '' && emailInput.value !== ''  && usernameInput.value !== '' && passwordInput.value !== ''){
 
+    // Get input values
       first_name = nameInput.value;
       email = emailInput.value;
       username = usernameInput.value;
@@ -31,8 +31,11 @@ function registerUser(){
       // Change view
       registerContainer.classList.add('hide')
       registerSuccessContainer.classList.remove('hide')
-
+ 
+      setTimeout(() => { window.location.href = 'login.html' }, 3000);
       console.log({user})
+
+      showRegistryError()
 
   }else{
     showRegistryError()

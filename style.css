@@ -1,5 +1,4 @@
-/* myPro-allQtns-total-display */
-/* myPro-allQtns-total-number */
+/* user-allAnswer-content */
 
 :root {
   --main-color: rgb(216, 112, 14);
@@ -164,7 +163,7 @@ nav .logo {
 }
 
 .login-container ,
-.login-success-container ,
+/* .login-success-container , */
 .register-container ,
 .register-success-container {
   width: 500px;
@@ -187,8 +186,7 @@ nav .logo {
   width: 30px;
 }
 
-.register-success-logo ,
-.login-success-logo {
+.register-success-logo {
   width: 20px;
 }
 
@@ -203,15 +201,11 @@ nav .logo {
   width: 400px;
 } 
 
-.login-success-container a ,
 .register-success-container a{
   font-size: 20px;
-  text-decoration: underline 1px solid var(--dark-text-color);
-  text-underline-offset: 2px;
 }
 
 .login-container a ,
-.login-success-container a ,
 .register-container a ,
 .register-success-container a{
   color: var(--btn-main-color);
@@ -1103,7 +1097,6 @@ footer {
 
 /* Media 510 */
 @media screen and (max-width: 510px){
-  .login-success-container ,
   .register-success-container {
     width: 90vw;
   }
@@ -1224,17 +1217,15 @@ footer {
     font-size: 20px;
   }
 
-  .login-success-container ,
   .register-success-container {
     width: 90vw;
     padding: 10px;
   }
 
-  .login-success-container h2 ,
   .register-success-container h2 {
     font-size: 18px;
   }
-  .login-success-container a ,
+
   .register-success-container a{
     font-size: 18px;
   }
@@ -1278,7 +1269,6 @@ footer {
   footer {
     font-size: 18px;
   }
-
 
   .myPro-mostAnsweredQtns-total-number {
     font-size: 13px;
@@ -1415,7 +1405,6 @@ footer {
     font-size: 10px;
   }
 
-  /* .myPro-allQtns-total-number , */
   .myPro-mostAnsweredQtns-total-number  {
     font-size: 10px;
   }
@@ -1541,9 +1530,6 @@ footer {
     font-size: 13px;
   }
 
-  .login-success-container h2 {
-    font-size: 13px;
-  }
 
   .login-success-container a {
     font-size: 13px;

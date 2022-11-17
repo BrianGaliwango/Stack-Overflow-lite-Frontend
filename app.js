@@ -5,7 +5,6 @@ const allUserQtnsContainer = document.getElementById('user-allQtns-content-conta
 const recentQtnsContainer = document.getElementById('user-recentQtns-content-container');
 const backQtnsBtn = document.getElementById('back-Qtns-btn');
 
-let questions = []
 
 // Show sidebar eventListener
 menuBtn.addEventListener('click', (e) => {

@@ -1,5 +1,3 @@
-/* user-allAnswer-content */
-
 :root {
   --main-color: rgb(216, 112, 14);
   --background-main-color: rgb(33, 33, 33);
@@ -17,6 +15,8 @@
   --danger-color:red;
   --university-text-color:navy;
   --light-grayish-color: rgb(205, 205, 205);
+  --other-btn-color: blueviolet;
+  --nursery-text-color: blue;
 }
 
 * {
@@ -145,7 +145,7 @@ nav .logo {
 }
 
 .form-btn .logout-btn {
-  background-color: blueviolet;
+  background-color: var(--other-btn-color);
 }
 
 .main-content {
@@ -711,7 +711,8 @@ footer {
   margin: 5px 10px;
   text-underline-offset: 2px;
   font-size: 20px;
-  border-bottom: solid 1px;
+  color: var(--nursery-text-color);
+  border-bottom: 1px solid var(--dark-text-color);
   padding-bottom: 10px;
 }
 
